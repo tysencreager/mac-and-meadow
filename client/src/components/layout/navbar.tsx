@@ -88,7 +88,7 @@ export function Navbar() {
         {/* Logo */}
         <div className="flex-1 md:flex-none flex justify-center md:justify-start">
           <Link href="/">
-            <a className="block w-32 md:w-40 hover:opacity-90 transition-opacity">
+            <a className="block w-24 md:w-32 hover:opacity-90 transition-opacity">
               <img src={logo} alt="Mac & Meadow" className="w-full h-auto" />
             </a>
           </Link>
