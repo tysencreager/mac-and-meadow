@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "@assets/Mac_&_Meadow_(Stickers_(Rectangle)_(Landscape))_(Logo)_1765122945852.png";
+import logo from "@assets/mm_logo_cropped_1765126657121.PNG";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 

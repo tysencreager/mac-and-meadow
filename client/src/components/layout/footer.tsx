@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import logo from "@assets/Mac_&_Meadow_(Stickers_(Rectangle)_(Landscape))_(Logo)_1765122945852.png";
+import logo from "@assets/mm_logo_cropped_1765126657121.PNG";
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
           
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start space-y-4">
-            <img src={logo} alt="Mac & Meadow" className="w-32 brightness-0 invert opacity-90" />
+            <img src={logo} alt="Mac & Meadow" className="w-32 opacity-90" />
             <p className="text-sm opacity-80 max-w-xs text-center md:text-left font-light">
               Natural, healing skincare for skin, home, and heart.
             </p>
