@@ -3,7 +3,7 @@ import logo from "@assets/mm_logo_cropped_1765126657121.PNG";
 
 export function Footer() {
   return (
-    <footer className="bg-[#644716] text-[#F7F6F2] py-16">
+    <footer className="bg-[#F7F6F2] text-[#644716] py-16 border-t border-[#644716]/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           
@@ -31,7 +31,7 @@ export function Footer() {
               href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#F7F6F2] text-[#644716] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300"
+              className="bg-[#644716] text-[#F7F6F2] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300"
             >
               <Instagram className="h-5 w-5" />
             </a>
