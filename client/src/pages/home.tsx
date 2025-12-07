@@ -6,6 +6,7 @@ import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Star } from "lucide-reac
 import heroBg from "@assets/generated_images/luxury_modern_farmhouse_skincare_background_with_natural_textures.png";
 import product1 from "@assets/IMG_5787_1765122929459.jpeg";
 import product2 from "@assets/IMG_5790_1765122929459.jpeg";
+import makerImage from "@assets/415988131_10224519028711897_3651009988014828584_n_1765127461768.jpg";
 import { useRef } from "react";
 
 const fadeIn = {
@@ -290,7 +291,7 @@ export default function Home() {
                  className="relative z-10"
                >
                  <img 
-                   src={product1} 
+                   src={makerImage} 
                    alt="McKenzie and Rory" 
                    className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F6F2]/10"
                  />
