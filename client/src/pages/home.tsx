@@ -273,21 +273,55 @@ export default function Home() {
           className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-[#BC7C5F]/20 rounded-full blur-[100px]" 
         />
         
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row items-center gap-12 md:gap-20"
           >
-            <span className="text-[#A2A77F] tracking-[0.3em] uppercase text-sm font-bold mb-6 block">Meet the Maker</span>
-            <h2 className="font-serif text-5xl md:text-7xl mb-12">McKenzie Madsen</h2>
-            <p className="text-xl md:text-3xl leading-relaxed opacity-90 mb-16 font-serif italic text-[#D9D0C1]">
-              "I started Mac & Meadow to bring healing back to our daily routines. 
-              Using the finest Wagyu tallow, I create skincare that nourishes your body 
-              without the chemicals found in modern products."
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#BC7C5F] to-transparent mx-auto rounded-full opacity-50" />
+            {/* Image Side */}
+            <div className="w-full md:w-1/2 relative">
+               <div className="absolute inset-0 bg-[#A2A77F]/20 rounded-full blur-[80px] transform -rotate-12" />
+               <motion.div 
+                 whileHover={{ scale: 1.02 }}
+                 transition={{ duration: 0.5 }}
+                 className="relative z-10"
+               >
+                 <img 
+                   src={product1} 
+                   alt="McKenzie and Rory" 
+                   className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F6F2]/10"
+                 />
+                 <div className="absolute -bottom-6 -right-6 bg-[#F7F6F2] text-[#644716] p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
+                   <p className="font-serif italic text-lg">"Sidekick Rory approved!"</p>
+                 </div>
+               </motion.div>
+            </div>
+
+            {/* Text Side */}
+            <div className="w-full md:w-1/2 text-left space-y-8">
+              <div>
+                <span className="text-[#A2A77F] tracking-[0.3em] uppercase text-sm font-bold mb-4 block">Meet the Maker</span>
+                <h2 className="font-serif text-5xl md:text-7xl mb-6">McKenzie Madsen</h2>
+              </div>
+              
+              <div className="space-y-6 text-lg md:text-xl font-light leading-relaxed text-[#D9D0C1]">
+                <p>
+                  McKenzie Madsen started Mac & Meadow to bring healing back to daily routines. 
+                  Using the finest Wagyu tallow, she creates skincare that nourishes the body 
+                  without the chemicals found in modern products.
+                </p>
+                <p>
+                  With her trusty sidekick Rory by her side, she crafts each batch with care, 
+                  ensuring it's simple, honest, and effective. It's not just about skincare—it's 
+                  about returning to what's natural and good.
+                </p>
+              </div>
+              
+              <div className="w-32 h-1 bg-gradient-to-r from-[#BC7C5F] to-transparent rounded-full opacity-50" />
+            </div>
           </motion.div>
         </div>
       </section>
