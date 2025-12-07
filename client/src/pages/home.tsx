@@ -37,7 +37,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[100vh] flex items-center pt-32 overflow-hidden">
+      <section id="home" className="relative min-h-[100vh] flex items-center pt-32 pb-32 overflow-hidden">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0 z-0">
           <motion.img 
             initial={{ scale: 1.1 }}
@@ -78,7 +78,7 @@ export default function Home() {
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-5 pt-6">
               <Button 
                 size="lg" 
-                className="bg-[#644716] text-[#F7F6F2] hover:bg-[#644716]/90 rounded-full text-lg h-14 px-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-[#644716] text-[#F7F6F2] hover:bg-[#644716]/90 rounded-full text-base h-12 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                 asChild
               >
                 <a href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw" target="_blank" rel="noopener noreferrer">
@@ -88,7 +88,7 @@ export default function Home() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-[#644716]/30 text-[#644716] hover:bg-[#644716]/5 rounded-full text-lg h-14 px-10 bg-white/20 backdrop-blur-sm"
+                className="border-[#644716]/30 text-[#644716] hover:bg-[#644716]/5 rounded-full text-base h-12 px-8 bg-white/20 backdrop-blur-sm"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
