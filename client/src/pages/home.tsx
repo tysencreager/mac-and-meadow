@@ -6,7 +6,6 @@ import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight } from "lucide-react";
 import heroBg from "@assets/generated_images/luxury_modern_farmhouse_skincare_background_with_natural_textures.png";
 import product1 from "@assets/IMG_5787_1765122929459.jpeg";
 import product2 from "@assets/IMG_5790_1765122929459.jpeg";
-import product3 from "@assets/IMG_5793_1765122929459.jpeg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -147,16 +146,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 src={product2} 
                 alt="Mac & Meadow Collection" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
-              />
-              <motion.img 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                src={product3} 
-                alt="Product Detail" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-2xl shadow-lg w-full h-48 object-cover col-span-2"
               />
             </div>
 
