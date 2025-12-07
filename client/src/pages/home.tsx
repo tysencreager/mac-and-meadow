@@ -202,23 +202,13 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, duration: 0.8 }}
+                  className="col-span-2"
                 >
                   <img 
                     src={product2} 
                     alt="Mac & Meadow Collection" 
-                    className="rounded-[2rem] shadow-xl w-full h-64 object-cover hover:scale-[1.05] transition-transform duration-700"
+                    className="rounded-[2rem] shadow-xl w-full h-[300px] object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.8 }}
-                  className="bg-[#644716] rounded-[2rem] p-8 flex flex-col justify-center items-center text-[#F7F6F2] text-center"
-                >
-                  <Star className="w-8 h-8 mb-4 text-[#A2A77F]" />
-                  <p className="font-serif text-2xl">100%</p>
-                  <p className="text-sm opacity-80 uppercase tracking-widest mt-2">Grass-Fed</p>
                 </motion.div>
               </div>
             </div>
