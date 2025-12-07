@@ -290,8 +290,8 @@ export default function Home() {
                    alt="McKenzie and Rory" 
                    className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F6F2]/10"
                  />
-                 <div className="absolute -bottom-6 -right-6 bg-[#F7F6F2] text-[#644716] p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
-                   <p className="font-serif italic text-lg">"Sidekick Rory approved!"</p>
+                 <div className="absolute -bottom-6 right-4 md:-right-6 bg-[#F7F6F2] text-[#644716] p-4 md:p-6 rounded-2xl shadow-xl max-w-[200px] md:max-w-xs">
+                   <p className="font-serif italic text-base md:text-lg">"Sidekick Rory approved!"</p>
                  </div>
                </motion.div>
             </div>
