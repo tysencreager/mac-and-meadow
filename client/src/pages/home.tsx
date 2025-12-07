@@ -38,7 +38,7 @@ export default function Home() {
             className="max-w-xl space-y-6"
           >
             <span className="inline-block px-3 py-1 bg-[#A2A77F]/20 text-[#644716] text-xs tracking-widest uppercase font-semibold rounded-full border border-[#A2A77F]/30">
-              Natural Skincare
+              Mac & Meadow
             </span>
             <h1 className="font-serif text-5xl md:text-7xl text-[#644716] leading-[1.1]">
               Holistic, Nourishing, <br />
