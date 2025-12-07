@@ -36,6 +36,14 @@ export function Footer() {
               <Instagram className="h-5 w-5" />
             </a>
             <p className="text-xs opacity-60">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
+            <a 
+              href="https://elevategrowth.solutions" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-xs opacity-40 hover:opacity-80 transition-opacity hover:text-[#BC7C5F]"
+            >
+              Designed by Elevate Growth Solutions
+            </a>
           </div>
         </div>
       </div>
