@@ -37,13 +37,13 @@ export default function Home() {
             className="max-w-xl space-y-6"
           >
             <span className="inline-block px-3 py-1 bg-[#A2A77F]/20 text-[#644716] text-xs tracking-widest uppercase font-semibold rounded-full border border-[#A2A77F]/30">
-              Mac & Meadow
+              Moisturizing Beef Tallow Cream
             </span>
             <h1 className="font-serif text-5xl md:text-7xl text-[#644716] leading-[1.1]">
               Holistic, Nourishing, <br />
               <span className="italic text-[#BC7C5F]">Healing.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[#644716]/80 font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-[#644716] font-medium leading-relaxed drop-shadow-sm">
               Experience the deep moisturizing power of Wagyu Tallow Cream. 
               Packed with vitamins A, D, E & K for your skin's natural glow.
             </p>
