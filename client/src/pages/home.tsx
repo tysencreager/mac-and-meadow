@@ -36,7 +36,6 @@ export default function Home() {
   return (
     <div ref={containerRef} className="min-h-screen bg-[#F7F6F2] font-sans selection:bg-[#BC7C5F] selection:text-white overflow-x-hidden">
       <Navbar />
-      
       {/* Hero Section */}
       <section id="home" className="relative min-h-[100vh] flex items-center pt-32 pb-32 overflow-hidden">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0 z-0">
@@ -98,7 +97,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Marquee/Ticker */}
       <div className="bg-[#644716] py-4 overflow-hidden whitespace-nowrap relative">
         <div className="absolute inset-0 bg-noise opacity-10" />
@@ -114,7 +112,6 @@ export default function Home() {
           ))}
         </motion.div>
       </div>
-
       {/* Benefits Section - Modern Cards */}
       <section id="benefits" className="py-32 bg-gradient-to-b from-white to-[#F7F6F2] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#A2A77F]/5 rounded-full blur-[120px]" />
@@ -175,7 +172,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Product Showcase - Modern Layout */}
       <section id="products" className="py-32 bg-[#F7F6F2] relative">
         <div className="absolute inset-0 bg-noise opacity-20" />
@@ -265,7 +261,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* About Section - Parallax Feel */}
       <section id="about" className="py-32 bg-[#644716] text-[#F7F6F2] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
@@ -314,11 +309,7 @@ export default function Home() {
                   Using the finest Wagyu tallow, she creates skincare that nourishes the body 
                   without the chemicals found in modern products.
                 </p>
-                <p>
-                  With her trusty sidekick Rory by her side, she crafts each batch with care, 
-                  ensuring it's simple, honest, and effective. It's not just about skincare—it's 
-                  about returning to what's natural and good.
-                </p>
+                <p>With her trusty sidekick Rory by her side, she crafts each batch with care, ensuring it's simple, honest, and effective. It's not just about skincare; it's about returning to what's natural and good.</p>
               </div>
               
               <div className="w-32 h-1 bg-gradient-to-r from-[#BC7C5F] to-transparent rounded-full opacity-50" />
@@ -326,7 +317,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
