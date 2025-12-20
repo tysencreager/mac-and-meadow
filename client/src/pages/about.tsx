@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Leaf, Heart, Sparkles } from "lucide-react";
 import makerImage from "@assets/415988131_10224519028711897_3651009988014828584_n_1765127461768.jpg";
@@ -7,6 +8,11 @@ import makerImage from "@assets/415988131_10224519028711897_3651009988014828584_
 export default function About() {
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
+      <SEO
+        title="About"
+        description="Meet McKenzie Madsen, founder of Mac & Meadow. Learn about our mission to bring natural, healing skincare to your daily routine."
+        url="/about"
+      />
       <Navbar />
 
       {/* Hero Section */}

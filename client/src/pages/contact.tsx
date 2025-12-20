@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin } from "lucide-react";
@@ -7,6 +8,11 @@ import { Instagram, Mail, MapPin } from "lucide-react";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
+      <SEO
+        title="Contact"
+        description="Get in touch with Mac & Meadow. Questions about our Wagyu tallow cream or natural skincare products? We'd love to hear from you."
+        url="/contact"
+      />
       <Navbar />
 
       {/* Hero Section */}

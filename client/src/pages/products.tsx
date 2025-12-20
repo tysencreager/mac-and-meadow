@@ -1,8 +1,9 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight } from "lucide-react";
+import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles } from "lucide-react";
 import product1 from "@assets/IMG_5787_1765122929459.jpeg";
 import product2 from "@assets/IMG_5790_1765122929459.jpeg";
 import product3 from "@assets/mac_meadow_product_3.jpg";
@@ -10,6 +11,12 @@ import product3 from "@assets/mac_meadow_product_3.jpg";
 export default function Products() {
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
+      <SEO
+        title="Products"
+        description="Shop Mac & Meadow's handcrafted Whipped Tallow Cream. Made with Wagyu beef tallow, olive oil, and natural essential oils for deeply moisturizing skincare."
+        url="/products"
+        type="product"
+      />
       <Navbar />
 
       {/* Hero Section */}
@@ -231,6 +238,38 @@ export default function Products() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* How to Use Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-[#F7F6F2] to-white p-10 md:p-14 rounded-[2rem] shadow-lg border border-[#644716]/10">
+              <div className="flex items-start gap-6">
+                <div className="w-14 h-14 bg-[#8B6F47] rounded-2xl flex items-center justify-center text-[#F7F6F2] flex-shrink-0">
+                  <Sparkles className="w-7 h-7" />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="font-serif text-3xl text-[#644716]">How to Use</h3>
+                  <div className="space-y-4 text-[#644716]/80 text-lg leading-relaxed">
+                    <p>
+                      A little goes a long way, but listen to your skin; use more or less as needed.
+                    </p>
+                    <p>
+                      Safe and effective for morning use as well, to lock in moisture throughout the day.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

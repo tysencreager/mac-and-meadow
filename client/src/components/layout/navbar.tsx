@@ -34,6 +34,11 @@ export function Navbar() {
           About
         </a>
       </Link>
+      <Link href="/blog">
+        <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+          Blog
+        </a>
+      </Link>
       <Link href="/contact">
         <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
           Contact

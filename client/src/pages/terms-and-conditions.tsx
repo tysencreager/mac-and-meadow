@@ -1,9 +1,15 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
+      <SEO
+        title="Terms & Conditions"
+        description="Mac & Meadow terms and conditions. Learn about our policies for purchasing and using our Wagyu tallow skincare products."
+        url="/terms-and-conditions"
+      />
       <Navbar />
 
       <div className="container mx-auto px-4 md:px-6 pt-48 pb-32">

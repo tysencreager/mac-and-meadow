@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote } from "lucide-react";
@@ -78,6 +79,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-[#F7F6F2] font-sans selection:bg-[#BC7C5F] selection:text-white overflow-x-hidden">
+      <SEO />
       <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center pt-48 pb-32 overflow-hidden">

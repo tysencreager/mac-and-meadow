@@ -1,9 +1,15 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SEO } from "@/components/SEO";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
+      <SEO
+        title="Privacy Policy"
+        description="Mac & Meadow privacy policy and customer guidelines. Learn about our handcrafted tallow skincare products and our commitment to quality."
+        url="/privacy-policy"
+      />
       <Navbar />
 
       <div className="container mx-auto px-4 md:px-6 pt-48 pb-32">
