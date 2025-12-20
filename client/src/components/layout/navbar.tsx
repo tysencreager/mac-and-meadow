@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "@assets/mm_logo_cropped_1765126657121.PNG";
+import logo from "@assets/mac_meadow_logo_horns.png";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -17,52 +17,36 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const NavLinks = () => (
     <>
-      <button
-        onClick={() => scrollToSection("home")}
-        className="text-foreground/80 hover:text-primary transition-colors font-medium"
-      >
-        Home
-      </button>
-      <button
-        onClick={() => scrollToSection("products")}
-        className="text-foreground/80 hover:text-primary transition-colors font-medium"
-      >
-        Shop
-      </button>
-      <button
-        onClick={() => scrollToSection("about")}
-        className="text-foreground/80 hover:text-primary transition-colors font-medium"
-      >
-        About
-      </button>
-      <button
-        onClick={() => scrollToSection("benefits")}
-        className="text-foreground/80 hover:text-primary transition-colors font-medium"
-      >
-        Benefits
-      </button>
-      <Link href="/blog">
+      <Link href="/">
         <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
-          Blog
+          Home
+        </a>
+      </Link>
+      <Link href="/products">
+        <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+          Products
+        </a>
+      </Link>
+      <Link href="/about">
+        <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+          About
+        </a>
+      </Link>
+      <Link href="/contact">
+        <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+          Contact
         </a>
       </Link>
     </>
   );
 
   return (
-    <nav 
+    <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-        isScrolled ? "bg-background/95 backdrop-blur-sm border-border/40 shadow-sm py-2" : "bg-transparent py-4"
+        "fixed top-0 w-full z-50 transition-all duration-300 border-b",
+        isScrolled ? "bg-background/95 backdrop-blur-sm border-border/40 shadow-sm py-2" : "bg-background/95 backdrop-blur-sm border-border/20 py-4"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -77,11 +61,11 @@ export function Navbar() {
             <SheetContent side="left" className="bg-[#F7F6F2]">
               <div className="flex flex-col gap-6 mt-10">
                 <NavLinks />
-                <Button 
+                <Button
                   className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
                   asChild
                 >
-                  <a href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw" target="_blank" rel="noopener noreferrer">
+                  <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
                     Buy Now
                   </a>
                 </Button>
@@ -106,11 +90,11 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Button 
+          <Button
             className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6"
             asChild
           >
-            <a href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw" target="_blank" rel="noopener noreferrer">
+            <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
               Buy Now
             </a>
           </Button>
