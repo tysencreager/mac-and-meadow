@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Leaf, Heart, Sparkles } from "lucide-react";
-import makerImage from "@assets/415988131_10224519028711897_3651009988014828584_n_1765127461768.jpg";
+import makerImage from "@assets/maker_image.webp";
 
 export default function About() {
   return (
@@ -57,6 +57,10 @@ export default function About() {
                  <img
                    src={makerImage}
                    alt="McKenzie and Rory"
+                   width={500}
+                   height={500}
+                   loading="lazy"
+                   decoding="async"
                    className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F6F2]/10"
                  />
                  <div className="absolute -bottom-6 right-4 md:-right-6 bg-[#F7F6F2] text-[#644716] p-4 md:p-6 rounded-2xl shadow-xl max-w-[200px] md:max-w-xs">

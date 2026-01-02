@@ -17,7 +17,7 @@ export default function TermsAndConditions() {
           <h1 className="font-serif text-4xl md:text-5xl text-[#8B6F47] mb-4">
             Mac & Meadow — Terms & Conditions
           </h1>
-          <p className="text-[#644716]/60 mb-8">Last updated: December 2025</p>
+          <p className="text-[#644716]/75 mb-8">Last updated: December 2025</p>
           <p className="text-[#644716] mb-8">Welcome to Mac & Meadow! By purchasing or using our Wagyu tallow skincare products, you agree to the following Terms & Conditions. Please read them carefully.</p>
 
           <section className="mb-8">

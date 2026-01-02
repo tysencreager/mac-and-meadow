@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import logo from "@assets/mac_meadow_logo_horns.png";
+import logo from "@assets/mac_meadow_logo_horns.webp";
 
 export function Footer() {
   return (
@@ -9,8 +9,8 @@ export function Footer() {
           
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start space-y-4">
-            <img src={logo} alt="Mac & Meadow" className="w-32 opacity-90" />
-            <p className="text-sm opacity-80 max-w-xs text-center md:text-left font-light">
+            <img src={logo} alt="Mac & Meadow" width={128} height={128} loading="lazy" decoding="async" className="w-32 opacity-90" />
+            <p className="text-sm opacity-90 max-w-xs text-center md:text-left font-light">
               Natural, healing skincare for skin, home, and heart.
             </p>
           </div>
@@ -29,15 +29,16 @@ export function Footer() {
           {/* Social */}
           <div className="flex flex-col items-center md:items-end space-y-4">
             <h4 className="font-serif text-lg">Connect With Us</h4>
-            <a 
-              href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Follow Mac & Meadow on Instagram"
               className="bg-[#8B6F47] text-[#F7F6F2] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300"
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <p className="text-xs opacity-60">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
+            <p className="text-xs opacity-75">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
           </div>
         </div>
       </div>

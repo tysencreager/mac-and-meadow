@@ -4,9 +4,9 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles } from "lucide-react";
-import product1 from "@assets/IMG_5787_1765122929459.jpeg";
-import product2 from "@assets/IMG_5790_1765122929459.jpeg";
-import product3 from "@assets/mac_meadow_product_3.jpg";
+import product1 from "@assets/IMG_5787.webp";
+import product2 from "@assets/IMG_5790.webp";
+import product3 from "@assets/mac_meadow_product_3.webp";
 
 export default function Products() {
   return (
@@ -130,6 +130,10 @@ export default function Products() {
               <img
                 src={product3}
                 alt="Whipped Tallow Cream Texture"
+                width={200}
+                height={260}
+                loading="lazy"
+                decoding="async"
                 className="rounded-[1.5rem] shadow-xl w-[200px] h-[260px] object-cover"
               />
             </motion.div>
@@ -170,6 +174,10 @@ export default function Products() {
                   <img
                     src={product1}
                     alt="Whipped Tallow Cream Jar"
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-[2rem] shadow-2xl w-full h-[400px] object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
                 </motion.div>
@@ -183,6 +191,10 @@ export default function Products() {
                   <img
                     src={product2}
                     alt="Mac & Meadow Collection"
+                    width={600}
+                    height={300}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-[2rem] shadow-xl w-full h-[300px] object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
                 </motion.div>
@@ -212,11 +224,11 @@ export default function Products() {
 
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <h4 className="font-bold text-[#644716] text-lg">Ingredients</h4>
+                  <h3 className="font-bold text-[#644716] text-lg">Ingredients</h3>
                   <p className="text-[#644716]/70 leading-relaxed">Wagyu Beef Tallow, Olive Oil, Orange Essential Oil, Vanilla Extract, Frankincense</p>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-bold text-[#644716] text-lg">Size</h4>
+                  <h3 className="font-bold text-[#644716] text-lg">Size</h3>
                   <p className="text-[#644716]/70">4 oz (113 g) Glass Jar</p>
                 </div>
               </div>

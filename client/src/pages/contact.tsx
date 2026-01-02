@@ -70,7 +70,7 @@ export default function Contact() {
                       >
                         @macandmeadowco
                       </a>
-                      <p className="text-[#644716]/60 text-sm mt-1">
+                      <p className="text-[#644716]/75 text-sm mt-1">
                         Follow us for skincare tips, product updates, and behind-the-scenes content.
                       </p>
                     </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                       <p className="text-[#644716]/70">
                         Syracuse, Utah
                       </p>
-                      <p className="text-[#644716]/60 text-sm mt-1">
+                      <p className="text-[#644716]/75 text-sm mt-1">
                         Local pickup and delivery available in the area.
                       </p>
                     </div>
@@ -105,7 +105,7 @@ export default function Contact() {
                       >
                         macandmeadowco@gmail.com
                       </a>
-                      <p className="text-[#644716]/60 text-sm mt-1">
+                      <p className="text-[#644716]/75 text-sm mt-1">
                         We typically respond within 24-48 hours.
                       </p>
                     </div>

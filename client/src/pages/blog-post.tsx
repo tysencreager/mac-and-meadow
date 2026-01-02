@@ -134,7 +134,7 @@ export default function BlogPost() {
               </a>
             </Link>
 
-            <div className="flex items-center gap-6 text-sm text-[#644716]/60 mb-6">
+            <div className="flex items-center gap-6 text-sm text-[#644716]/75 mb-6">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <time dateTime={post.date}>

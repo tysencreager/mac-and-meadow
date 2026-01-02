@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/mac_meadow_hero_2.jpg";
+import heroImage from "@assets/mac_meadow_hero_2.webp";
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -159,6 +159,10 @@ export default function Home() {
                 <img
                   src={heroImage}
                   alt="Mac & Meadow Whipped Tallow Cream"
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover relative z-10"
                 />
               </motion.div>
@@ -267,6 +271,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-6 mt-10">
               <button
                 onClick={prevTestimonial}
+                aria-label="Previous testimonial"
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -277,6 +282,8 @@ export default function Home() {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                    aria-current={index === currentTestimonial ? "true" : undefined}
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                       index === currentTestimonial
                         ? "bg-[#8B6F47] w-8"
@@ -288,6 +295,7 @@ export default function Home() {
 
               <button
                 onClick={nextTestimonial}
+                aria-label="Next testimonial"
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
               >
                 <ChevronRight className="w-6 h-6" />

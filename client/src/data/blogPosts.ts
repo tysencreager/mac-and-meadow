@@ -1,5 +1,5 @@
-import blogHeader1 from "@assets/blog_header_1.png";
-import blogHeader2 from "@assets/blog_header_2.png";
+import blogHeader1 from "@assets/blog_header_1.webp";
+import blogHeader2 from "@assets/blog_header_2.webp";
 
 export interface BlogPost {
   slug: string;

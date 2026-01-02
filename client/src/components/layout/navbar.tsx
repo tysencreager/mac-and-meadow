@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "@assets/mac_meadow_logo_horns.png";
+import logo from "@assets/mac_meadow_logo_horns.webp";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -59,7 +59,7 @@ export function Navbar() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary">
+              <Button variant="ghost" size="icon" className="text-primary" aria-label="Open navigation menu">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
@@ -83,7 +83,7 @@ export function Navbar() {
         <div className="flex-1 md:flex-none flex justify-center md:justify-start">
           <Link href="/">
             <a className="block w-24 md:w-32 hover:opacity-90 transition-opacity">
-              <img src={logo} alt="Mac & Meadow" className="w-full h-auto" />
+              <img src={logo} alt="Mac & Meadow" width={128} height={128} className="w-full h-auto" />
             </a>
           </Link>
         </div>
