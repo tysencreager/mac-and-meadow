@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/mac_meadow_hero_2.jpg";
+import heroImage from "@assets/mac_meadow_hero_2.webp";
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },

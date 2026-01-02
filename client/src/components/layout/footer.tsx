@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import logo from "@assets/mac_meadow_logo_horns.png";
+import logo from "@assets/mac_meadow_logo_horns.webp";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <img src={logo} alt="Mac & Meadow" width={128} height={128} loading="lazy" decoding="async" className="w-32 opacity-90" />
-            <p className="text-sm opacity-80 max-w-xs text-center md:text-left font-light">
+            <p className="text-sm opacity-90 max-w-xs text-center md:text-left font-light">
               Natural, healing skincare for skin, home, and heart.
             </p>
           </div>
@@ -38,7 +38,7 @@ export function Footer() {
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <p className="text-xs opacity-60">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
+            <p className="text-xs opacity-75">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
           </div>
         </div>
       </div>

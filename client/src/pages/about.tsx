@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Leaf, Heart, Sparkles } from "lucide-react";
-import makerImage from "@assets/415988131_10224519028711897_3651009988014828584_n_1765127461768.jpg";
+import makerImage from "@assets/maker_image.webp";
 
 export default function About() {
   return (
