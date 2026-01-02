@@ -83,15 +83,10 @@ export default function Home() {
       <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center pt-48 pb-32 overflow-hidden">
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0 z-0">
-          <motion.div
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]"
-          />
+        <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
+          <div className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]" />
           <div className="absolute inset-0 bg-noise opacity-15 mix-blend-soft-light" />
-        </motion.div>
+        </div>
 
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <motion.div
@@ -161,8 +156,9 @@ export default function Home() {
                   alt="Mac & Meadow Whipped Tallow Cream"
                   width={600}
                   height={600}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
+                  fetchPriority="high"
                   className="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover relative z-10"
                 />
               </motion.div>
@@ -284,11 +280,14 @@ export default function Home() {
                     onClick={() => setCurrentTestimonial(index)}
                     aria-label={`Go to testimonial ${index + 1}`}
                     aria-current={index === currentTestimonial ? "true" : undefined}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    className={`h-2.5 rounded-full transition-all duration-300 will-change-transform ${
                       index === currentTestimonial
                         ? "bg-[#8B6F47] w-8"
-                        : "bg-[#8B6F47]/30 hover:bg-[#8B6F47]/50"
+                        : "bg-[#8B6F47]/30 hover:bg-[#8B6F47]/50 w-2.5"
                     }`}
+                    style={{
+                      transform: index === currentTestimonial ? 'scaleX(1)' : 'scaleX(1)',
+                    }}
                   />
                 ))}
               </div>
