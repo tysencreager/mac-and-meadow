@@ -34,9 +34,10 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Mac & Meadow on Instagram"
-              className="bg-[#8B6F47] text-[#F7F6F2] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300"
+              className="bg-[#8B6F47] text-[#F7F6F2] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300 inline-flex items-center gap-2"
             >
               <Instagram className="h-5 w-5" />
+              <span className="sr-only">Follow us on Instagram</span>
             </a>
             <p className="text-xs opacity-75">© {new Date().getFullYear()} Mac & Meadow. All rights reserved.</p>
           </div>

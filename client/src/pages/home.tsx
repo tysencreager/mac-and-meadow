@@ -134,7 +134,7 @@ export default function Home() {
                 asChild
               >
                 <Link href="/products">
-                  Learn More
+                  View Our Products
                 </Link>
               </Button>
             </motion.div>

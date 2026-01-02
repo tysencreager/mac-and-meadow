@@ -1,4 +1,10 @@
+# Robots.txt for Mac & Meadow
 User-agent: *
 Allow: /
+Disallow: /api/
 
+# Sitemap location
 Sitemap: https://macandmeadowco.com/sitemap.xml
+
+# Host
+Host: https://macandmeadowco.com
