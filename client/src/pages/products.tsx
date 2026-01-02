@@ -130,6 +130,10 @@ export default function Products() {
               <img
                 src={product3}
                 alt="Whipped Tallow Cream Texture"
+                width={200}
+                height={260}
+                loading="lazy"
+                decoding="async"
                 className="rounded-[1.5rem] shadow-xl w-[200px] h-[260px] object-cover"
               />
             </motion.div>
@@ -170,6 +174,10 @@ export default function Products() {
                   <img
                     src={product1}
                     alt="Whipped Tallow Cream Jar"
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-[2rem] shadow-2xl w-full h-[400px] object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
                 </motion.div>
@@ -183,6 +191,10 @@ export default function Products() {
                   <img
                     src={product2}
                     alt="Mac & Meadow Collection"
+                    width={600}
+                    height={300}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-[2rem] shadow-xl w-full h-[300px] object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
                 </motion.div>
