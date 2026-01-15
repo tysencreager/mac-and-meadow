@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { EventBanner } from "@/components/EventBanner";
 import { lazy, Suspense } from "react";
 
 // Eager load Home for fast initial render (most visited page)
@@ -19,6 +20,8 @@ const TermsAndConditions = lazy(() => import("@/pages/terms-and-conditions"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogPost = lazy(() => import("@/pages/blog-post"));
 const NotFound = lazy(() => import("@/pages/not-found"));
+const LocationSyracuse = lazy(() => import("@/pages/location-syracuse"));
+const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"));
 
 // Simple loading fallback
 function PageLoader() {
@@ -32,6 +35,7 @@ function PageLoader() {
 function Router() {
   return (
     <>
+      <EventBanner />
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Switch>
@@ -41,6 +45,8 @@ function Router() {
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/locations/syracuse-utah" component={LocationSyracuse} />
+          <Route path="/locations/salt-lake-city-utah" component={LocationSaltLakeCity} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/terms-and-conditions" component={TermsAndConditions} />
           <Route component={NotFound} />
