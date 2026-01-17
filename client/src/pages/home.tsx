@@ -2,12 +2,13 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { InstagramFeed } from "@/components/InstagramFeed";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useRef, useState } from "react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote, Instagram } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/mac_meadow_hero_2.webp";
+
+const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -61,6 +62,17 @@ const testimonials = [
 export default function Home() {
   const containerRef = useRef(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    // Load Elfsight script if not already loaded
+    if (!document.getElementById("elfsight-platform")) {
+      const script = document.createElement("script");
+      script.id = "elfsight-platform";
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -229,84 +241,118 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials + Instagram Section - Side by Side */}
       <section className="py-24 bg-[#F7F6F2] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">What Our Customers Say</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-4">Real Results, Real Stories</h2>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              key={currentTestimonial}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-[2rem] p-10 md:p-14 shadow-xl relative"
-            >
-              <Quote className="w-12 h-12 text-[#BC7C5F]/20 absolute top-8 left-8" />
-              <div className="relative z-10">
-                <p className="text-[#644716] text-lg md:text-xl leading-relaxed italic mb-8">
-                  "{testimonials[currentTestimonial].quote}"
-                </p>
-                <p className="text-[#8B6F47] font-bold text-lg">
-                  — {testimonials[currentTestimonial].name}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Navigation */}
-            <div className="flex items-center justify-center gap-6 mt-10">
-              <button
-                onClick={prevTestimonial}
-                aria-label="Previous testimonial"
-                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Testimonials Side */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-8"
               >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
+                <div className="text-center lg:text-left">
+                  <span className="text-[#BC7C5F] font-serif italic text-xl">What Our Customers Say</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Real Results, Real Stories</h2>
+                </div>
 
-              <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                    aria-current={index === currentTestimonial ? "true" : undefined}
-                    className={`h-2.5 rounded-full transition-all duration-300 will-change-transform ${
-                      index === currentTestimonial
-                        ? "bg-[#8B6F47] w-8"
-                        : "bg-[#8B6F47]/30 hover:bg-[#8B6F47]/50 w-2.5"
-                    }`}
-                    style={{
-                      transform: index === currentTestimonial ? 'scaleX(1)' : 'scaleX(1)',
-                    }}
+                <div className="relative">
+                  <motion.div
+                    key={currentTestimonial}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-white rounded-2xl p-8 shadow-lg relative min-h-[280px] flex flex-col justify-between"
+                  >
+                    <Quote className="w-10 h-10 text-[#BC7C5F]/20 absolute top-6 left-6" />
+                    <div className="relative z-10 pt-8">
+                      <p className="text-[#644716] text-base leading-relaxed italic mb-6">
+                        "{testimonials[currentTestimonial].quote}"
+                      </p>
+                      <p className="text-[#8B6F47] font-bold">
+                        — {testimonials[currentTestimonial].name}
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Navigation */}
+                  <div className="flex items-center justify-center gap-4 mt-6">
+                    <button
+                      onClick={prevTestimonial}
+                      aria-label="Previous testimonial"
+                      className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+
+                    <div className="flex gap-1.5">
+                      {testimonials.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentTestimonial(index)}
+                          aria-label={`Go to testimonial ${index + 1}`}
+                          aria-current={index === currentTestimonial ? "true" : undefined}
+                          className={`h-2 rounded-full transition-all duration-300 ${
+                            index === currentTestimonial
+                              ? "bg-[#8B6F47] w-6"
+                              : "bg-[#8B6F47]/30 hover:bg-[#8B6F47]/50 w-2"
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={nextTestimonial}
+                      aria-label="Next testimonial"
+                      className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Instagram Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-6"
+              >
+                <div className="text-center lg:text-left">
+                  <span className="text-[#BC7C5F] font-serif italic text-xl">Stay Connected</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
+                </div>
+
+                <div className="bg-white rounded-2xl p-4 shadow-lg">
+                  <div
+                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
+                    data-elfsight-app-lazy
                   />
-                ))}
-              </div>
+                </div>
 
-              <button
-                onClick={nextTestimonial}
-                aria-label="Next testimonial"
-                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
+                <div className="text-center lg:text-left">
+                  <a
+                    href="https://www.instagram.com/macandmeadowco"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-[#8B6F47] text-white px-6 py-3 rounded-full font-medium hover:bg-[#8B6F47]/90 transition-colors"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Follow @macandmeadowco
+                  </a>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Instagram Feed Section */}
-      <InstagramFeed />
 
       {/* CTA Section */}
       <section className="py-32 bg-gradient-to-br from-[#8B6F47] to-[#644716] text-[#F7F6F2] relative overflow-hidden">
