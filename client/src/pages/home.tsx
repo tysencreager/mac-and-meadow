@@ -330,10 +330,12 @@ export default function Home() {
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
 
-                <div
-                  className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
-                  data-elfsight-app-lazy
-                />
+                <div className="flex justify-center lg:justify-start">
+                  <div
+                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
+                    data-elfsight-app-lazy
+                  />
+                </div>
 
                 <div className="text-center lg:text-left">
                   <a
