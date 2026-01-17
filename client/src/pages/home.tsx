@@ -330,9 +330,9 @@ export default function Home() {
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
 
-                <div className="bg-white rounded-2xl p-4 shadow-lg flex justify-center">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                   <div
-                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID} w-full`}
+                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
                     data-elfsight-app-lazy
                   />
                 </div>
