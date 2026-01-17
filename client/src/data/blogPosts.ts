@@ -1,5 +1,7 @@
 import blogHeader1 from "@assets/blog_header_1.webp";
 import blogHeader2 from "@assets/blog_header_2.webp";
+// TODO: Replace with valentines_blog_header.png from https://i.postimg.cc/jdbbQDKz/opengraph.png
+const valentinesBlogHeader = blogHeader1;
 
 export interface BlogPost {
   slug: string;
@@ -13,6 +15,121 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "valentines-day-galentines-day-gift-ideas-natural-skincare",
+    title: "Valentine's Day & Galentine's Day Gift Ideas: Thoughtful Natural Skincare Gifts for 2025",
+    excerpt: "Discover the best Valentine's Day and Galentine's Day gift ideas for 2025. From luxurious tallow skincare to self-care essentials, find meaningful gifts that show you care.",
+    image: valentinesBlogHeader,
+    content: `
+Looking for the perfect Valentine's Day gift or Galentine's Day present? This year, skip the generic chocolates and flowers and give something truly meaningful—natural skincare that nourishes both body and soul.
+
+## Why Natural Skincare Makes the Perfect Valentine's Gift
+
+There's something deeply personal about skincare. It's a daily ritual of self-care, a moment of peace in busy lives. When you gift someone luxurious, natural skincare, you're giving them permission to take care of themselves—and that's one of the most loving gifts of all.
+
+Unlike fleeting gifts that are quickly forgotten, quality skincare products become part of someone's daily routine, reminding them of your thoughtfulness every single day.
+
+## Top Valentine's Day Gift Ideas for Her (and Him!)
+
+### 1. Whipped Tallow Cream – The Star of Self-Care
+
+Our **Mac & Meadow Whipped Tallow Cream** is the ultimate Valentine's Day gift for anyone who values natural, effective skincare. Here's why it's so special:
+
+- **Luxurious Wagyu beef tallow** blended with olive oil for ultimate hydration
+- **Warm vanilla and orange** essential oils create a subtle, romantic scent
+- **Frankincense** adds a touch of luxury and skin-healing benefits
+- **100% natural ingredients** with no synthetic chemicals
+- **Handcrafted in small batches** for quality you can feel
+
+A little goes a long way, making this 4 oz jar a gift that keeps giving for weeks—even months. It's perfect for face, hands, body, and even dry winter skin that needs extra love.
+
+### 2. Build a Self-Care Gift Basket
+
+Pair our tallow cream with other thoughtful items to create a complete self-care experience:
+
+- **Cozy socks or slippers** for ultimate relaxation
+- **A beautiful candle** with natural scents
+- **Herbal tea** for cozy evenings
+- **A handwritten note** expressing your love
+- **A soft towel or robe** for spa-like indulgence
+
+### 3. Experience Gifts That Pair Perfectly
+
+Consider combining skincare with experiences:
+
+- A **spa day at home** complete with face masks and tallow moisturizer
+- A **relaxing bath experience** with natural bath salts
+- **Quality time together** doing at-home facials
+
+## Why Tallow Cream is the Best Gift for Galentine's Day
+
+Galentine's Day (February 13th) is all about celebrating the women in your life—your best friends, sisters, mothers, and all the amazing ladies who support you. What better way to honor them than with gifts that say "you deserve to feel pampered"?
+
+Here's why tallow cream makes the perfect Galentine's Day gift:
+
+- **It's unique** – Most people haven't discovered the magic of tallow skincare yet
+- **It actually works** – Your friends will thank you when their dry winter skin transforms
+- **It sparks conversation** – The history and benefits of tallow make for great girl talk
+- **It shows you care** – Thoughtful, natural products show genuine consideration
+
+### Galentine's Day Party Ideas
+
+Host a Galentine's Day gathering and include tallow cream in your celebration:
+
+- **DIY spa night** where everyone can try the cream together
+- **Skincare swap** where friends share their favorite products
+- **Self-care gift exchange** featuring natural beauty items
+
+## The Benefits of Choosing Natural Skincare Gifts
+
+When you choose natural skincare like our Whipped Tallow Cream, you're making a statement about your values:
+
+### Better for Their Skin
+
+- **Biocompatible ingredients** that work with the skin, not against it
+- **Vitamins A, D, E, and K** for real nourishment
+- **No harsh chemicals** that can irritate sensitive skin
+- **Deep hydration** that lasts all day
+
+### Better for the Environment
+
+- **Simple, clean ingredients** with minimal processing
+- **Glass jar packaging** that can be reused or recycled
+- **Small-batch production** that reduces waste
+- **Supporting small business** instead of mass production
+
+### Better for Your Conscience
+
+Giving a gift you truly believe in feels wonderful. When you hand over a jar of Mac & Meadow tallow cream, you can confidently say, "This is something I know you'll love."
+
+## Last-Minute Valentine's Day Gift Ideas
+
+Running short on time? Here's how to make a beautiful presentation quickly:
+
+- **Wrap the jar** in tissue paper with a ribbon
+- **Add a small tag** with a heartfelt message
+- **Pair with something small** like their favorite candy or a single flower
+- **Include usage tips** so they get the most from their gift
+
+## Why Choose Mac & Meadow for Valentine's Day
+
+At Mac & Meadow, we believe skincare should be simple, effective, and rooted in tradition. Our Whipped Tallow Cream is:
+
+- **Made with love** in small batches
+- **Crafted from the finest Wagyu beef tallow** for superior quality
+- **Scented naturally** with real vanilla and orange essential oils
+- **Free from synthetic ingredients** – just pure, natural goodness
+
+This Valentine's Day, give a gift that truly makes a difference. Whether it's for your partner, your best friend, your mom, or yourself—natural skincare is a gift of love that keeps on giving.
+
+## Ready to Shop?
+
+Make this Valentine's Day and Galentine's Day unforgettable with the gift of natural, luxurious skincare. Your loved ones (and their skin) will thank you!
+    `.trim(),
+    date: "2025-01-17",
+    author: "McKenzie Madsen",
+    tags: ["Valentine's Day gifts", "Galentine's Day", "natural skincare", "gift ideas", "tallow", "self-care", "skincare gifts", "2025"]
+  },
   {
     slug: "why-tallow-is-the-best-moisturizer",
     title: "Why Tallow Is the Best Natural Moisturizer for Your Skin",
