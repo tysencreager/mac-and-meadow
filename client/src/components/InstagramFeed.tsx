@@ -16,7 +16,7 @@ interface InstagramFeedProps {
 // 5. Copy your widget ID and replace "YOUR_WIDGET_ID" below
 // 6. The free plan shows "Powered by Elfsight" - upgrade to remove
 
-const ELFSIGHT_WIDGET_ID = "YOUR_WIDGET_ID"; // Replace with your Elfsight widget ID
+const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 export function InstagramFeed({
   title = "Follow Us on Instagram",
@@ -29,7 +29,7 @@ export function InstagramFeed({
     if (!document.getElementById("elfsight-platform")) {
       const script = document.createElement("script");
       script.id = "elfsight-platform";
-      script.src = "https://static.elfsight.com/platform/platform.js";
+      script.src = "https://elfsightcdn.com/platform.js";
       script.async = true;
       document.body.appendChild(script);
     }
