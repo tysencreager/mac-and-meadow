@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { InstagramFeed } from "@/components/InstagramFeed";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useRef, useState } from "react";
@@ -303,6 +304,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed Section */}
+      <InstagramFeed />
 
       {/* CTA Section */}
       <section className="py-32 bg-gradient-to-br from-[#8B6F47] to-[#644716] text-[#F7F6F2] relative overflow-hidden">

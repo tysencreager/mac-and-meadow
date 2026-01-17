@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { InstagramFeed } from "@/components/InstagramFeed";
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin } from "lucide-react";
 
@@ -159,6 +160,12 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed Section */}
+      <InstagramFeed
+        title="See What We're Up To"
+        subtitle="Latest from @macandmeadowco"
+      />
 
       {/* FAQ Section */}
       <section className="py-32 bg-[#F7F6F2]">
