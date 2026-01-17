@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { X, Calendar, MapPin } from "lucide-react";
-import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function EventBanner() {
@@ -59,11 +58,14 @@ export function EventBanner() {
               </div>
             </div>
 
-            <Link href="/contact">
-              <a className="inline-block bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full text-sm font-medium transition-colors">
-                Learn More
-              </a>
-            </Link>
+            <a
+              href="https://www.goldenspikeeventcenter.com/event-details/radiate-vendor-markets-valentines-market-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full text-sm font-medium transition-colors"
+            >
+              Learn More
+            </a>
           </div>
         </motion.div>
       </motion.div>
