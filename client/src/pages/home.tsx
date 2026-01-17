@@ -330,10 +330,11 @@ export default function Home() {
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden [&_.eapps-instagram-feed]:!w-full [&_.eapps-widget-toolbar]:!hidden">
                   <div
                     className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
                     data-elfsight-app-lazy
+                    style={{ width: '100%' }}
                   />
                 </div>
 
