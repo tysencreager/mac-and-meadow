@@ -35,11 +35,14 @@ export function EventBanner() {
           </button>
 
           <div className="p-8 text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Calendar className="w-5 h-5" />
-              <span className="font-serif text-2xl font-medium">
-                Galentines Market
-              </span>
+            <div className="mb-4">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Calendar className="w-5 h-5" />
+                <span className="font-serif text-2xl font-medium">
+                  Galentines Market
+                </span>
+              </div>
+              <p className="text-white/90 text-sm">Come Visit Us!</p>
             </div>
 
             <div className="space-y-3 mb-6">
