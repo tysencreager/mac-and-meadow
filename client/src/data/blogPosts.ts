@@ -16,8 +16,8 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "valentines-day-galentines-day-gift-ideas-natural-skincare",
-    title: "Valentine's Day & Galentine's Day Gift Ideas: Thoughtful Natural Skincare Gifts for 2025",
-    excerpt: "Discover the best Valentine's Day and Galentine's Day gift ideas for 2025. From luxurious tallow skincare to self-care essentials, find meaningful gifts that show you care.",
+    title: "Valentine's Day & Galentine's Day Gift Ideas: Thoughtful Natural Skincare Gifts for 2026",
+    excerpt: "Discover the best Valentine's Day and Galentine's Day gift ideas for 2026. From luxurious tallow skincare to self-care essentials, find meaningful gifts that show you care.",
     image: valentinesBlogHeader,
     content: `
 Looking for the perfect Valentine's Day gift or Galentine's Day present? This year, skip the generic chocolates and flowers and give something truly meaningful—natural skincare that nourishes both body and soul.
@@ -125,9 +125,9 @@ This Valentine's Day, give a gift that truly makes a difference. Whether it's fo
 
 Make this Valentine's Day and Galentine's Day unforgettable with the gift of natural, luxurious skincare. Your loved ones (and their skin) will thank you!
     `.trim(),
-    date: "2025-01-17",
+    date: "2026-01-17",
     author: "McKenzie Madsen",
-    tags: ["Valentine's Day gifts", "Galentine's Day", "natural skincare", "gift ideas", "tallow", "self-care", "skincare gifts", "2025"]
+    tags: ["Valentine's Day gifts", "Galentine's Day", "natural skincare", "gift ideas", "tallow", "self-care", "skincare gifts", "2026"]
   },
   {
     slug: "why-tallow-is-the-best-moisturizer",
