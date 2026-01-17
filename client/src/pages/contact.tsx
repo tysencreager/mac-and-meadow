@@ -65,9 +65,9 @@ export default function Contact() {
                   <span className="text-[#BC7C5F] font-serif italic text-lg">Latest from @macandmeadowco</span>
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
-                <div className="bg-[#F7F6F2] rounded-2xl p-4">
+                <div className="bg-[#F7F6F2] rounded-2xl p-4 flex justify-center">
                   <div
-                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
+                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID} w-full`}
                     data-elfsight-app-lazy
                   />
                 </div>
