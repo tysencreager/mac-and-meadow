@@ -4,8 +4,22 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import { useEffect } from "react";
+
+const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 export default function Contact() {
+  useEffect(() => {
+    // Load Elfsight script if not already loaded
+    if (!document.getElementById("elfsight-platform")) {
+      const script = document.createElement("script");
+      script.id = "elfsight-platform";
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F7F6F2]">
       <SEO
@@ -35,15 +49,100 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Instagram + FAQ Section - Side by Side */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Instagram Feed Side */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="space-y-6"
+              >
+                <div className="text-center lg:text-left">
+                  <span className="text-[#BC7C5F] font-serif italic text-lg">Latest from @macandmeadowco</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
+                </div>
+                <div className="flex justify-center lg:justify-start">
+                  <div
+                    className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
+                    data-elfsight-app-lazy
+                  />
+                </div>
+                <div className="text-center lg:text-left">
+                  <a
+                    href="https://www.instagram.com/macandmeadowco"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-[#8B6F47] text-white px-6 py-3 rounded-full font-medium hover:bg-[#8B6F47]/90 transition-colors"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Follow @macandmeadowco
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* FAQ Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-6"
+              >
+                <div className="text-center lg:text-left">
+                  <span className="text-[#BC7C5F] font-serif italic text-lg">Quick Answers</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Common Questions</h2>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    {
+                      question: "How do I place an order?",
+                      answer: "Orders can be placed through our Square shop. Simply click the 'Shop Now' button or contact us via Instagram."
+                    },
+                    {
+                      question: "Do you ship nationwide?",
+                      answer: "Currently, we serve local Utah customers only with pickup and local delivery options. We're working on expanding shipping options!"
+                    },
+                    {
+                      question: "How should I store my tallow cream?",
+                      answer: "Store in a cool, dry place away from direct sunlight. Keep the lid tightly closed and always use clean hands when applying."
+                    },
+                    {
+                      question: "Is tallow safe for sensitive skin?",
+                      answer: "Tallow is naturally biocompatible with human skin, making it gentle for most skin types. We recommend a patch test first if you have very sensitive skin."
+                    }
+                  ].map((faq, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      className="bg-[#F7F6F2] rounded-xl p-5"
+                    >
+                      <h3 className="font-serif text-lg text-[#644716] mb-2">{faq.question}</h3>
+                      <p className="text-[#644716]/70 text-sm leading-relaxed">{faq.answer}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-32 bg-white">
+      <section className="py-24 bg-[#F7F6F2]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="space-y-12"
               >
@@ -57,7 +156,7 @@ export default function Contact() {
                 <div className="space-y-8">
                   {/* Instagram */}
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Instagram className="w-6 h-6 text-[#8B6F47]" />
                     </div>
                     <div>
@@ -78,7 +177,7 @@ export default function Contact() {
 
                   {/* Location */}
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-[#8B6F47]" />
                     </div>
                     <div>
@@ -94,7 +193,7 @@ export default function Contact() {
 
                   {/* Email */}
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-[#8B6F47]" />
                     </div>
                     <div>
@@ -116,7 +215,8 @@ export default function Contact() {
               {/* CTA Card */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="bg-gradient-to-br from-[#8B6F47] to-[#644716] rounded-[2rem] p-12 text-[#F7F6F2] relative overflow-hidden"
               >
@@ -155,51 +255,6 @@ export default function Contact() {
                   </div>
                 </div>
               </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-32 bg-[#F7F6F2]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16 space-y-4">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">Common Questions</h2>
-              <p className="text-[#644716]/70 text-lg">Here are some answers to questions we get asked frequently.</p>
-            </div>
-
-            <div className="space-y-6">
-              {[
-                {
-                  question: "How do I place an order?",
-                  answer: "Orders can be placed through our Square shop. Simply click the 'Shop Now' button on our Products page or contact us via Instagram."
-                },
-                {
-                  question: "Do you ship nationwide?",
-                  answer: "Currently, we serve local Utah customers only with pickup and local delivery options. We're working on expanding shipping options in the future!"
-                },
-                {
-                  question: "How should I store my tallow cream?",
-                  answer: "Store your tallow cream in a cool, dry place away from direct sunlight. Keep the lid tightly closed when not in use and always use clean hands when applying."
-                },
-                {
-                  question: "Is tallow safe for sensitive skin?",
-                  answer: "Tallow is naturally biocompatible with human skin, making it gentle for most skin types. However, we recommend doing a patch test first if you have very sensitive skin or allergies."
-                }
-              ].map((faq, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="bg-white rounded-2xl p-8 shadow-sm"
-                >
-                  <h3 className="font-serif text-xl text-[#644716] mb-3">{faq.question}</h3>
-                  <p className="text-[#644716]/70 leading-relaxed">{faq.answer}</p>
-                </motion.div>
-              ))}
             </div>
           </div>
         </div>

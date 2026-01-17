@@ -136,3 +136,20 @@
     border-width: 0;
   }
 }
+
+/* Elfsight Instagram widget - force full width */
+[class*="elfsight-app-"] {
+  width: 100% !important;
+}
+
+[class*="elfsight-app-"] > div {
+  width: 100% !important;
+}
+
+.eapps-instagram-feed {
+  width: 100% !important;
+}
+
+.eapps-instagram-feed-posts-grid {
+  width: 100% !important;
+}
