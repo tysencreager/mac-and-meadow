@@ -1,7 +1,6 @@
 import blogHeader1 from "@assets/blog_header_1.webp";
 import blogHeader2 from "@assets/blog_header_2.webp";
-// TODO: Replace with valentines_blog_header.png from https://i.postimg.cc/jdbbQDKz/opengraph.png
-const valentinesBlogHeader = blogHeader1;
+import valentinesBlogHeader from "@assets/valentines_blog_header.png";
 
 export interface BlogPost {
   slug: string;
