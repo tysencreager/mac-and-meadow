@@ -15,7 +15,7 @@ export function EventBanner() {
         animate={{ height: "auto", opacity: 1 }}
         exit={{ height: 0, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-gradient-to-r from-[#BC7C5F] to-[#8B6F47] text-white relative z-[60]"
+        className="bg-gradient-to-r from-[#E91E8C] to-[#FF69B4] text-white relative z-[60]"
       >
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
@@ -25,6 +25,11 @@ export function EventBanner() {
                 <span className="font-serif text-sm sm:text-base font-medium">
                   Galentines Market
                 </span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-white/30" />
+              <div className="flex items-center gap-2 text-white/90 text-xs sm:text-sm">
+                <MapPin className="w-3 h-3 flex-shrink-0" />
+                <span>Golden Spike Event Center, 1000 N 1200 W, Ogden UT</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/30" />
               <div className="flex items-center gap-2 text-white/90 text-xs sm:text-sm">
