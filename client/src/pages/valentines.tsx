@@ -238,11 +238,11 @@ export default function Valentines() {
             </div>
 
             <div className="w-full md:w-1/2 md:pr-10">
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">Whipped Tallow - Vanilla & Rose</h3>
-              <p className="text-[#D64045] font-medium text-lg mb-6">$17.00</p>
+              <h3 className="text-3xl font-bold text-gray-800 mb-2">Whipped Tallow - Vanilla & Orange</h3>
+              <p className="text-[#D64045] font-medium text-lg mb-6">$18.50</p>
 
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Indulge in the softest skin of your life. Our whipped tallow is aerated to perfection, creating a cloud-like texture that melts instantly upon contact. Infused with organic vanilla bean and a hint of rose for that romantic touch.
+                Indulge in the softest skin of your life. Our whipped tallow is aerated to perfection, creating a cloud-like texture that melts instantly upon contact. Infused with organic vanilla bean and a hint of orange for that sweet citrus touch.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -289,7 +289,7 @@ export default function Valentines() {
 
             <div className="w-full md:w-1/2 md:pl-10">
               <h3 className="text-3xl font-bold text-gray-800 mb-2">The Perfect Gift</h3>
-              <p className="text-[#D64045] font-medium text-lg mb-6">Gift Sets Starting at $17</p>
+              <p className="text-[#D64045] font-medium text-lg mb-6">Gift Sets Starting at $18.50</p>
 
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Whether it's for your galentine, your partner, or yourself, our Valentine's collection makes gifting easy. Each jar is hand-whipped with love and ready to nourish dry winter skin with the rich vitamins A, D, E & K found naturally in grass-fed tallow.
