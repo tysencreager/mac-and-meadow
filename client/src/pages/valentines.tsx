@@ -344,12 +344,12 @@ export default function Valentines() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-3xl p-8 md:p-12 relative overflow-hidden"
+            className="bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-3xl p-6 md:p-8 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10 flex flex-col md:flex-row-reverse items-center gap-8">
+            <div className="relative z-10 flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8">
               {/* Image */}
               <div className="w-full md:w-2/5 flex-shrink-0">
                 <img
@@ -359,19 +359,19 @@ export default function Valentines() {
                   height={400}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-2xl shadow-xl w-full h-[350px] object-cover object-top"
+                  className="rounded-2xl shadow-xl w-full h-[320px] object-cover object-top"
                 />
               </div>
               {/* Content */}
-              <div className="text-center md:text-right">
-                <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Coming Soon</span>
-                <div className="flex justify-center md:justify-end mb-4">
-                  <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+              <div className="text-right flex-1">
+                <span className="inline-block bg-[#BC7C5F] text-white text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Coming Soon</span>
+                <div className="flex justify-end mb-4">
+                  <TreePine className="w-14 h-14 text-[#BC7C5F]" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-script text-white mb-2">The Lumberjack</h3>
-                <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
-                <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-                <p className="text-white/60 mt-4 max-w-md md:ml-auto">
+                <h3 className="text-4xl md:text-5xl font-script text-white mb-3">The Lumberjack</h3>
+                <p className="text-white/80 text-xl mb-2">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-xl">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-4 text-lg ml-auto max-w-md">
                   A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
                 </p>
               </div>
