@@ -35,7 +35,7 @@ const stagger = {
 
 export default function Valentines() {
   return (
-    <div className="min-h-screen bg-[#FFF9F5] font-script selection:bg-[#E88D8D] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#FFF9F5] font-serif selection:bg-[#E88D8D] selection:text-white overflow-x-hidden">
       <SEO
         title="Valentine's Day Collection | Mac & Meadow Co."
         description="Give the gift of glowing skin this Valentine's Day with Mac & Meadow Co. 100% Grass-Fed Tallow Balm. Perfect gifts for your loved ones."
@@ -311,7 +311,7 @@ export default function Valentines() {
         <div className="absolute inset-0 heart-bg pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-[#D64045] font-sans font-bold uppercase tracking-widest text-sm">Shop All Scents</span>
+            <span className="text-[#D64045] font-bold uppercase tracking-widest text-sm">Shop All Scents</span>
             <h2 className="text-4xl font-script text-gray-800 mt-2">Our Full Collection</h2>
           </div>
 
@@ -328,14 +328,14 @@ export default function Valentines() {
                 {product.isBundle && (
                   <span className="inline-block bg-[#D64045] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
                 )}
-                <h3 className="text-lg font-sans font-bold text-gray-800 mb-1">{product.name}</h3>
-                <p className="text-gray-500 text-sm mb-3 font-sans">{product.description}</p>
-                <p className="text-[#D64045] font-bold text-xl mb-4 font-sans">{product.price}</p>
+                <h3 className="text-lg font-bold text-gray-800 mb-1">{product.name}</h3>
+                <p className="text-gray-500 text-sm mb-3">{product.description}</p>
+                <p className="text-[#D64045] font-bold text-xl mb-4">{product.price}</p>
                 <a
                   href="https://macandmeadowco.square.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-gray-800 text-white py-2 rounded-full text-center text-sm font-sans font-medium hover:bg-gray-900 transition"
+                  className="block w-full bg-gray-800 text-white py-2 rounded-full text-center text-sm font-medium hover:bg-gray-900 transition"
                 >
                   Shop Now
                 </a>
@@ -359,14 +359,14 @@ export default function Valentines() {
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
             <div className="relative z-10">
-              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 font-sans uppercase tracking-wider">Coming Soon</span>
+              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Coming Soon</span>
               <div className="flex justify-center mb-4">
                 <TreePine className="w-12 h-12 text-[#BC7C5F]" />
               </div>
               <h3 className="text-3xl md:text-4xl font-script text-white mb-2">The Lumberjack</h3>
-              <p className="text-white/80 text-lg mb-2 font-sans">Men's Whipped Tallow</p>
-              <p className="text-[#BC7C5F] font-sans font-medium text-lg">Cedar & Orange Scented</p>
-              <p className="text-white/60 mt-4 max-w-md mx-auto font-sans">
+              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
+              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
+              <p className="text-white/60 mt-4 max-w-md mx-auto">
                 A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
               </p>
             </div>
@@ -379,7 +379,7 @@ export default function Valentines() {
         <div className="absolute inset-0 heart-bg pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-[#D64045] font-sans font-bold uppercase tracking-widest text-sm">Nature's Love Language</span>
+            <span className="text-[#D64045] font-bold uppercase tracking-widest text-sm">Nature's Love Language</span>
             <h2 className="text-4xl font-script text-gray-800 mt-2">Why Your Skin Loves Tallow</h2>
           </div>
 
@@ -394,8 +394,8 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="w-8 h-8 text-[#D64045]" />
               </div>
-              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">Vitamin Rich</h3>
-              <p className="text-gray-600 text-sm font-sans">Packed with Vitamins A, D, E, and K to naturally boost collagen and fight signs of aging.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Vitamin Rich</h3>
+              <p className="text-gray-600 text-sm">Packed with Vitamins A, D, E, and K to naturally boost collagen and fight signs of aging.</p>
             </motion.div>
 
             <motion.div
@@ -408,8 +408,8 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-[#D64045]" fill="currentColor" />
               </div>
-              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">100% Grass-Fed</h3>
-              <p className="text-gray-600 text-sm font-sans">Sourced responsibly from grass-fed cows, ensuring the highest nutrient density for your skin.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">100% Grass-Fed</h3>
+              <p className="text-gray-600 text-sm">Sourced responsibly from grass-fed cows, ensuring the highest nutrient density for your skin.</p>
             </motion.div>
 
             <motion.div
@@ -422,8 +422,8 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Dna className="w-8 h-8 text-[#D64045]" />
               </div>
-              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">Bio-Compatible</h3>
-              <p className="text-gray-600 text-sm font-sans">Tallow biology closely mimics human skin oils, meaning it absorbs deeper without clogging pores.</p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Bio-Compatible</h3>
+              <p className="text-gray-600 text-sm">Tallow biology closely mimics human skin oils, meaning it absorbs deeper without clogging pores.</p>
             </motion.div>
           </div>
         </div>
