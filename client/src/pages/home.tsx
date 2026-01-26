@@ -3,12 +3,20 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote, Instagram } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote, Instagram, TreePine } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/mac_meadow_hero_2.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
+
+// All products data
+const allProducts = [
+  { name: "Bare Bones", description: "Unscented", price: "$18.50", isBundle: false },
+  { name: "Bare Bones for Two", description: "Unscented Bundle", price: "$32.00", isBundle: true },
+  { name: "Vanilla & Orange", description: "Sweet citrus blend", price: "$18.50", isBundle: false },
+  { name: "Vanilla & Orange for Two", description: "Sweet citrus bundle", price: "$32.00", isBundle: true },
+];
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -238,6 +246,87 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Products Grid Section */}
+      <section className="py-20 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <span className="text-[#BC7C5F] font-serif italic text-xl">Our Collection</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-2">Shop Whipped Tallow</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {allProducts.map((product, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-white p-6 rounded-[1.5rem] shadow-sm hover:shadow-lg transition-all duration-300 border border-[#644716]/10 group hover:-translate-y-1"
+              >
+                {product.isBundle && (
+                  <span className="inline-block bg-[#8B6F47] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
+                )}
+                <h3 className="text-lg font-bold text-[#644716] mb-1">Whipped Tallow</h3>
+                <p className="text-[#BC7C5F] font-serif italic mb-1">{product.name}</p>
+                <p className="text-[#644716]/60 text-sm mb-3">{product.description}</p>
+                <p className="text-[#8B6F47] font-bold text-xl mb-4">{product.price}</p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#8B6F47] text-white py-2.5 rounded-full text-center text-sm font-medium hover:bg-[#8B6F47]/90 transition"
+                >
+                  Shop Now
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full h-12 px-8"
+              asChild
+            >
+              <Link href="/products">
+                View All Products <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Coming Soon - The Lumberjack */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
+
+            <div className="relative z-10">
+              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
+              <div className="flex justify-center mb-4">
+                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+              </div>
+              <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
+              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
+              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
+              <p className="text-white/60 mt-4 max-w-md mx-auto">
+                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
