@@ -22,6 +22,7 @@ const BlogPost = lazy(() => import("@/pages/blog-post"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const LocationSyracuse = lazy(() => import("@/pages/location-syracuse"));
 const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"));
+const Valentines = lazy(() => import("@/pages/valentines"));
 
 // Simple loading fallback
 function PageLoader() {
@@ -49,6 +50,7 @@ function Router() {
           <Route path="/locations/salt-lake-city-utah" component={LocationSaltLakeCity} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/terms-and-conditions" component={TermsAndConditions} />
+          <Route path="/valentines" component={Valentines} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>

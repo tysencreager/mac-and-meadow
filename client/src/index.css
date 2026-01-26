@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Google Fonts for Valentine's page */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -32,6 +35,7 @@
 
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Playfair Display', serif;
+  --font-script: 'Dancing Script', cursive;
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -84,6 +88,9 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+  .font-script {
+    font-family: 'Dancing Script', cursive;
   }
 }
 
@@ -152,4 +159,52 @@
 
 .eapps-instagram-feed-posts-grid {
   width: 100% !important;
+}
+
+/* Valentine's Day Theme Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.floating-heart {
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Valentine's heart background pattern */
+.heart-bg {
+  background-image: radial-gradient(#FFC4C4 15%, transparent 16%), radial-gradient(#FFC4C4 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.1;
+}
+
+/* Valentine's button shadow effect */
+.btn-love {
+  box-shadow: 0 4px 14px 0 rgba(214, 64, 69, 0.39);
+}
+
+.btn-love:hover {
+  box-shadow: 0 6px 20px 0 rgba(214, 64, 69, 0.5);
 }
