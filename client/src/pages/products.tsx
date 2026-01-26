@@ -163,61 +163,6 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Lifestyle Photo Section */}
-      <section className="py-20 bg-[#F7F6F2]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Content */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6 order-2 lg:order-1"
-              >
-                <span className="text-[#BC7C5F] font-serif italic text-xl">Real People, Real Results</span>
-                <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">
-                  Trusted by Skincare Lovers
-                </h2>
-                <p className="text-[#644716]/70 text-lg leading-relaxed">
-                  Join thousands of happy customers who have made the switch to natural, tallow-based skincare. Experience the difference that clean, wholesome ingredients can make for your skin.
-                </p>
-                <Button
-                  size="lg"
-                  className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full h-12 px-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                  asChild
-                >
-                  <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
-                    Start Your Skincare Journey <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                </Button>
-              </motion.div>
-
-              {/* Image */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative order-1 lg:order-2"
-              >
-                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
-                <img
-                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
-                  alt="Customer using Mac & Meadow tallow cream"
-                  width={500}
-                  height={600}
-                  loading="lazy"
-                  decoding="async"
-                  className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover object-top relative z-10"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Product Showcase - Modern Layout */}
       <section className="py-32 bg-[#F7F6F2] relative">
         <div className="absolute inset-0 bg-noise opacity-20" />
@@ -319,32 +264,56 @@ export default function Products() {
       {/* How to Use Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto"
-          >
-            <div className="bg-gradient-to-br from-[#F7F6F2] to-white p-10 md:p-14 rounded-[2rem] shadow-lg border border-[#644716]/10">
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 bg-[#8B6F47] rounded-2xl flex items-center justify-center text-[#F7F6F2] flex-shrink-0">
-                  <Sparkles className="w-7 h-7" />
-                </div>
-                <div className="space-y-4">
-                  <h3 className="font-serif text-3xl text-[#644716]">How to Use</h3>
-                  <div className="space-y-4 text-[#644716]/80 text-lg leading-relaxed">
-                    <p>
-                      A little goes a long way, but listen to your skin; use more or less as needed.
-                    </p>
-                    <p>
-                      Safe and effective for morning use as well, to lock in moisture throughout the day.
-                    </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
+                <img
+                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
+                  alt="Customer using Mac & Meadow tallow cream"
+                  width={400}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[2rem] shadow-2xl w-full h-[450px] object-cover object-top relative z-10"
+                />
+              </motion.div>
+
+              {/* Content */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="bg-gradient-to-br from-[#F7F6F2] to-white p-10 md:p-12 rounded-[2rem] shadow-lg border border-[#644716]/10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-14 h-14 bg-[#8B6F47] rounded-2xl flex items-center justify-center text-[#F7F6F2] flex-shrink-0">
+                      <Sparkles className="w-7 h-7" />
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="font-serif text-3xl text-[#644716]">How to Use</h3>
+                      <div className="space-y-4 text-[#644716]/80 text-lg leading-relaxed">
+                        <p>
+                          A little goes a long way, but listen to your skin; use more or less as needed.
+                        </p>
+                        <p>
+                          Safe and effective for morning use as well, to lock in moisture throughout the day.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
