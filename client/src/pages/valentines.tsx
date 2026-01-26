@@ -349,7 +349,7 @@ export default function Valentines() {
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div className="relative z-10 flex flex-col md:flex-row-reverse items-center gap-8">
               {/* Image */}
               <div className="w-full md:w-2/5 flex-shrink-0">
                 <img
@@ -363,15 +363,15 @@ export default function Valentines() {
                 />
               </div>
               {/* Content */}
-              <div className="text-center md:text-left">
+              <div className="text-center md:text-right">
                 <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Coming Soon</span>
-                <div className="flex justify-center md:justify-start mb-4">
+                <div className="flex justify-center md:justify-end mb-4">
                   <TreePine className="w-12 h-12 text-[#BC7C5F]" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-script text-white mb-2">The Lumberjack</h3>
                 <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
                 <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-                <p className="text-white/60 mt-4 max-w-md">
+                <p className="text-white/60 mt-4 max-w-md md:ml-auto">
                   A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
                 </p>
               </div>
