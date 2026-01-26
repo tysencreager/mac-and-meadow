@@ -1,8 +1,9 @@
 import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
-import { Heart, Gift, Droplet, Leaf, Dna, TreePine } from "lucide-react";
+import { Heart, Gift, Droplet, Leaf, Dna, TreePine, BookOpen } from "lucide-react";
 import { Link } from "wouter";
+import valentinesBlogHeader from "@assets/valentines_blog_header.png";
 
 // Valentine's product images
 const PRODUCT_IMAGES = {
@@ -454,6 +455,76 @@ export default function Valentines() {
               <p className="text-gray-600 text-sm">Tallow biology closely mimics human skin oils, meaning it absorbs deeper without clogging pores.</p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Blog Highlight Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#D64045] font-bold uppercase tracking-widest text-sm">From Our Blog</span>
+            <h2 className="text-4xl font-script text-gray-800 mt-2">Valentine's Gift Guide</h2>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-gradient-to-br from-[#FFF9F5] to-white rounded-3xl overflow-hidden shadow-xl border border-[#FFC4C4]/30"
+          >
+            <div className="flex flex-col lg:flex-row">
+              {/* Blog Image */}
+              <div className="w-full lg:w-1/2 relative group">
+                <img
+                  src={valentinesBlogHeader}
+                  alt="Valentine's Day Gift Ideas"
+                  className="w-full h-[300px] lg:h-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent lg:bg-gradient-to-r" />
+              </div>
+
+              {/* Blog Content */}
+              <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-2 mb-4">
+                  <BookOpen className="w-5 h-5 text-[#D64045]" />
+                  <span className="text-[#D64045] font-medium text-sm uppercase tracking-wider">Blog Post</span>
+                </div>
+
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 leading-tight">
+                  Valentine's Day & Galentine's Day Gift Ideas: Thoughtful Natural Skincare Gifts
+                </h3>
+
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Discover the best Valentine's Day and Galentine's Day gift ideas for 2026. From luxurious tallow skincare to self-care essentials, find meaningful gifts that show you care.
+                </p>
+
+                <ul className="space-y-2 mb-8 text-gray-600">
+                  <li className="flex items-center">
+                    <Heart className="w-4 h-4 text-[#E88D8D] mr-2" fill="currentColor" />
+                    Why natural skincare makes the perfect gift
+                  </li>
+                  <li className="flex items-center">
+                    <Heart className="w-4 h-4 text-[#E88D8D] mr-2" fill="currentColor" />
+                    Self-care gift basket ideas
+                  </li>
+                  <li className="flex items-center">
+                    <Heart className="w-4 h-4 text-[#E88D8D] mr-2" fill="currentColor" />
+                    Galentine's Day party inspiration
+                  </li>
+                </ul>
+
+                <Link href="/blog/valentines-day-galentines-day-gift-ideas-natural-skincare">
+                  <a className="inline-flex items-center gap-2 bg-[#D64045] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#D64045]/90 transition shadow-lg hover:-translate-y-1 duration-300 w-fit">
+                    Read the Full Guide
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
