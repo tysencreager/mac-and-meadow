@@ -371,17 +371,17 @@ export default function Valentines() {
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-10">
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
               {/* Content */}
               <div className="flex-1 text-center md:text-left order-2 md:order-1">
-                <span className="inline-block bg-[#BC7C5F] text-white text-sm sm:text-base px-4 sm:px-5 py-2 rounded-full mb-4 sm:mb-5 uppercase tracking-wider">Coming Soon</span>
-                <div className="flex justify-center md:justify-start mb-4 sm:mb-5">
-                  <TreePine className="w-12 h-12 sm:w-16 sm:h-16 text-[#BC7C5F]" />
+                <span className="inline-block bg-[#BC7C5F] text-white text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 md:mb-5 uppercase tracking-wider">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
+                  <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
                 </div>
-                <h3 className="text-4xl sm:text-5xl md:text-6xl font-script text-white mb-3 sm:mb-4">The Lumberjack</h3>
-                <p className="text-white/80 text-xl sm:text-2xl mb-2 sm:mb-3">Men's Whipped Tallow</p>
-                <p className="text-[#BC7C5F] font-medium text-xl sm:text-2xl">Cedar & Orange Scented</p>
-                <p className="text-white/60 mt-4 sm:mt-5 text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-script text-white mb-2 sm:mb-3 md:mb-4">The Lumberjack</h3>
+                <p className="text-white/80 text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg sm:text-xl md:text-2xl">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
                   A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
                 </p>
               </div>
@@ -391,10 +391,10 @@ export default function Valentines() {
                   src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
                   alt="Man using The Lumberjack tallow cream"
                   width={300}
-                  height={400}
+                  height={500}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-2xl shadow-xl w-full h-[280px] sm:h-[320px] md:h-[400px] object-cover object-top"
+                  className="rounded-2xl shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover object-top"
                 />
               </div>
             </div>
