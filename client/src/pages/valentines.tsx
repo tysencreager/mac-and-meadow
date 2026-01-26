@@ -89,46 +89,68 @@ export default function Valentines() {
 
       {/* Hero Section */}
       <header className="relative bg-gradient-to-b from-[#FFC4C4]/20 to-[#FFF9F5] pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={stagger}
-          >
-            <motion.span
-              variants={fadeIn}
-              className="inline-block py-2 px-4 rounded-full bg-[#FFC4C4]/30 text-[#D64045] text-sm font-semibold mb-6 tracking-wider uppercase"
-            >
-              Limited Edition
-            </motion.span>
-
-            <motion.h1
-              variants={fadeIn}
-              className="text-5xl md:text-7xl font-script font-bold text-[#D64045] mb-6 leading-tight"
-            >
-              Love Your Skin <br />
-              <span className="text-gray-700 text-4xl md:text-6xl">This Valentine's Day</span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeIn}
-              className="mt-4 max-w-2xl mx-auto text-xl text-gray-600 font-light"
-            >
-              Give the gift of pure, grass-fed nourishment. "Tallow for the skin and soul" — wrapped in love.
-            </motion.p>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
             <motion.div
-              variants={fadeIn}
-              className="mt-10 flex justify-center gap-4"
+              initial="initial"
+              animate="animate"
+              variants={stagger}
+              className="text-center lg:text-left"
             >
-              <a
-                href="#valentine-collection"
-                className="btn-love bg-[#D64045] text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+              <motion.span
+                variants={fadeIn}
+                className="inline-block py-2 px-4 rounded-full bg-[#FFC4C4]/30 text-[#D64045] text-sm font-semibold mb-6 tracking-wider uppercase"
               >
-                <Gift className="w-5 h-5" /> Shop The Gift Guide
-              </a>
+                Limited Edition
+              </motion.span>
+
+              <motion.h1
+                variants={fadeIn}
+                className="text-5xl md:text-7xl font-script font-bold text-[#D64045] mb-6 leading-tight"
+              >
+                Love Your Skin <br />
+                <span className="text-gray-700 text-4xl md:text-6xl">This Valentine's Day</span>
+              </motion.h1>
+
+              <motion.p
+                variants={fadeIn}
+                className="mt-4 max-w-2xl text-xl text-gray-600 font-light"
+              >
+                Give the gift of pure, grass-fed nourishment. "Tallow for the skin and soul" — wrapped in love.
+              </motion.p>
+
+              <motion.div
+                variants={fadeIn}
+                className="mt-10 flex justify-center lg:justify-start gap-4"
+              >
+                <a
+                  href="#valentine-collection"
+                  className="btn-love bg-[#D64045] text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <Gift className="w-5 h-5" /> Shop The Gift Guide
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            {/* Heart Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative hidden lg:flex justify-center"
+            >
+              <img
+                src="https://i.postimg.cc/SN3b2M2t/M-M-Valentines-heart.png"
+                alt="Valentine's Day Skincare Heart"
+                width={450}
+                height={450}
+                loading="eager"
+                decoding="async"
+                className="w-[400px] h-[400px] object-contain drop-shadow-2xl"
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* Decorative blobs */}
