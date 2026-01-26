@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Google Fonts for Valentine's page */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
