@@ -301,6 +301,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Lifestyle Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
+                <img
+                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
+                  alt="Customer using Mac & Meadow tallow cream"
+                  width={500}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover object-top relative z-10"
+                />
+              </motion.div>
+
+              {/* Content */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-6"
+              >
+                <span className="text-[#BC7C5F] font-serif italic text-xl">Real People, Real Results</span>
+                <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">
+                  Loved by Skincare Enthusiasts
+                </h2>
+                <p className="text-[#644716]/70 text-lg leading-relaxed">
+                  Our customers are discovering the transformative power of natural tallow-based skincare. From dry, irritated skin to soft, radiant glow—Mac & Meadow delivers visible results you can feel.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Button
+                    size="lg"
+                    className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full h-12 px-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
+                      Try It Yourself
+                    </a>
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Coming Soon - The Lumberjack */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -309,22 +366,37 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden"
+            className="max-w-5xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10">
-              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
-              <div className="flex justify-center mb-4">
-                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0">
+                <img
+                  src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
+                  alt="Man using The Lumberjack tallow cream"
+                  width={300}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[350px] object-cover object-top"
+                />
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
-              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
-              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-              <p className="text-white/60 mt-4 max-w-md mx-auto">
-                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-              </p>
+              {/* Content */}
+              <div className="text-center md:text-left">
+                <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-4">
+                  <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+                </div>
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
+                <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-4 max-w-md">
+                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

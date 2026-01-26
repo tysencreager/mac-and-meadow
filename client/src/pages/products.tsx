@@ -163,6 +163,61 @@ export default function Products() {
         </div>
       </section>
 
+      {/* Lifestyle Photo Section */}
+      <section className="py-20 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-6 order-2 lg:order-1"
+              >
+                <span className="text-[#BC7C5F] font-serif italic text-xl">Real People, Real Results</span>
+                <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">
+                  Trusted by Skincare Lovers
+                </h2>
+                <p className="text-[#644716]/70 text-lg leading-relaxed">
+                  Join thousands of happy customers who have made the switch to natural, tallow-based skincare. Experience the difference that clean, wholesome ingredients can make for your skin.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full h-12 px-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  asChild
+                >
+                  <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
+                    Start Your Skincare Journey <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+              </motion.div>
+
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative order-1 lg:order-2"
+              >
+                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
+                <img
+                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
+                  alt="Customer using Mac & Meadow tallow cream"
+                  width={500}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover object-top relative z-10"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product Showcase - Modern Layout */}
       <section className="py-32 bg-[#F7F6F2] relative">
         <div className="absolute inset-0 bg-noise opacity-20" />
@@ -340,22 +395,37 @@ export default function Products() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden"
+            className="max-w-5xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10">
-              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
-              <div className="flex justify-center mb-4">
-                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0">
+                <img
+                  src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
+                  alt="Man using The Lumberjack tallow cream"
+                  width={300}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[350px] object-cover object-top"
+                />
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
-              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
-              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-              <p className="text-white/60 mt-4 max-w-md mx-auto">
-                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-              </p>
+              {/* Content */}
+              <div className="text-center md:text-left">
+                <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-4">
+                  <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+                </div>
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
+                <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-4 max-w-md">
+                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
