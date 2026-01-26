@@ -51,15 +51,6 @@ export default function Valentines() {
         <Heart className="floating-heart text-[#FFC4C4] w-6 h-6 absolute" style={{ top: '80%', right: '15%', animationDelay: '2.5s' }} fill="currentColor" />
       </div>
 
-      {/* Valentine's Announcement Bar */}
-      <div className="bg-[#E88D8D] text-white text-center py-3 text-sm font-medium tracking-wide relative z-50">
-        <span className="inline-flex items-center gap-2">
-          <Heart className="w-4 h-4" fill="currentColor" />
-          Order by Feb 7th for Valentine's Day Delivery!
-          <Heart className="w-4 h-4" fill="currentColor" />
-        </span>
-      </div>
-
       {/* Valentine's Navigation */}
       <nav className="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#FFC4C4]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,17 +434,17 @@ export default function Valentines() {
             This Valentine's Day, treat yourself or someone you love to the nourishing power of grass-fed tallow. Pure ingredients, made with love.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="https://macandmeadowco.square.site/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[#D64045] px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/95 transition shadow-xl hover:-translate-y-1 duration-300"
+              className="bg-white text-[#D64045] px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/95 transition shadow-xl hover:-translate-y-1 duration-300 inline-flex items-center justify-center"
             >
               Shop Valentine's Collection
             </a>
             <Link href="/products">
-              <a className="border-2 border-white/40 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition">
+              <a className="border-2 border-white/40 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition inline-flex items-center justify-center">
                 View All Products
               </a>
             </Link>

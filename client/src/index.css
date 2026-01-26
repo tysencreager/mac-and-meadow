@@ -89,9 +89,17 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
-  .font-script {
-    font-family: 'Dancing Script', cursive;
-  }
+}
+
+/* Script font - outside layer for higher specificity */
+.font-script,
+h1.font-script,
+h2.font-script,
+h3.font-script,
+h4.font-script,
+h5.font-script,
+h6.font-script {
+  font-family: 'Dancing Script', cursive !important;
 }
 
 @layer utilities {
