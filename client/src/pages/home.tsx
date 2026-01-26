@@ -110,51 +110,73 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 mx-auto px-4 md:px-6">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={stagger}
-            className="max-w-2xl space-y-8"
-          >
-            <motion.div variants={fadeIn}>
-              <span className="inline-block px-4 py-1.5 bg-white/50 backdrop-blur-md text-[#644716] text-xs tracking-[0.2em] uppercase font-bold rounded-full border border-[#644716]/10 shadow-sm">
-                Moisturizing Beef Tallow Cream
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={stagger}
+              className="space-y-8"
+            >
+              <motion.div variants={fadeIn}>
+                <span className="inline-block px-4 py-1.5 bg-white/50 backdrop-blur-md text-[#644716] text-xs tracking-[0.2em] uppercase font-bold rounded-full border border-[#644716]/10 shadow-sm">
+                  Moisturizing Beef Tallow Cream
+                </span>
+              </motion.div>
+
+              <motion.h1 variants={fadeIn} className="font-serif text-6xl md:text-8xl text-[#644716] leading-[1.05]">
+                Holistic, <br />
+                <span className="text-gradient-gold">Nourishing,</span> <br />
+                <span className="italic font-light text-[#BC7C5F]">Healing.</span>
+              </motion.h1>
+
+              <motion.p variants={fadeIn} className="text-lg md:text-xl text-[#644716] font-medium leading-relaxed drop-shadow-sm max-w-lg">
+                Experience the deep moisturizing power of Wagyu Tallow Cream.
+                Packed with vitamins A, D, E & K for your skin's natural glow.
+              </motion.p>
+
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-5 pt-6">
+                <Button
+                  size="lg"
+                  className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full text-base h-12 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  asChild
+                >
+                  <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
+                    Shop Collection
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full text-base h-12 px-8 bg-white/20 backdrop-blur-sm"
+                  asChild
+                >
+                  <Link href="/products">
+                    View Our Products
+                  </Link>
+                </Button>
+              </motion.div>
             </motion.div>
 
-            <motion.h1 variants={fadeIn} className="font-serif text-6xl md:text-8xl text-[#644716] leading-[1.05]">
-              Holistic, <br />
-              <span className="text-gradient-gold">Nourishing,</span> <br />
-              <span className="italic font-light text-[#BC7C5F]">Healing.</span>
-            </motion.h1>
-
-            <motion.p variants={fadeIn} className="text-lg md:text-xl text-[#644716] font-medium leading-relaxed drop-shadow-sm max-w-lg">
-              Experience the deep moisturizing power of Wagyu Tallow Cream.
-              Packed with vitamins A, D, E & K for your skin's natural glow.
-            </motion.p>
-
-            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-5 pt-6">
-              <Button
-                size="lg"
-                className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full text-base h-12 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-                asChild
-              >
-                <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
-                  Shop Collection
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full text-base h-12 px-8 bg-white/20 backdrop-blur-sm"
-                asChild
-              >
-                <Link href="/products">
-                  View Our Products
-                </Link>
-              </Button>
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative hidden lg:block"
+            >
+              <div className="absolute inset-0 bg-[#BC7C5F]/20 rounded-full blur-[100px]" />
+              <img
+                src={heroImage}
+                alt="Mac & Meadow Whipped Tallow Cream"
+                width={500}
+                height={500}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover relative z-10"
+              />
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -173,14 +195,13 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[100px]" />
                 <img
-                  src={heroImage}
-                  alt="Mac & Meadow Whipped Tallow Cream"
+                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
+                  alt="Customer using Mac & Meadow tallow cream"
                   width={600}
                   height={600}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
-                  fetchPriority="high"
-                  className="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover relative z-10"
+                  className="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover object-top relative z-10"
                 />
               </motion.div>
 
@@ -309,22 +330,37 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10">
-              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
-              <div className="flex justify-center mb-4">
-                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                <span className="inline-block bg-[#BC7C5F] text-white text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 md:mb-5 uppercase tracking-wider font-bold">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
+                  <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
+                </div>
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 sm:mb-3 md:mb-4">The Lumberjack</h3>
+                <p className="text-white/80 text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg sm:text-xl md:text-2xl">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
+                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+                </p>
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
-              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
-              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-              <p className="text-white/60 mt-4 max-w-md mx-auto">
-                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-              </p>
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
+                <img
+                  src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
+                  alt="Man using The Lumberjack tallow cream"
+                  width={300}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover object-top"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

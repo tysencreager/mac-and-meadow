@@ -264,32 +264,56 @@ export default function Products() {
       {/* How to Use Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto"
-          >
-            <div className="bg-gradient-to-br from-[#F7F6F2] to-white p-10 md:p-14 rounded-[2rem] shadow-lg border border-[#644716]/10">
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 bg-[#8B6F47] rounded-2xl flex items-center justify-center text-[#F7F6F2] flex-shrink-0">
-                  <Sparkles className="w-7 h-7" />
-                </div>
-                <div className="space-y-4">
-                  <h3 className="font-serif text-3xl text-[#644716]">How to Use</h3>
-                  <div className="space-y-4 text-[#644716]/80 text-lg leading-relaxed">
-                    <p>
-                      A little goes a long way, but listen to your skin; use more or less as needed.
-                    </p>
-                    <p>
-                      Safe and effective for morning use as well, to lock in moisture throughout the day.
-                    </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
+                <img
+                  src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
+                  alt="Customer using Mac & Meadow tallow cream"
+                  width={400}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[2rem] shadow-2xl w-full h-[450px] object-cover object-top relative z-10"
+                />
+              </motion.div>
+
+              {/* Content */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="bg-gradient-to-br from-[#F7F6F2] to-white p-10 md:p-12 rounded-[2rem] shadow-lg border border-[#644716]/10">
+                  <div className="flex items-start gap-6">
+                    <div className="w-14 h-14 bg-[#8B6F47] rounded-2xl flex items-center justify-center text-[#F7F6F2] flex-shrink-0">
+                      <Sparkles className="w-7 h-7" />
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="font-serif text-3xl text-[#644716]">How to Use</h3>
+                      <div className="space-y-4 text-[#644716]/80 text-lg leading-relaxed">
+                        <p>
+                          A little goes a long way, but listen to your skin; use more or less as needed.
+                        </p>
+                        <p>
+                          Safe and effective for morning use as well, to lock in moisture throughout the day.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -340,22 +364,37 @@ export default function Products() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10">
-              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-wider font-bold">Coming Soon</span>
-              <div className="flex justify-center mb-4">
-                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                <span className="inline-block bg-[#BC7C5F] text-white text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 md:mb-5 uppercase tracking-wider font-bold">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
+                  <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
+                </div>
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 sm:mb-3 md:mb-4">The Lumberjack</h3>
+                <p className="text-white/80 text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg sm:text-xl md:text-2xl">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
+                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+                </p>
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">The Lumberjack</h3>
-              <p className="text-white/80 text-lg mb-2">Men's Whipped Tallow</p>
-              <p className="text-[#BC7C5F] font-medium text-lg">Cedar & Orange Scented</p>
-              <p className="text-white/60 mt-4 max-w-md mx-auto">
-                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-              </p>
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
+                <img
+                  src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
+                  alt="Man using The Lumberjack tallow cream"
+                  width={300}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover object-top"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
