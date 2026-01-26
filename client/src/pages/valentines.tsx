@@ -1,9 +1,7 @@
-import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
-import { Heart, Gift, Droplet, Leaf, Dna, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useState } from "react";
+import { Heart, Gift, Droplet, Leaf, Dna, TreePine } from "lucide-react";
 import { Link } from "wouter";
 
 // Valentine's product images
@@ -13,23 +11,12 @@ const PRODUCT_IMAGES = {
   lifestyle: "https://i.postimg.cc/CMvkcV3p/FC66DFC2-CFCE-4A40-B28D-A729D2C7E2B6.jpg"
 };
 
-const testimonials = [
-  {
-    quote: "I bought the Tallow for Two bundle for my boyfriend and me. We are both obsessed! It's the only thing that fixed our winter dry skin. Best Valentine's gift ever!",
-    name: "Sarah M."
-  },
-  {
-    quote: "This is the best tallow, a little bit goes a long way. My skin has been so soft and healthy! This is the best for dry skin and all ages.",
-    name: "Veronica J."
-  },
-  {
-    quote: "The tallow cream smells divine and goes on beautifully. I really appreciate the clean and simple ingredients. I have loved using it!",
-    name: "Kirsten H."
-  },
-  {
-    quote: "GLOWING! I've been using this tallow on my face and skin, and wow—what a game changer. It's rich, clean, and melts in like a dream.",
-    name: "Heather B."
-  }
+// Products data
+const products = [
+  { name: "Whipped Tallow - Bare Bones", description: "Unscented", price: "$18.50", isBundle: false },
+  { name: "Whipped Tallow - Bare Bones for Two", description: "Unscented Bundle", price: "$32.00", isBundle: true },
+  { name: "Whipped Tallow - Vanilla & Orange", description: "Sweet citrus blend", price: "$18.50", isBundle: false },
+  { name: "Whipped Tallow - Vanilla & Orange for Two", description: "Sweet citrus bundle", price: "$32.00", isBundle: true },
 ];
 
 const fadeIn = {
@@ -47,18 +34,8 @@ const stagger = {
 };
 
 export default function Valentines() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
-    <div className="min-h-screen bg-[#FFF9F5] font-sans selection:bg-[#E88D8D] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#FFF9F5] font-script selection:bg-[#E88D8D] selection:text-white overflow-x-hidden">
       <SEO
         title="Valentine's Day Collection | Mac & Meadow Co."
         description="Give the gift of glowing skin this Valentine's Day with Mac & Meadow Co. 100% Grass-Fed Tallow Balm. Perfect gifts for your loved ones."
@@ -329,12 +306,80 @@ export default function Valentines() {
         </div>
       </section>
 
+      {/* All Products Grid */}
+      <section className="py-20 bg-[#FFF9F5] relative overflow-hidden">
+        <div className="absolute inset-0 heart-bg pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-[#D64045] font-sans font-bold uppercase tracking-widest text-sm">Shop All Scents</span>
+            <h2 className="text-4xl font-script text-gray-800 mt-2">Our Full Collection</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.map((product, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-[#FFC4C4]/20 group hover:-translate-y-1"
+              >
+                {product.isBundle && (
+                  <span className="inline-block bg-[#D64045] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
+                )}
+                <h3 className="text-lg font-sans font-bold text-gray-800 mb-1">{product.name}</h3>
+                <p className="text-gray-500 text-sm mb-3 font-sans">{product.description}</p>
+                <p className="text-[#D64045] font-bold text-xl mb-4 font-sans">{product.price}</p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-gray-800 text-white py-2 rounded-full text-center text-sm font-sans font-medium hover:bg-gray-900 transition"
+                >
+                  Shop Now
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Coming Soon - The Lumberjack */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
+
+            <div className="relative z-10">
+              <span className="inline-block bg-[#BC7C5F] text-white text-xs px-3 py-1 rounded-full mb-4 font-sans uppercase tracking-wider">Coming Soon</span>
+              <div className="flex justify-center mb-4">
+                <TreePine className="w-12 h-12 text-[#BC7C5F]" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-script text-white mb-2">The Lumberjack</h3>
+              <p className="text-white/80 text-lg mb-2 font-sans">Men's Whipped Tallow</p>
+              <p className="text-[#BC7C5F] font-sans font-medium text-lg">Cedar & Orange Scented</p>
+              <p className="text-white/60 mt-4 max-w-md mx-auto font-sans">
+                A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Tallow Section */}
       <section className="py-20 bg-[#FFF9F5] relative overflow-hidden">
         <div className="absolute inset-0 heart-bg pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-[#D64045] font-bold uppercase tracking-widest text-sm">Nature's Love Language</span>
+            <span className="text-[#D64045] font-sans font-bold uppercase tracking-widest text-sm">Nature's Love Language</span>
             <h2 className="text-4xl font-script text-gray-800 mt-2">Why Your Skin Loves Tallow</h2>
           </div>
 
@@ -349,8 +394,8 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="w-8 h-8 text-[#D64045]" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Vitamin Rich</h3>
-              <p className="text-gray-600 text-sm">Packed with Vitamins A, D, E, and K to naturally boost collagen and fight signs of aging.</p>
+              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">Vitamin Rich</h3>
+              <p className="text-gray-600 text-sm font-sans">Packed with Vitamins A, D, E, and K to naturally boost collagen and fight signs of aging.</p>
             </motion.div>
 
             <motion.div
@@ -363,8 +408,8 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-[#D64045]" fill="currentColor" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">100% Grass-Fed</h3>
-              <p className="text-gray-600 text-sm">Sourced responsibly from grass-fed cows, ensuring the highest nutrient density for your skin.</p>
+              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">100% Grass-Fed</h3>
+              <p className="text-gray-600 text-sm font-sans">Sourced responsibly from grass-fed cows, ensuring the highest nutrient density for your skin.</p>
             </motion.div>
 
             <motion.div
@@ -377,63 +422,9 @@ export default function Valentines() {
               <div className="w-16 h-16 bg-[#FFC4C4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Dna className="w-8 h-8 text-[#D64045]" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Bio-Compatible</h3>
-              <p className="text-gray-600 text-sm">Tallow biology closely mimics human skin oils, meaning it absorbs deeper without clogging pores.</p>
+              <h3 className="text-xl font-sans font-bold mb-3 text-gray-800">Bio-Compatible</h3>
+              <p className="text-gray-600 text-sm font-sans">Tallow biology closely mimics human skin oils, meaning it absorbs deeper without clogging pores.</p>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-[#E88D8D] text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Quote className="w-12 h-12 text-[#FFC4C4] mx-auto mb-6 opacity-50" />
-
-          <motion.div
-            key={currentTestimonial}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-2xl md:text-3xl font-script leading-relaxed mb-8">
-              "{testimonials[currentTestimonial].quote}"
-            </h3>
-            <p className="font-bold text-lg">— {testimonials[currentTestimonial].name}</p>
-          </motion.div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
-              onClick={prevTestimonial}
-              aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-300"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-
-            <div className="flex gap-1.5">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial
-                      ? "bg-white w-6"
-                      : "bg-white/40 hover:bg-white/60 w-2"
-                  }`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={nextTestimonial}
-              aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </section>
