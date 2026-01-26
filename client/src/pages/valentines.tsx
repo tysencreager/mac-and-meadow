@@ -143,11 +143,11 @@ export default function Valentines() {
               <img
                 src="https://i.postimg.cc/SN3b2M2t/M-M-Valentines-heart.png"
                 alt="Valentine's Day Skincare Heart"
-                width={450}
-                height={450}
+                width={550}
+                height={550}
                 loading="eager"
                 decoding="async"
-                className="w-[400px] h-[400px] object-contain drop-shadow-2xl"
+                className="w-[500px] h-[500px] object-contain drop-shadow-2xl"
               />
             </motion.div>
           </div>
@@ -360,20 +360,33 @@ export default function Valentines() {
 
       {/* Coming Soon - The Lumberjack */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-3xl p-6 md:p-10 relative overflow-hidden"
+            className="bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
 
-            <div className="relative z-10 flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-10">
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                <span className="inline-block bg-[#BC7C5F] text-white text-sm sm:text-base px-4 sm:px-5 py-2 rounded-full mb-4 sm:mb-5 uppercase tracking-wider">Coming Soon</span>
+                <div className="flex justify-center md:justify-start mb-4 sm:mb-5">
+                  <TreePine className="w-12 h-12 sm:w-16 sm:h-16 text-[#BC7C5F]" />
+                </div>
+                <h3 className="text-4xl sm:text-5xl md:text-6xl font-script text-white mb-3 sm:mb-4">The Lumberjack</h3>
+                <p className="text-white/80 text-xl sm:text-2xl mb-2 sm:mb-3">Men's Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-xl sm:text-2xl">Cedar & Orange Scented</p>
+                <p className="text-white/60 mt-4 sm:mt-5 text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
+                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
+                </p>
+              </div>
               {/* Image */}
-              <div className="w-full md:w-1/3 flex-shrink-0">
+              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
                 <img
                   src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
                   alt="Man using The Lumberjack tallow cream"
@@ -381,21 +394,8 @@ export default function Valentines() {
                   height={400}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-2xl shadow-xl w-full h-[350px] object-cover object-top"
+                  className="rounded-2xl shadow-xl w-full h-[280px] sm:h-[320px] md:h-[400px] object-cover object-top"
                 />
-              </div>
-              {/* Content */}
-              <div className="flex-1 text-center md:text-right">
-                <span className="inline-block bg-[#BC7C5F] text-white text-base px-5 py-2 rounded-full mb-5 uppercase tracking-wider">Coming Soon</span>
-                <div className="flex justify-center md:justify-end mb-5">
-                  <TreePine className="w-16 h-16 text-[#BC7C5F]" />
-                </div>
-                <h3 className="text-5xl md:text-6xl font-script text-white mb-4">The Lumberjack</h3>
-                <p className="text-white/80 text-2xl mb-3">Men's Whipped Tallow</p>
-                <p className="text-[#BC7C5F] font-medium text-2xl">Cedar & Orange Scented</p>
-                <p className="text-white/60 mt-5 text-xl mx-auto md:ml-auto md:mr-0 max-w-lg">
-                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-                </p>
               </div>
             </div>
           </motion.div>
