@@ -1,18 +1,38 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { X, Mail, Phone, Gift } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { apiRequest } from "@/lib/queryClient";
 
 export function SignupPopup() {
   const [isVisible, setIsVisible] = useState(true);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email && !phone) return;
-    setSubmitted(true);
-    setTimeout(() => setIsVisible(false), 2000);
+    if (!email) return;
+    if (!agreedToPrivacy) {
+      setError("Please agree to the Privacy Policy to continue.");
+      return;
+    }
+
+    setError("");
+    setSubmitting(true);
+
+    try {
+      await apiRequest("POST", "/api/signup", { email, phone });
+      setSubmitted(true);
+      setTimeout(() => setIsVisible(false), 2000);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (!isVisible) return null;
@@ -70,6 +90,7 @@ export function SignupPopup() {
                     <input
                       id="signup-email"
                       type="email"
+                      required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
@@ -95,11 +116,36 @@ export function SignupPopup() {
                   </div>
                 </div>
 
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={agreedToPrivacy}
+                    onChange={(e) => {
+                      setAgreedToPrivacy(e.target.checked);
+                      if (e.target.checked) setError("");
+                    }}
+                    className="mt-0.5 w-4 h-4 rounded border-[#D4C5B0] text-[#8B6F47] focus:ring-[#8B6F47]/50 accent-[#8B6F47]"
+                  />
+                  <span className="text-xs text-[#3D2E1F]/70">
+                    I agree to the{" "}
+                    <Link href="/privacy-policy">
+                      <a className="text-[#8B6F47] underline hover:text-[#6B5334]" onClick={() => setIsVisible(false)}>
+                        Privacy Policy
+                      </a>
+                    </Link>
+                  </span>
+                </label>
+
+                {error && (
+                  <p className="text-red-600 text-xs text-center">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-[#8B6F47] hover:bg-[#7A6140] text-white font-medium py-2.5 rounded-lg transition-colors"
+                  disabled={submitting}
+                  className="w-full bg-[#8B6F47] hover:bg-[#7A6140] disabled:opacity-60 text-white font-medium py-2.5 rounded-lg transition-colors"
                 >
-                  Sign Me Up
+                  {submitting ? "Signing up..." : "Sign Me Up"}
                 </button>
 
                 <p className="text-[#3D2E1F]/50 text-xs text-center">
