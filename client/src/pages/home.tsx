@@ -348,6 +348,14 @@ export default function Home() {
                 <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
                   A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
                 </p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-5 sm:mt-6 md:mt-8 bg-[#BC7C5F] hover:bg-[#A86B4F] text-white font-medium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-colors text-sm sm:text-base"
+                >
+                  Order Now
+                </a>
               </div>
               {/* Image */}
               <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
