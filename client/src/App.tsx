@@ -5,7 +5,6 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { SignupPopup } from "@/components/SignupPopup";
 import { lazy, Suspense } from "react";
 
 // Eager load Home for fast initial render (most visited page)
@@ -36,7 +35,6 @@ function PageLoader() {
 function Router() {
   return (
     <>
-      <SignupPopup />
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Switch>
