@@ -1,16 +1,10 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { storage } from "./storage";
 import { log } from "./index";
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER || "macandmeadowco@gmail.com",
-    pass: process.env.GMAIL_APP_PASSWORD || "",
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY || "");
 
 export async function registerRoutes(
   httpServer: Server,
@@ -23,22 +17,20 @@ export async function registerRoutes(
       return res.status(400).json({ message: "Email is required." });
     }
 
-    const mailOptions = {
-      from: process.env.GMAIL_USER || "macandmeadowco@gmail.com",
-      to: "macandmeadowco@gmail.com",
-      subject: "New Newsletter Signup - Mac & Meadow",
-      text: [
-        "New signup from the Mac & Meadow website:",
-        "",
-        `Email: ${email}`,
-        phone ? `Phone: ${phone}` : "Phone: Not provided",
-        "",
-        `Signed up at: ${new Date().toLocaleString("en-US", { timeZone: "America/Denver" })}`,
-      ].join("\n"),
-    };
-
     try {
-      await transporter.sendMail(mailOptions);
+      await resend.emails.send({
+        from: process.env.RESEND_FROM || "Mac & Meadow <onboarding@resend.dev>",
+        to: "macandmeadowco@gmail.com",
+        subject: "New Newsletter Signup - Mac & Meadow",
+        text: [
+          "New signup from the Mac & Meadow website:",
+          "",
+          `Email: ${email}`,
+          phone ? `Phone: ${phone}` : "Phone: Not provided",
+          "",
+          `Signed up at: ${new Date().toLocaleString("en-US", { timeZone: "America/Denver" })}`,
+        ].join("\n"),
+      });
       log(`Signup notification sent for ${email}`);
       return res.json({ message: "Signup successful." });
     } catch (err) {
