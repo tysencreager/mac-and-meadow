@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Heart } from "lucide-react";
+import { Menu } from "lucide-react";
 import logo from "@assets/mac_meadow_logo_horns.webp";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -22,12 +22,6 @@ export function Navbar() {
       <Link href="/">
         <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
           Home
-        </a>
-      </Link>
-      <Link href="/valentines">
-        <a className="text-[#D64045] hover:text-[#E88D8D] transition-colors font-medium flex items-center gap-1">
-          <Heart className="w-4 h-4" fill="currentColor" />
-          Valentine's
         </a>
       </Link>
       <Link href="/products">
