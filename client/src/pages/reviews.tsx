@@ -3,6 +3,9 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Star, ExternalLink } from "lucide-react";
+import tysenReview from "@assets/review-images/tysenreview.png";
+import dustinReview from "@assets/review-images/dustinreview.png";
+import veronicaReview from "@assets/review-images/veronicareview.png";
 
 interface Review {
   name: string;
@@ -18,21 +21,21 @@ const reviews: Review[] = [
     quote: "Mac and Meadow has changed the game for my skin. Seriously a dream product! My skin gets so dry when the seasons change and this tallow is so moisturizing without being greasy. Not only that, but knowing that McKenzie crafts each handmade batch herself makes the product feel so much more special. This is more than skincare; it's an investment in yourself and a way to appreciate the simple things in life. I'll forever recommend this product to anyone looking for some self care. Thank you McKenzie!",
     rating: 5,
     timeAgo: "a month ago",
-    images: [],
+    images: [tysenReview],
   },
   {
     name: "Dustin Izatt",
     quote: "I bought Mac and Meadow, The Lumberjack beef tallow at a vendor event fully expecting it to be \"fine.\" Instead, it completely fixed my dry, flaky skin and made me question every lotion I've ever owned.\n\nThis stuff goes on smooth, absorbs fast, and doesn't leave me feeling greasy or like I wrestled a fast-food deep fryer. My skin went from \"survived a harsh winter\" to \"accidentally handsome and well-hydrated man\" in record time.\n\nI'm a simple guy. I don't want a skincare routine. I want one jar that works. The Lumberjack delivers. No weird chemicals, no nonsense, just solid, manly hydration that actually does its job.\n\nIf your skin is dry, cracked, or generally losing the will to go out in public like I was, buy this. If your skin is already fine, buy it anyway and become unstoppable. Five stars. Will repurchase. Excuse me now, think I might go throw on a flannel shirt now and go chop some wood and build a cabin with my bare moisturized beef tallow slathered manly hands and with my renewed sense of self! I am man hear me roar!",
     rating: 5,
     timeAgo: "2 weeks ago",
-    images: [],
+    images: [dustinReview],
   },
   {
     name: "Veronica Skidmore",
     quote: "I'm on my second batch of this! This is the best tallow, a little bit goes a long way. My skin has been so soft and healthy! This is the best for dry skin and all ages, I put this on my kids when their face starts to get dry and within two days it's back to normal and as soft as ever.",
     rating: 5,
     timeAgo: "2 months ago",
-    images: [],
+    images: [veronicaReview],
   },
   {
     name: "Kimberly Zisumbo",
