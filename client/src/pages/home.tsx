@@ -37,73 +37,73 @@ const testimonials = [
     quote: "Mac and Meadow has changed the game for my skin. Seriously a dream product! My skin gets so dry when the seasons change and this tallow is so moisturizing without being greasy. Not only that, but knowing that McKenzie crafts each handmade batch herself makes the product feel so much more special. This is more than skincare; it's an investment in yourself and a way to appreciate the simple things in life. I'll forever recommend this product to anyone looking for some self care. Thank you McKenzie!",
     name: "Tysen C",
     rating: 5,
-    timeAgo: "a month ago"
+
   },
   {
     quote: "I bought Mac and Meadow, The Lumberjack beef tallow at a vendor event fully expecting it to be \"fine.\" Instead, it completely fixed my dry, flaky skin and made me question every lotion I've ever owned. This stuff goes on smooth, absorbs fast, and doesn't leave me feeling greasy. Five stars. Will repurchase.",
     name: "Dustin Izatt",
     rating: 5,
-    timeAgo: "2 weeks ago"
+
   },
   {
     quote: "I'm on my second batch of this! This is the best tallow, a little bit goes a long way. My skin has been so soft and healthy! This is the best for dry skin and all ages, I put this on my kids when their face starts to get dry and within two days it's back to normal and as soft as ever.",
     name: "Veronica S",
     rating: 5,
-    timeAgo: "2 months ago"
+
   },
   {
     quote: "I've been using Mac & Meadow since Christmas and I love it. I love to use it on my rougher skin areas, back of hands, heels if feet, elbows. These areas don't stay as soft and smooth when I use regular lotion. Buy it! You won't regret it.",
     name: "Kimberly Z",
     rating: 5,
-    timeAgo: "a month ago"
+
   },
   {
     quote: "I have been using the Mac & Meadow Beef Tallow for 1 week now. Love the way it makes my skin feel. Very soft and not greasy. Customer service is excellent!!!! Great product!!!!!!",
     name: "Justine S",
     rating: 5,
-    timeAgo: "3 weeks ago"
+
   },
   {
     quote: "The tallow cream smells divine and goes on beautifully. I really appreciate the clean and simple ingredients. I have loved using it!",
     name: "Kirsten H",
     rating: 5,
-    timeAgo: "3 months ago"
+
   },
   {
     quote: "I bought 2 of the tallow creams for my girls. They are 11 and 16. My 11 yr old has very dry skin and the tallow cream is already helping out around her nose and on her chin. She loves it. My 16 yr old loves the smell and is excited to see how her skin transforms using it.",
     name: "Natasha S",
     rating: 5,
-    timeAgo: "a month ago"
+
   },
   {
     quote: "GLOWING! I've been using this tallow on my face and skin, and wow—what a game changer. It's rich, clean, and melts in like a dream. My skin feels soft, nourished, and calm, even in dry weather. No fillers, no fluff—just pure, natural goodness that actually works.",
     name: "Heather B",
     rating: 5,
-    timeAgo: "a month ago"
+
   },
   {
     quote: "I'm loving this moisturizer! Its moisturizing power is amazing—rich, long-lasting, and deeply hydrating without feeling heavy. I'm also loving the pleasant light orange scent. The texture melts into my skin and lasts all day.",
     name: "Chris C",
     rating: 5,
-    timeAgo: "2 months ago"
+
   },
   {
     quote: "I absolutely love this beef tallow cream! It makes my skin feel incredibly soft and moisturized. Thank you, Mac & Meadow!",
     name: "Camille G",
     rating: 5,
-    timeAgo: "2 months ago"
+
   },
   {
     quote: "I love how soft and smooth this goes on. My face feels better than ever each time I use it!",
     name: "Ronnie G",
     rating: 5,
-    timeAgo: "3 weeks ago"
+
   },
   {
     quote: "This tallow has a pleasant aroma and texture. The application is smooth and quickly absorbed!",
     name: "Nate S",
     rating: 5,
-    timeAgo: "3 months ago"
+
   }
 ];
 
@@ -486,9 +486,6 @@ export default function Home() {
                         <div>
                           <p className="text-[#202124] text-sm font-medium" style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}>
                             {testimonials[currentTestimonial].name}
-                          </p>
-                          <p className="text-[#70757a] text-xs" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
-                            {testimonials[currentTestimonial].timeAgo}
                           </p>
                         </div>
                       </div>
