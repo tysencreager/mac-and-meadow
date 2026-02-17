@@ -356,7 +356,7 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Coming Soon - The Lumberjack */}
+      {/* The Lumberjack */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
@@ -372,7 +372,6 @@ export default function Products() {
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
               {/* Content */}
               <div className="flex-1 text-center md:text-left order-2 md:order-1">
-                <span className="inline-block bg-[#BC7C5F] text-white text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 md:mb-5 uppercase tracking-wider font-bold">Coming Soon</span>
                 <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
                   <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
                 </div>
