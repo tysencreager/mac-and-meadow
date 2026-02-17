@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Quote, Instagram, TreePine } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, TreePine, ExternalLink } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/mac_meadow_hero_2.webp";
@@ -34,36 +34,76 @@ const stagger = {
 
 const testimonials = [
   {
-    quote: "This is the best tallow, a little bit goes a long way. My skin has been so soft and healthy! This is the best for dry skin and all ages, I put this on my kids when their face starts to get dry and within two days it's back to normal and as soft as ever.",
-    name: "Veronica J"
+    quote: "Mac and Meadow has changed the game for my skin. Seriously a dream product! My skin gets so dry when the seasons change and this tallow is so moisturizing without being greasy. Not only that, but knowing that McKenzie crafts each handmade batch herself makes the product feel so much more special. This is more than skincare; it's an investment in yourself and a way to appreciate the simple things in life. I'll forever recommend this product to anyone looking for some self care. Thank you McKenzie!",
+    name: "Tysen C",
+    rating: 5,
+    timeAgo: "a month ago"
+  },
+  {
+    quote: "I bought Mac and Meadow, The Lumberjack beef tallow at a vendor event fully expecting it to be \"fine.\" Instead, it completely fixed my dry, flaky skin and made me question every lotion I've ever owned. This stuff goes on smooth, absorbs fast, and doesn't leave me feeling greasy. Five stars. Will repurchase.",
+    name: "Dustin Izatt",
+    rating: 5,
+    timeAgo: "2 weeks ago"
+  },
+  {
+    quote: "I'm on my second batch of this! This is the best tallow, a little bit goes a long way. My skin has been so soft and healthy! This is the best for dry skin and all ages, I put this on my kids when their face starts to get dry and within two days it's back to normal and as soft as ever.",
+    name: "Veronica S",
+    rating: 5,
+    timeAgo: "2 months ago"
+  },
+  {
+    quote: "I've been using Mac & Meadow since Christmas and I love it. I love to use it on my rougher skin areas, back of hands, heels if feet, elbows. These areas don't stay as soft and smooth when I use regular lotion. Buy it! You won't regret it.",
+    name: "Kimberly Z",
+    rating: 5,
+    timeAgo: "a month ago"
+  },
+  {
+    quote: "I have been using the Mac & Meadow Beef Tallow for 1 week now. Love the way it makes my skin feel. Very soft and not greasy. Customer service is excellent!!!! Great product!!!!!!",
+    name: "Justine S",
+    rating: 5,
+    timeAgo: "3 weeks ago"
   },
   {
     quote: "The tallow cream smells divine and goes on beautifully. I really appreciate the clean and simple ingredients. I have loved using it!",
-    name: "Kirsten H"
+    name: "Kirsten H",
+    rating: 5,
+    timeAgo: "3 months ago"
   },
   {
     quote: "I bought 2 of the tallow creams for my girls. They are 11 and 16. My 11 yr old has very dry skin and the tallow cream is already helping out around her nose and on her chin. She loves it. My 16 yr old loves the smell and is excited to see how her skin transforms using it.",
-    name: "Natasha S"
-  },
-  {
-    quote: "I absolutely love this beef tallow cream! It makes my skin feel incredibly soft and moisturized. Thank you, Mac & Meadow!",
-    name: "Camille G"
-  },
-  {
-    quote: "I love how soft and smooth this goes on. My face feels better than ever each time I use it!",
-    name: "Ronnie G"
+    name: "Natasha S",
+    rating: 5,
+    timeAgo: "a month ago"
   },
   {
     quote: "GLOWING! I've been using this tallow on my face and skin, and wow—what a game changer. It's rich, clean, and melts in like a dream. My skin feels soft, nourished, and calm, even in dry weather. No fillers, no fluff—just pure, natural goodness that actually works.",
-    name: "Heather B"
+    name: "Heather B",
+    rating: 5,
+    timeAgo: "a month ago"
   },
   {
     quote: "I'm loving this moisturizer! Its moisturizing power is amazing—rich, long-lasting, and deeply hydrating without feeling heavy. I'm also loving the pleasant light orange scent. The texture melts into my skin and lasts all day.",
-    name: "Chris C"
+    name: "Chris C",
+    rating: 5,
+    timeAgo: "2 months ago"
+  },
+  {
+    quote: "I absolutely love this beef tallow cream! It makes my skin feel incredibly soft and moisturized. Thank you, Mac & Meadow!",
+    name: "Camille G",
+    rating: 5,
+    timeAgo: "2 months ago"
+  },
+  {
+    quote: "I love how soft and smooth this goes on. My face feels better than ever each time I use it!",
+    name: "Ronnie G",
+    rating: 5,
+    timeAgo: "3 weeks ago"
   },
   {
     quote: "This tallow has a pleasant aroma and texture. The application is smooth and quickly absorbed!",
-    name: "Nate S"
+    name: "Nate S",
+    rating: 5,
+    timeAgo: "3 months ago"
   }
 ];
 
@@ -322,7 +362,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coming Soon - The Lumberjack */}
+      {/* The Lumberjack */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
@@ -338,7 +378,6 @@ export default function Home() {
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
               {/* Content */}
               <div className="flex-1 text-center md:text-left order-2 md:order-1">
-                <span className="inline-block bg-[#BC7C5F] text-white text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 md:mb-5 uppercase tracking-wider font-bold">Coming Soon</span>
                 <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
                   <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
                 </div>
@@ -374,25 +413,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials + Instagram Section - Side by Side */}
+      {/* Google Reviews + Instagram Section - Side by Side */}
       <section className="py-24 bg-[#F7F6F2] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Testimonials Side */}
+              {/* Google Reviews Side */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-8"
+                className="space-y-6"
               >
-                <div className="text-center lg:text-left">
-                  <span className="text-[#BC7C5F] font-serif italic text-xl">What Our Customers Say</span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Real Results, Real Stories</h2>
+                {/* Google Header */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <svg viewBox="0 0 24 24" className="w-7 h-7 flex-shrink-0" aria-hidden="true">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <div>
+                      <h2 className="text-[#202124] text-lg font-medium" style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}>
+                        Google Reviews
+                      </h2>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[#202124] text-sm font-medium" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>5.0</span>
+                        <div className="flex items-center gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
+                          ))}
+                        </div>
+                        <span className="text-[#70757a] text-sm" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+                          ({testimonials.length})
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/phxT7PuQALuPWnty5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1a73e8] text-sm font-medium hover:underline hidden sm:block"
+                    style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}
+                  >
+                    View all
+                  </a>
                 </div>
 
+                {/* Review Card */}
                 <div className="relative">
                   <motion.div
                     key={currentTestimonial}
@@ -400,15 +472,37 @@ export default function Home() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl p-8 shadow-lg relative min-h-[280px] flex flex-col justify-between"
+                    className="bg-white rounded-2xl border border-[#dadce0] shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_8px_3px_rgba(60,64,67,0.06)] p-6 md:p-8 min-h-[280px] flex flex-col justify-between"
                   >
-                    <Quote className="w-10 h-10 text-[#BC7C5F]/20 absolute top-6 left-6" />
-                    <div className="relative z-10 pt-8">
-                      <p className="text-[#644716] text-base leading-relaxed italic mb-6">
-                        "{testimonials[currentTestimonial].quote}"
-                      </p>
-                      <p className="text-[#8B6F47] font-bold">
-                        — {testimonials[currentTestimonial].name}
+                    {/* Reviewer Info */}
+                    <div>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div
+                          className="w-10 h-10 rounded-full bg-[#1a73e8] flex items-center justify-center text-white text-sm font-medium flex-shrink-0"
+                          style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}
+                        >
+                          {testimonials[currentTestimonial].name.charAt(0)}
+                        </div>
+                        <div>
+                          <p className="text-[#202124] text-sm font-medium" style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}>
+                            {testimonials[currentTestimonial].name}
+                          </p>
+                          <p className="text-[#70757a] text-xs" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+                            {testimonials[currentTestimonial].timeAgo}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Stars */}
+                      <div className="flex items-center gap-0.5 mb-3">
+                        {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
+                        ))}
+                      </div>
+
+                      {/* Review Text */}
+                      <p className="text-[#202124] text-sm leading-relaxed" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+                        {testimonials[currentTestimonial].quote}
                       </p>
                     </div>
                   </motion.div>
@@ -417,8 +511,8 @@ export default function Home() {
                   <div className="flex items-center justify-center gap-4 mt-6">
                     <button
                       onClick={prevTestimonial}
-                      aria-label="Previous testimonial"
-                      className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
+                      aria-label="Previous review"
+                      className="w-10 h-10 rounded-full bg-white border border-[#dadce0] shadow-sm flex items-center justify-center text-[#5f6368] hover:bg-[#f8f9fa] transition-colors duration-200"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
@@ -428,12 +522,12 @@ export default function Home() {
                         <button
                           key={index}
                           onClick={() => setCurrentTestimonial(index)}
-                          aria-label={`Go to testimonial ${index + 1}`}
+                          aria-label={`Go to review ${index + 1}`}
                           aria-current={index === currentTestimonial ? "true" : undefined}
                           className={`h-2 rounded-full transition-all duration-300 ${
                             index === currentTestimonial
-                              ? "bg-[#8B6F47] w-6"
-                              : "bg-[#8B6F47]/30 hover:bg-[#8B6F47]/50 w-2"
+                              ? "bg-[#1a73e8] w-6"
+                              : "bg-[#dadce0] hover:bg-[#bdc1c6] w-2"
                           }`}
                         />
                       ))}
@@ -441,12 +535,26 @@ export default function Home() {
 
                     <button
                       onClick={nextTestimonial}
-                      aria-label="Next testimonial"
-                      className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#644716] hover:bg-[#8B6F47] hover:text-white transition-colors duration-300"
+                      aria-label="Next review"
+                      className="w-10 h-10 rounded-full bg-white border border-[#dadce0] shadow-sm flex items-center justify-center text-[#5f6368] hover:bg-[#f8f9fa] transition-colors duration-200"
                     >
                       <ChevronRight className="w-5 h-5" />
                     </button>
                   </div>
+                </div>
+
+                {/* Write a Review CTA */}
+                <div className="text-center lg:text-left">
+                  <a
+                    href="https://maps.app.goo.gl/phxT7PuQALuPWnty5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#1a73e8] hover:bg-[#1765cc] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-[0_1px_2px_rgba(60,64,67,0.3),0_1px_3px_1px_rgba(60,64,67,0.15)]"
+                    style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}
+                  >
+                    Write a Review
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </motion.div>
 

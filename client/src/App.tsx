@@ -18,6 +18,7 @@ const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
 const TermsAndConditions = lazy(() => import("@/pages/terms-and-conditions"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogPost = lazy(() => import("@/pages/blog-post"));
+const Reviews = lazy(() => import("@/pages/reviews"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const LocationSyracuse = lazy(() => import("@/pages/location-syracuse"));
 const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"));
@@ -44,6 +45,7 @@ function Router() {
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/reviews" component={Reviews} />
           <Route path="/locations/syracuse-utah" component={LocationSyracuse} />
           <Route path="/locations/salt-lake-city-utah" component={LocationSaltLakeCity} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
