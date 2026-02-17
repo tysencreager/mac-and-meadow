@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Instagram, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { Instagram, Mail, MapPin, Send, CheckCircle, Star, ExternalLink } from "lucide-react";
 import { useEffect, useState, FormEvent } from "react";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
@@ -344,6 +344,68 @@ export default function Contact() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Google Business Profile Review Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="bg-white rounded-2xl border border-[#dadce0] shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_8px_3px_rgba(60,64,67,0.06)] p-8 md:p-10">
+              {/* Google Header */}
+              <div className="flex items-center gap-3 mb-6">
+                <svg viewBox="0 0 24 24" className="w-8 h-8 flex-shrink-0" aria-hidden="true">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <div>
+                  <h3 className="text-[#202124] text-lg font-medium" style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}>
+                    Mac & Meadow
+                  </h3>
+                  <p className="text-[#70757a] text-sm" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+                    Google Business Profile
+                  </p>
+                </div>
+              </div>
+
+              {/* Stars */}
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-7 h-7 fill-[#FBBC05] text-[#FBBC05]" />
+                ))}
+              </div>
+
+              {/* Message */}
+              <div className="mb-8">
+                <h4 className="text-[#202124] text-xl font-medium mb-2" style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}>
+                  Love our products? Leave us a review!
+                </h4>
+                <p className="text-[#70757a] text-sm leading-relaxed" style={{ fontFamily: "'Roboto', Arial, sans-serif" }}>
+                  Your feedback helps other customers discover Mac & Meadow and means the world to our small business.
+                </p>
+              </div>
+
+              {/* Review Button */}
+              <a
+                href="https://maps.app.goo.gl/phxT7PuQALuPWnty5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#1a73e8] hover:bg-[#1765cc] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors shadow-[0_1px_2px_rgba(60,64,67,0.3),0_1px_3px_1px_rgba(60,64,67,0.15)] hover:shadow-[0_1px_3px_rgba(60,64,67,0.3),0_4px_8px_3px_rgba(60,64,67,0.15)]"
+                style={{ fontFamily: "'Google Sans', 'Roboto', Arial, sans-serif" }}
+              >
+                Write a Review
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
