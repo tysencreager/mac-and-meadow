@@ -46,6 +46,9 @@ export function SEO({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
+      <meta property="og:image:width" content="1080" />
+      <meta property="og:image:height" content="1080" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:site_name" content="Mac & Meadow" />
 
       {/* Twitter */}
