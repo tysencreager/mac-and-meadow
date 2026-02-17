@@ -206,9 +206,25 @@ export default function Reviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-white rounded-2xl border border-[#dadce0] shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_8px_3px_rgba(60,64,67,0.06)] p-6 flex flex-col"
+                className={`bg-white rounded-2xl border border-[#dadce0] shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_8px_3px_rgba(60,64,67,0.06)] flex flex-col overflow-hidden ${review.images && review.images.length > 0 ? "" : "p-6"}`}
               >
+                {/* Review Image */}
+                {review.images && review.images.length > 0 && (
+                  <div className="w-full">
+                    {review.images.map((img, imgIndex) => (
+                      <img
+                        key={imgIndex}
+                        src={img}
+                        alt={`Photo from ${review.name}'s review`}
+                        className="w-full h-56 object-cover"
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
+                )}
+
                 {/* Reviewer Info */}
+                <div className={review.images && review.images.length > 0 ? "px-6 pt-5 pb-6" : ""}>
                 <div className="flex items-center gap-3 mb-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-medium flex-shrink-0"
@@ -249,21 +265,7 @@ export default function Reviews() {
                 >
                   {review.quote}
                 </p>
-
-                {/* Review Images */}
-                {review.images && review.images.length > 0 && (
-                  <div className="flex gap-2 mt-4 flex-wrap">
-                    {review.images.map((img, imgIndex) => (
-                      <img
-                        key={imgIndex}
-                        src={img}
-                        alt={`Photo from ${review.name}'s review`}
-                        className="w-24 h-24 rounded-lg object-cover border border-[#dadce0]"
-                        loading="lazy"
-                      />
-                    ))}
-                  </div>
-                )}
+                </div>
               </motion.div>
             ))}
           </div>
