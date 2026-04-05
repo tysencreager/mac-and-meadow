@@ -143,14 +143,14 @@ export default function Home() {
       <SEO />
       <Navbar />
       {/* Hero Section */}
-      <section className="relative min-h-[100vh] flex items-center pt-48 pb-32 overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center pt-32 md:pt-40 lg:pt-48 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
         <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
           <div className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]" />
           <div className="absolute inset-0 bg-noise opacity-15 mix-blend-soft-light" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="initial"
               animate="animate"
@@ -202,7 +202,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative hidden lg:block"
+              className="relative hidden md:block"
             >
               <div className="absolute inset-0 bg-[#BC7C5F]/20 rounded-full blur-[100px]" />
               <img
@@ -213,7 +213,7 @@ export default function Home() {
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover relative z-10"
+                className="rounded-[2rem] shadow-2xl w-full h-[350px] lg:h-[500px] object-cover relative z-10"
               />
             </motion.div>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
       <section className="py-32 bg-white relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Image */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -241,7 +241,7 @@ export default function Home() {
                   height={600}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-[2rem] shadow-2xl w-full h-[600px] object-cover object-top relative z-10"
+                  className="rounded-[2rem] shadow-2xl w-full h-[400px] md:h-[450px] lg:h-[600px] object-cover object-top relative z-10"
                 />
               </motion.div>
 
@@ -418,7 +418,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               {/* Google Reviews Side */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -541,7 +541,7 @@ export default function Home() {
                 </div>
 
                 {/* Write a Review CTA */}
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <a
                     href="https://maps.app.goo.gl/phxT7PuQALuPWnty5"
                     target="_blank"
@@ -563,19 +563,19 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="space-y-6"
               >
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <span className="text-[#BC7C5F] font-serif italic text-xl">Stay Connected</span>
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
 
-                <div className="flex justify-center lg:justify-start">
+                <div className="flex justify-center md:justify-start">
                   <div
                     className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
                     data-elfsight-app-lazy
                   />
                 </div>
 
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <a
                     href="https://www.instagram.com/macandmeadowco"
                     target="_blank"

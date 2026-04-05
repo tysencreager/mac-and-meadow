@@ -57,7 +57,7 @@ export default function Contact() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-32 md:pt-40 lg:pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Contact() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               {/* Instagram Feed Side */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -88,17 +88,17 @@ export default function Contact() {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
               >
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <span className="text-[#BC7C5F] font-serif italic text-lg">Latest from @macandmeadowco</span>
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
                 </div>
-                <div className="flex justify-center lg:justify-start">
+                <div className="flex justify-center md:justify-start">
                   <div
                     className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}
                     data-elfsight-app-lazy
                   />
                 </div>
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <a
                     href="https://www.instagram.com/macandmeadowco"
                     target="_blank"
@@ -118,7 +118,7 @@ export default function Contact() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="space-y-6"
               >
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <span className="text-[#BC7C5F] font-serif italic text-lg">Quick Answers</span>
                   <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Common Questions</h2>
                 </div>
@@ -164,7 +164,7 @@ export default function Contact() {
       <section className="py-24 bg-[#F7F6F2]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
               {/* Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}

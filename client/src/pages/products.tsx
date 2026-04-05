@@ -28,7 +28,7 @@ export default function Products() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-32 md:pt-40 lg:pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,9 +167,9 @@ export default function Products() {
       <section className="py-32 bg-[#F7F6F2] relative">
         <div className="absolute inset-0 bg-noise opacity-20" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
             {/* Image Grid */}
-            <div className="w-full lg:w-1/2 relative">
+            <div className="w-full md:w-1/2 relative">
               <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[100px] transform rotate-12" />
               <div className="grid grid-cols-2 gap-6 relative">
                 <motion.div
@@ -210,7 +210,7 @@ export default function Products() {
             </div>
 
             {/* Content */}
-            <div className="w-full lg:w-1/2 space-y-10">
+            <div className="w-full md:w-1/2 space-y-10">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -265,7 +265,7 @@ export default function Products() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Image */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -282,7 +282,7 @@ export default function Products() {
                   height={500}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-[2rem] shadow-2xl w-full h-[450px] object-cover object-top relative z-10"
+                  className="rounded-[2rem] shadow-2xl w-full h-[350px] md:h-[400px] lg:h-[450px] object-cover object-top relative z-10"
                 />
               </motion.div>
 
