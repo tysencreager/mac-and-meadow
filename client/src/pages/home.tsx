@@ -3,10 +3,12 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, TreePine, ExternalLink } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X, Shield } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/new-mac-and-meadow-product-photos/header-frame.jpeg";
+import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
+import meadowGuardPhoto from "@product-photos/meadow-guard-photography.png";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
@@ -110,6 +112,7 @@ const testimonials = [
 export default function Home() {
   const containerRef = useRef(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [showDreamerPopup, setShowDreamerPopup] = useState(false);
 
   useEffect(() => {
     // Load Elfsight script if not already loaded
@@ -119,6 +122,16 @@ export default function Home() {
       script.src = "https://elfsightcdn.com/platform.js";
       script.async = true;
       document.body.appendChild(script);
+    }
+
+    // Show Dreamer popup after 3 seconds
+    const popupShown = sessionStorage.getItem("dreamerPopupShown");
+    if (!popupShown) {
+      const timer = setTimeout(() => {
+        setShowDreamerPopup(true);
+        sessionStorage.setItem("dreamerPopupShown", "true");
+      }, 3000);
+      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -142,8 +155,67 @@ export default function Home() {
     <div ref={containerRef} className="min-h-screen bg-[#F7F6F2] font-sans selection:bg-[#BC7C5F] selection:text-white overflow-x-hidden">
       <SEO />
       <Navbar />
+
+      {/* The Dreamer Popup */}
+      {showDreamerPopup && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          onClick={() => setShowDreamerPopup(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#9B7FD4]/15 rounded-full blur-[40px]" />
+            <div className="absolute top-2 left-2 text-white/5 text-[100px] font-serif leading-none pointer-events-none">&#9790;</div>
+
+            <button
+              onClick={() => setShowDreamerPopup(false)}
+              className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors z-20"
+              aria-label="Close popup"
+            >
+              <X className="w-4 h-4" />
+            </button>
+
+            <div className="relative z-10 text-center space-y-5">
+              <img
+                src={dreamerTransparent}
+                alt="The Dreamer tallow cream"
+                className="w-44 h-auto mx-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+              />
+              <div>
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Just Launched</span>
+                <h3 className="font-serif text-3xl text-white">The Dreamer</h3>
+                <p className="text-white/80 text-base mt-2">
+                  Nighttime whipped tallow with lavender & magnesium. Nourish your skin while you sleep.
+                </p>
+              </div>
+              <a
+                href="https://macandmeadowco.square.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
+              >
+                Order Now
+              </a>
+              <button
+                onClick={() => setShowDreamerPopup(false)}
+                className="block mx-auto text-white/60 text-sm hover:text-white/80 transition-colors"
+              >
+                Maybe later
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
       {/* Hero Section */}
-      <section className="relative min-h-[100vh] flex items-center pt-32 md:pt-40 lg:pt-48 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center pt-40 md:pt-48 lg:pt-56 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
         <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
           <div className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]" />
           <div className="absolute inset-0 bg-noise opacity-15 mix-blend-soft-light" />
@@ -310,6 +382,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: The Dreamer Announcement */}
+      <section className="py-12 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#3399ff]/20 rounded-full blur-[80px]" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#9B7FD4]/15 rounded-full blur-[60px]" />
+            <div className="absolute top-4 left-4 text-white/5 text-[120px] font-serif leading-none pointer-events-none">&#9790;</div>
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center">
+                <img
+                  src={dreamerTransparent}
+                  alt="The Dreamer tallow cream"
+                  className="w-48 md:w-56 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">New Product</span>
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">Introducing The Dreamer!</h3>
+                <p className="text-white/80 text-lg mb-2">Nighttime Whipped Tallow with Lavender & Magnesium</p>
+                <p className="text-white/60 mb-6">
+                  Your new bedtime ritual is here. Nourish your skin while you sleep with our calming, deeply moisturizing nighttime formula.
+                </p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg"
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Products Grid Section */}
       <section className="py-20 bg-[#F7F6F2]">
         <div className="container mx-auto px-4 md:px-6">
@@ -359,57 +475,6 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* The Lumberjack */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D3B2D] to-[#1a2a1a] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A5D4A]/30 rounded-full blur-3xl" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left order-2 md:order-1">
-                <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
-                  <TreePine className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
-                </div>
-                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 sm:mb-3 md:mb-4">The Lumberjack</h3>
-                <p className="text-white/80 text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Men's Whipped Tallow</p>
-                <p className="text-[#BC7C5F] font-medium text-lg sm:text-xl md:text-2xl">Cedar & Orange Scented</p>
-                <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
-                  A rugged, woodsy blend crafted for him. Rich cedar meets bright orange for a scent that's as bold as it is nourishing.
-                </p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-5 sm:mt-6 md:mt-8 bg-[#BC7C5F] hover:bg-[#A86B4F] text-white font-medium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-colors text-sm sm:text-base"
-                >
-                  Order Now
-                </a>
-              </div>
-              {/* Image */}
-              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
-                <img
-                  src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
-                  alt="Man using The Lumberjack tallow cream"
-                  width={300}
-                  height={500}
-                  loading="lazy"
-                  decoding="async"
-                  className="rounded-[1.5rem] shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover object-top"
-                />
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -589,6 +654,84 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Meadow Guard Coming Soon */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A6741]/30 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0">
+                <img
+                  src={meadowGuardPhoto}
+                  alt="Meadow Guard Natural Insect Repellant"
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">Coming Soon</span>
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <Shield className="w-8 h-8 text-[#A2A77F]" />
+                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">Meadow Guard</h3>
+                </div>
+                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Insect Repellant Spray</p>
+                <p className="text-white/60 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0">
+                  Protect yourself naturally this summer. Meadow Guard is a plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Dreamer - Second Announcement */}
+      <section className="py-10 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto bg-[#0066cc] rounded-[1.5rem] p-5 md:p-8 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#3399ff]/20 rounded-full blur-[60px]" />
+            <div className="absolute bottom-0 left-0 text-white/5 text-[80px] font-serif leading-none pointer-events-none">&#9734;</div>
+
+            <div className="relative z-10 flex items-center gap-6">
+              <img
+                src={dreamerTransparent}
+                alt="The Dreamer"
+                className="w-20 md:w-28 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] flex-shrink-0 hidden sm:block"
+                loading="lazy"
+              />
+              <div className="flex-1">
+                <h4 className="font-serif text-xl md:text-2xl text-white mb-1">Sweet dreams start with The Dreamer</h4>
+                <p className="text-white/70 text-sm md:text-base mb-3">Lavender + Magnesium nighttime tallow. Your skin's new best friend before bed.</p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-[#0066cc] font-bold px-6 py-2 rounded-full text-sm hover:bg-[#F7F6F2] transition-colors"
+                >
+                  Shop The Dreamer
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -19,7 +19,7 @@ export default function Blog() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 lg:pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

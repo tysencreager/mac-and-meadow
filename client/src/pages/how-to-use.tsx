@@ -3,8 +3,9 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, Sun, Moon, Sparkles, Heart, Lightbulb } from "lucide-react";
+import { ArrowLeft, Sun, Moon, Sparkles, Heart, Lightbulb, ArrowRight } from "lucide-react";
 import blogHeader2 from "@assets/blog_header_2.jpg";
+import dreamerPhoto from "@product-photos/the-dreamer-photography.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -23,42 +24,55 @@ export default function HowToUse() {
       />
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 lg:pt-48 pb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={blogHeader2}
-            alt="Tallow cream application"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#644716]/70 via-[#644716]/50 to-[#F7F6F2]" />
-        </div>
-
+      {/* Hero Section - Product image left, text right */}
+      <section className="relative pt-40 md:pt-48 lg:pt-56 pb-20 bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#F7F6F2] overflow-hidden">
+        <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="container relative z-10 mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center space-y-6"
-          >
+          <div className="max-w-6xl mx-auto">
             <Link href="/products">
-              <a className="inline-flex items-center gap-2 text-white/80 font-medium hover:text-white transition-colors">
+              <a className="inline-flex items-center gap-2 text-[#8B6F47] font-medium hover:text-[#BC7C5F] transition-colors mb-8">
                 <ArrowLeft className="w-4 h-4" /> Back to Products
               </a>
             </Link>
-            <span className="block text-[#BC7C5F] font-serif italic text-xl">Your Guide</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight">
-              How to Use Your <br />
-              <span className="italic text-[#BC7C5F]">Tallow Cream</span>
-            </h1>
-            <p className="text-white/80 text-lg max-w-xl mx-auto">
-              Simple steps for glowing, nourished skin — morning, evening, and everything in between.
-            </p>
-          </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Product Image - transparent bg, no frame */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://i.postimg.cc/SN3b2M2t/M_M_Valentines_heart.png"
+                  alt="Mac & Meadow tallow cream"
+                  className="w-full max-w-md h-auto drop-shadow-2xl"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </motion.div>
+
+              {/* Text */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-6"
+              >
+                <span className="block text-[#BC7C5F] font-serif italic text-xl">Your Guide</span>
+                <h1 className="font-serif text-5xl md:text-7xl text-[#644716] leading-tight">
+                  How to Use Your <br />
+                  <span className="italic text-[#BC7C5F]">Tallow Cream</span>
+                </h1>
+                <p className="text-[#644716]/70 text-lg max-w-xl">
+                  Simple steps for glowing, nourished skin — morning, evening, and everything in between.
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Step Zero - Exfoliate */}
+      {/* Step Zero - Exfoliate (now uses blog_header_2 as the photo) */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#BC7C5F]/5 rounded-full blur-[120px]" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -94,8 +108,8 @@ export default function HowToUse() {
               >
                 <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[80px]" />
                 <img
-                  src="https://i.postimg.cc/SN3b2M2t/M_M_Valentines_heart.png"
-                  alt="Mac & Meadow tallow cream"
+                  src={blogHeader2}
+                  alt="Skincare preparation"
                   className="rounded-[2rem] shadow-2xl w-full h-[350px] md:h-[450px] object-cover relative z-10"
                   loading="lazy"
                 />
@@ -171,7 +185,7 @@ export default function HowToUse() {
         </div>
       </section>
 
-      {/* Evening Application */}
+      {/* Evening Application - uses The Dreamer photography + product plug */}
       <section className="py-24 bg-[#8B6F47] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#BC7C5F]/20 rounded-full blur-[120px]" />
@@ -216,6 +230,26 @@ export default function HowToUse() {
                     Wake up and notice the difference.
                   </p>
                 </div>
+
+                {/* The Dreamer product plug */}
+                <div className="bg-gradient-to-br from-[#2D2040] to-[#1a1530] p-6 rounded-[1.5rem] border border-white/10 mt-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Moon className="w-6 h-6 text-[#BC7C5F]" />
+                    <span className="text-[#BC7C5F] font-serif italic text-lg">Nighttime Pick</span>
+                  </div>
+                  <h4 className="font-serif text-2xl text-white mb-2">Try The Dreamer for Better Sleep</h4>
+                  <p className="text-white/70 text-sm leading-relaxed mb-4">
+                    Our nighttime formula is infused with calming lavender essential oil and magnesium flakes — designed to help you wind down and nourish your skin while you rest.
+                  </p>
+                  <a
+                    href="https://macandmeadowco.square.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#BC7C5F] hover:bg-[#A86B4F] text-white font-medium px-6 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    Shop The Dreamer <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
               </motion.div>
 
               <motion.div
@@ -227,9 +261,9 @@ export default function HowToUse() {
               >
                 <div className="absolute inset-0 bg-white/5 rounded-full blur-[80px]" />
                 <img
-                  src="https://i.postimg.cc/8P4hKp4T/M_M_website_photo_man.png"
-                  alt="Applying tallow cream at night"
-                  className="rounded-[2rem] shadow-2xl w-full h-[400px] md:h-[500px] object-cover object-top relative z-10"
+                  src={dreamerPhoto}
+                  alt="The Dreamer nighttime tallow cream"
+                  className="rounded-[2rem] shadow-2xl w-full h-[400px] md:h-[550px] object-cover relative z-10"
                   loading="lazy"
                 />
               </motion.div>
