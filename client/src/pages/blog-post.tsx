@@ -15,7 +15,7 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen bg-[#F7F6F2]">
         <Navbar />
-        <div className="pt-48 pb-20 text-center">
+        <div className="pt-56 pb-20 text-center">
           <h1 className="font-serif text-4xl text-[#644716]">Post Not Found</h1>
           <p className="text-[#644716]/70 mt-4">The blog post you're looking for doesn't exist.</p>
           <Link href="/blog">
@@ -120,7 +120,7 @@ export default function BlogPost() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
