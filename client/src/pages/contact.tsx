@@ -347,45 +347,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Google Maps Embed */}
-      <section className="py-20 bg-[#F7F6F2]">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center space-y-8"
-          >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">Find Us</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">Our Location</h2>
-            <div className="rounded-[2rem] overflow-hidden shadow-xl border border-[#644716]/10">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96854.5!2d-129.9427085!3d46.423669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875303d488ab9c67%3A0x2aaed1becd23da83!2sMac%20%26%20Meadow!5e0!3m2!1sen!2sus!4v1712000000000"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mac & Meadow on Google Maps"
-                className="w-full"
-              />
-            </div>
-            <a
-              href="https://www.google.com/maps/place/Mac+%26+Meadow/@46.423669,-129.9427085,3z/data=!3m1!4b1!4m6!3m5!1s0x875303d488ab9c67:0x2aaed1becd23da83!8m2!3d46.423669!4d-129.9427086!16s%2Fg%2F11yzt7nlt1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#8B6F47] font-medium hover:text-[#BC7C5F] transition-colors"
-            >
-              <MapPin className="w-4 h-4" />
-              View on Google Maps
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Google Business Profile Review Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">

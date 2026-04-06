@@ -292,6 +292,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meadow Guard Coming Soon */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A6741]/30 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0">
+                <img
+                  src={meadowGuardPhoto}
+                  alt="Meadow Guard Natural Insect Repellant"
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">Coming Soon</span>
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <Shield className="w-8 h-8 text-[#A2A77F]" />
+                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">Meadow Guard</h3>
+                </div>
+                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Insect Repellant Spray</p>
+                <p className="text-white/60 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0">
+                  Protect yourself naturally this summer. A plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Featured Section */}
       <section className="py-32 bg-white relative">
         <div className="container mx-auto px-4 md:px-6">
@@ -654,84 +695,6 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Meadow Guard Coming Soon */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A6741]/30 rounded-full blur-3xl" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              {/* Image */}
-              <div className="w-full md:w-2/5 flex-shrink-0">
-                <img
-                  src={meadowGuardPhoto}
-                  alt="Meadow Guard Natural Insect Repellant"
-                  loading="lazy"
-                  decoding="async"
-                  className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
-                />
-              </div>
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">Coming Soon</span>
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                  <Shield className="w-8 h-8 text-[#A2A77F]" />
-                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">Meadow Guard</h3>
-                </div>
-                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Insect Repellant Spray</p>
-                <p className="text-white/60 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0">
-                  Protect yourself naturally this summer. Meadow Guard is a plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* The Dreamer - Second Announcement */}
-      <section className="py-10 bg-[#F7F6F2]">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto bg-[#0066cc] rounded-[1.5rem] p-5 md:p-8 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#3399ff]/20 rounded-full blur-[60px]" />
-            <div className="absolute bottom-0 left-0 text-white/5 text-[80px] font-serif leading-none pointer-events-none">&#9734;</div>
-
-            <div className="relative z-10 flex items-center gap-6">
-              <img
-                src={dreamerTransparent}
-                alt="The Dreamer"
-                className="w-20 md:w-28 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] flex-shrink-0 hidden sm:block"
-                loading="lazy"
-              />
-              <div className="flex-1">
-                <h4 className="font-serif text-xl md:text-2xl text-white mb-1">Sweet dreams start with The Dreamer</h4>
-                <p className="text-white/70 text-sm md:text-base mb-3">Lavender + Magnesium nighttime tallow. Your skin's new best friend before bed.</p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-[#0066cc] font-bold px-6 py-2 rounded-full text-sm hover:bg-[#F7F6F2] transition-colors"
-                >
-                  Shop The Dreamer
-                </a>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

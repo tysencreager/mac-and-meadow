@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon, Package } from "lucide-react";
+import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon, Package, Shield } from "lucide-react";
 import product3 from "@assets/mac_meadow_product_3.webp";
 import heavenSentPhoto from "@product-photos/Heaven-Sent-photography.png";
 import bareBonesPhoto from "@product-photos/bare-bones-photography.png";
@@ -11,6 +11,7 @@ import lumberjackPhoto from "@product-photos/the-lumberjack-photography.png";
 import dreamerPhoto from "@product-photos/the-dreamer-photography.png";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
 import allProductsPhoto from "@product-photos/all-products-photography.png";
+import meadowGuardPhoto from "@product-photos/meadow-guard-photography.png";
 
 export default function Products() {
   return (
@@ -39,6 +40,43 @@ export default function Products() {
             <p className="text-[#644716]/70 text-lg leading-relaxed">
               Handcrafted with the finest Wagyu tallow and natural ingredients for healthy, glowing skin.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Meadow Guard Coming Soon */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#4A6741]/30 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/3 flex-shrink-0">
+                <img
+                  src={meadowGuardPhoto}
+                  alt="Meadow Guard Natural Insect Repellant"
+                  loading="lazy"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[250px] md:h-[280px] object-cover"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Coming Soon</span>
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                  <Shield className="w-7 h-7 text-[#A2A77F]" />
+                  <h3 className="font-serif text-3xl md:text-4xl text-white">Meadow Guard</h3>
+                </div>
+                <p className="text-white/80 text-lg mb-1">Natural Insect Repellant Spray</p>
+                <p className="text-white/60 text-sm md:text-base max-w-md mx-auto md:mx-0">
+                  Protect yourself naturally this summer. A plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -120,78 +158,72 @@ export default function Products() {
         </div>
       </section>
 
-      {/* NEW: The Dreamer Announcement */}
-      <section className="py-10 bg-white">
+      {/* See the Quality + Dreamer Announcement - Two Column */}
+      <section className="py-20 bg-white relative">
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-r from-[#0066cc] to-[#004999] rounded-[1.5rem] p-5 md:p-8 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#3399ff]/20 rounded-full blur-[60px]" />
-            <div className="absolute bottom-0 left-0 text-white/5 text-[80px] font-serif leading-none pointer-events-none">&#9790;</div>
-
-            <div className="relative z-10 flex items-center gap-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Whipped to Perfection */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-[#F7F6F2] rounded-[2rem] overflow-hidden border border-[#644716]/10"
+            >
               <img
-                src={dreamerTransparent}
-                alt="The Dreamer"
-                className="w-24 md:w-32 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] flex-shrink-0 hidden sm:block"
+                src={allProductsPhoto}
+                alt="Mac & Meadow product collection"
                 loading="lazy"
+                decoding="async"
+                className="w-full h-[260px] object-cover"
               />
-              <div className="flex-1">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-2">New Product</span>
-                <h4 className="font-serif text-xl md:text-2xl text-white mb-1">Meet The Dreamer — Your New Nighttime Ritual!</h4>
-                <p className="text-white/70 text-sm md:text-base mb-3">Infused with calming lavender & magnesium flakes for better sleep and softer skin.</p>
+              <div className="p-8">
+                <span className="text-[#BC7C5F] font-serif italic text-lg">See the Quality</span>
+                <h3 className="font-serif text-3xl text-[#644716] mt-2 mb-4">Whipped to Perfection</h3>
+                <p className="text-[#644716]/70 text-lg leading-relaxed">
+                  Our cream is carefully hand-whipped to achieve a light, luxurious texture that melts into your skin.
+                  Rich, nourishing, and never greasy — just pure, natural goodness.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* The Dreamer Announcement */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 relative overflow-hidden flex flex-col justify-between"
+            >
+              <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
+              <div className="absolute bottom-0 left-0 text-white/5 text-[100px] font-serif leading-none pointer-events-none">&#9790;</div>
+
+              <div className="relative z-10 flex-1 flex flex-col">
+                <span className="inline-block self-start bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Product</span>
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={dreamerTransparent}
+                    alt="The Dreamer"
+                    className="w-24 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h4 className="font-serif text-2xl md:text-3xl text-white">The Dreamer</h4>
+                    <p className="text-white/70 text-sm">Nighttime Whipped Tallow</p>
+                  </div>
+                </div>
+                <p className="text-white/80 text-base leading-relaxed mb-6">
+                  Your new bedtime ritual is here! Infused with calming lavender & magnesium flakes for better sleep and softer skin.
+                </p>
                 <a
                   href="https://macandmeadowco.square.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white text-[#0066cc] font-bold px-6 py-2 rounded-full text-sm hover:bg-[#F7F6F2] transition-colors"
+                  className="inline-block self-start bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg mt-auto"
                 >
                   Order Now
                 </a>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* See the Quality Section */}
-      <section className="py-20 bg-white relative">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="flex-shrink-0"
-            >
-              <img
-                src={product3}
-                alt="Whipped Tallow Cream Texture"
-                width={200}
-                height={260}
-                loading="lazy"
-                decoding="async"
-                className="rounded-[1.5rem] shadow-xl w-[200px] h-[260px] object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
-            >
-              <span className="text-[#BC7C5F] font-serif italic text-lg">See the Quality</span>
-              <h3 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2 mb-4">Whipped to Perfection</h3>
-              <p className="text-[#644716]/70 text-lg leading-relaxed">
-                Our cream is carefully hand-whipped to achieve a light, luxurious texture that melts into your skin.
-                Rich, nourishing, and never greasy—just pure, natural goodness.
-              </p>
             </motion.div>
           </div>
         </div>
@@ -416,9 +448,9 @@ export default function Products() {
       </section>
 
       {/* Featured Product: The Dreamer */}
-      <section className="py-32 bg-gradient-to-br from-[#1a1530] to-[#2D2040] relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#9B7FD4]/15 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#BC7C5F]/10 rounded-full blur-[120px]" />
+      <section className="py-32 bg-gradient-to-br from-[#004999] to-[#0066cc] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3399ff]/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#002244]/20 rounded-full blur-[120px]" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
