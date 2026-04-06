@@ -93,7 +93,7 @@ export default function LocationSaltLakeCity() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-32 md:pt-40 lg:pt-48 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,7 +235,7 @@ export default function LocationSaltLakeCity() {
       <section className="py-24 bg-[#F7F6F2]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
