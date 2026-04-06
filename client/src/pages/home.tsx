@@ -6,16 +6,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, TreePine, ExternalLink } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/mac_meadow_hero_2.webp";
+import heroImage from "@assets/new-mac-and-meadow-product-photos/header-frame.jpeg";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 // All products data
 const allProducts = [
-  { name: "Bare Bones", description: "Unscented", price: "$18.50", isBundle: false },
-  { name: "Bare Bones for Two", description: "Unscented Bundle", price: "$32.00", isBundle: true },
-  { name: "Vanilla & Orange", description: "Sweet citrus blend", price: "$18.50", isBundle: false },
-  { name: "Vanilla & Orange for Two", description: "Sweet citrus bundle", price: "$32.00", isBundle: true },
+  { name: "Bare Bones", description: "Unscented whipped tallow", price: "$18.50", isBundle: false },
+  { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18.50", isBundle: false },
+  { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18.50", isBundle: false },
+  { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$18.50", isBundle: false },
 ];
 
 const fadeIn = {

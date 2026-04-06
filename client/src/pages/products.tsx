@@ -3,17 +3,21 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine } from "lucide-react";
-import product1 from "@assets/IMG_5787.webp";
-import product2 from "@assets/IMG_5790.webp";
+import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon } from "lucide-react";
+import product1 from "@assets/new-mac-and-meadow-product-photos/heaven-sent.jpeg";
+import product2 from "@assets/new-mac-and-meadow-product-photos/heaven-sent 2.jpeg";
 import product3 from "@assets/mac_meadow_product_3.webp";
+import bareBonesImg from "@assets/new-mac-and-meadow-product-photos/bare-bones.jpg";
+import lumberjackImg from "@assets/new-mac-and-meadow-product-photos/the-lumberjack.JPG";
+import dreamerImg from "@assets/new-mac-and-meadow-product-photos/the-dreamer.jpeg";
 
 // All products data
 const allProducts = [
-  { name: "Bare Bones", description: "Unscented", price: "$18.50", isBundle: false },
-  { name: "Bare Bones for Two", description: "Unscented Bundle", price: "$32.00", isBundle: true },
-  { name: "Vanilla & Orange", description: "Sweet citrus blend", price: "$18.50", isBundle: false },
-  { name: "Vanilla & Orange for Two", description: "Sweet citrus bundle", price: "$32.00", isBundle: true },
+  { name: "Bare Bones", description: "Unscented whipped tallow", price: "$18.50", isBundle: false, image: bareBonesImg },
+  { name: "Bare Bones for Two", description: "Unscented Bundle", price: "$32.00", isBundle: true, image: bareBonesImg },
+  { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18.50", isBundle: false, image: product1 },
+  { name: "Heaven Sent for Two", description: "Vanilla & Orange bundle", price: "$32.00", isBundle: true, image: product1 },
+  { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$18.50", isBundle: false, image: dreamerImg },
 ];
 
 export default function Products() {
@@ -224,9 +228,9 @@ export default function Products() {
                 </div>
 
                 <h2 className="font-serif text-5xl md:text-6xl text-[#644716]">Whipped Tallow Cream</h2>
-                <p className="text-2xl text-[#BC7C5F] font-serif italic">Vanilla & Orange</p>
+                <p className="text-2xl text-[#BC7C5F] font-serif italic">Heaven Sent</p>
                 <p className="text-[#644716]/80 leading-relaxed text-lg font-light">
-                  Our signature whipped tallow cream is a luxurious blend of Wagyu beef tallow, olive oil, orange essential oil, vanilla extract, and frankincense. It's not just skincare; it's skin food that deeply nourishes and restores.
+                  Our signature whipped tallow cream, Heaven Sent, is a luxurious blend of Wagyu beef tallow, olive oil, orange essential oil, vanilla extract, and frankincense. It's not just skincare; it's skin food that deeply nourishes and restores.
                 </p>
               </motion.div>
 
@@ -325,7 +329,7 @@ export default function Products() {
             <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-2">All Products</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {allProducts.map((product, i) => (
               <motion.div
                 key={i}
@@ -333,23 +337,33 @@ export default function Products() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-6 rounded-[1.5rem] shadow-sm hover:shadow-lg transition-all duration-300 border border-[#644716]/10 group hover:-translate-y-1"
+                className="bg-white rounded-[1.5rem] shadow-sm hover:shadow-lg transition-all duration-300 border border-[#644716]/10 group hover:-translate-y-1 overflow-hidden"
               >
-                {product.isBundle && (
-                  <span className="inline-block bg-[#8B6F47] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
-                )}
-                <h3 className="text-lg font-bold text-[#644716] mb-1">Whipped Tallow</h3>
-                <p className="text-[#BC7C5F] font-serif italic mb-1">{product.name}</p>
-                <p className="text-[#644716]/60 text-sm mb-3">{product.description}</p>
-                <p className="text-[#8B6F47] font-bold text-xl mb-4">{product.price}</p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-[#8B6F47] text-white py-2.5 rounded-full text-center text-sm font-medium hover:bg-[#8B6F47]/90 transition"
-                >
-                  Shop Now
-                </a>
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6">
+                  {product.isBundle && (
+                    <span className="inline-block bg-[#8B6F47] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
+                  )}
+                  <h3 className="text-lg font-bold text-[#644716] mb-1">Whipped Tallow</h3>
+                  <p className="text-[#BC7C5F] font-serif italic mb-1">{product.name}</p>
+                  <p className="text-[#644716]/60 text-sm mb-3">{product.description}</p>
+                  <p className="text-[#8B6F47] font-bold text-xl mb-4">{product.price}</p>
+                  <a
+                    href="https://macandmeadowco.square.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#8B6F47] text-white py-2.5 rounded-full text-center text-sm font-medium hover:bg-[#8B6F47]/90 transition"
+                  >
+                    Shop Now
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -390,16 +404,76 @@ export default function Products() {
                   Order Now
                 </a>
               </div>
-              {/* Image */}
-              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
+              {/* Images */}
+              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2 space-y-4">
+                <img
+                  src={lumberjackImg}
+                  alt="The Lumberjack tallow cream product"
+                  width={300}
+                  height={300}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[280px] sm:h-[300px] md:h-[300px] object-cover"
+                />
                 <img
                   src="https://i.postimg.cc/8P4hKp4T/M-M-website-photo-man.png"
                   alt="Man using The Lumberjack tallow cream"
                   width={300}
+                  height={200}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[160px] sm:h-[180px] md:h-[180px] object-cover object-top"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Dreamer */}
+      <section className="py-16 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#2D2040] to-[#1a1530] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#9B7FD4]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#BC7C5F]/15 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5">
+                  <Moon className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#BC7C5F]" />
+                </div>
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 sm:mb-3 md:mb-4">The Dreamer</h3>
+                <p className="text-white/80 text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 md:mb-3">Nighttime Whipped Tallow</p>
+                <p className="text-[#BC7C5F] font-medium text-lg sm:text-xl md:text-2xl">Lavender & Magnesium</p>
+                <p className="text-white/60 mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-md mx-auto md:mx-0">
+                  Drift into deep rest with our nighttime tallow, infused with calming lavender essential oil and magnesium flakes. Nourish your skin while you sleep.
+                </p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-5 sm:mt-6 md:mt-8 bg-[#BC7C5F] hover:bg-[#A86B4F] text-white font-medium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-colors text-sm sm:text-base"
+                >
+                  Order Now
+                </a>
+              </div>
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0 order-1 md:order-2">
+                <img
+                  src={dreamerImg}
+                  alt="The Dreamer nighttime tallow cream"
+                  width={300}
                   height={500}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-[1.5rem] shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover object-top"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[380px] sm:h-[400px] md:h-[420px] object-cover"
                 />
               </div>
             </div>

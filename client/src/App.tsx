@@ -19,6 +19,7 @@ const TermsAndConditions = lazy(() => import("@/pages/terms-and-conditions"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogPost = lazy(() => import("@/pages/blog-post"));
 const Reviews = lazy(() => import("@/pages/reviews"));
+const HowToUse = lazy(() => import("@/pages/how-to-use"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const LocationSyracuse = lazy(() => import("@/pages/location-syracuse"));
 const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"));
@@ -42,6 +43,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/products" component={Products} />
+          <Route path="/how-to-use" component={HowToUse} />
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />

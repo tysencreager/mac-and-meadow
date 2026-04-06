@@ -24,11 +24,20 @@ export function Navbar() {
           Home
         </a>
       </Link>
-      <Link href="/products">
-        <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
-          Products
-        </a>
-      </Link>
+      <div className="space-y-3">
+        <Link href="/products">
+          <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            Products
+          </a>
+        </Link>
+        <div className="pl-4 flex flex-col gap-3 border-l-2 border-border/40">
+          <Link href="/how-to-use">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              How to Use
+            </a>
+          </Link>
+        </div>
+      </div>
       <div className="space-y-3">
         <Link href="/about">
           <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
@@ -104,11 +113,29 @@ export function Navbar() {
               Home
             </a>
           </Link>
-          <Link href="/products">
-            <a className="text-foreground/80 hover:text-primary transition-colors font-medium">
-              Products
-            </a>
-          </Link>
+          {/* Products Dropdown */}
+          <div className="relative group">
+            <Link href="/products">
+              <a className="text-foreground/80 hover:text-primary transition-colors font-medium inline-flex items-center gap-1">
+                Products
+                <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+              </a>
+            </Link>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[180px]">
+                <Link href="/products">
+                  <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    All Products
+                  </a>
+                </Link>
+                <Link href="/how-to-use">
+                  <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    How to Use
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
 
           {/* About Dropdown */}
           <div className="relative group">
