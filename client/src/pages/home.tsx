@@ -14,10 +14,10 @@ const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 // All products data
 const allProducts = [
-  { name: "Bare Bones", description: "Unscented whipped tallow", price: "$18.50", isBundle: false },
-  { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18.50", isBundle: false },
-  { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18.50", isBundle: false },
-  { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$18.50", isBundle: false },
+  { name: "Bare Bones", description: "Unscented whipped tallow", price: "$18", isBundle: false },
+  { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18", isBundle: false },
+  { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18", isBundle: false },
+  { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$16", isBundle: false },
 ];
 
 const fadeIn = {
