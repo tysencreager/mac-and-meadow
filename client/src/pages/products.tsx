@@ -175,7 +175,7 @@ export default function Products() {
                 alt="Mac & Meadow product collection"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-[260px] object-cover"
+                className="w-full h-[200px] sm:h-[240px] md:h-[260px] object-cover"
               />
               <div className="p-8">
                 <span className="text-[#BC7C5F] font-serif italic text-lg">See the Quality</span>
@@ -193,33 +193,29 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 relative overflow-hidden flex flex-col justify-between"
+              className="bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 md:p-10 relative overflow-hidden flex flex-col items-center justify-center text-center"
             >
               <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
-              <div className="absolute bottom-0 left-0 text-white/5 text-[100px] font-serif leading-none pointer-events-none">&#9790;</div>
+              <div className="absolute bottom-0 left-0 text-white/5 text-[120px] font-serif leading-none pointer-events-none">&#9790;</div>
 
-              <div className="relative z-10 flex-1 flex flex-col">
-                <span className="inline-block self-start bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Product</span>
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={dreamerTransparent}
-                    alt="The Dreamer"
-                    className="w-24 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] flex-shrink-0"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h4 className="font-serif text-2xl md:text-3xl text-white">The Dreamer</h4>
-                    <p className="text-white/70 text-sm">Nighttime Whipped Tallow</p>
-                  </div>
-                </div>
-                <p className="text-white/80 text-base leading-relaxed mb-6">
+              <div className="relative z-10 flex flex-col items-center">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">New Product</span>
+                <img
+                  src={dreamerTransparent}
+                  alt="The Dreamer"
+                  className="w-44 md:w-52 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] mb-6"
+                  loading="lazy"
+                />
+                <h4 className="font-serif text-3xl md:text-4xl text-white mb-2">The Dreamer</h4>
+                <p className="text-white/70 text-lg mb-4">Nighttime Whipped Tallow</p>
+                <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-sm">
                   Your new bedtime ritual is here! Infused with calming lavender & magnesium flakes for better sleep and softer skin.
                 </p>
                 <a
                   href="https://macandmeadowco.square.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block self-start bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg mt-auto"
+                  className="inline-block bg-white text-[#0066cc] font-bold px-10 py-3.5 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
                 >
                   Order Now
                 </a>
@@ -248,7 +244,7 @@ export default function Products() {
                 alt="Heaven Sent Whipped Tallow Cream"
                 loading="lazy"
                 decoding="async"
-                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700 relative z-10"
+                className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700 relative z-10"
               />
             </motion.div>
 
@@ -367,7 +363,7 @@ export default function Products() {
                 alt="Bare Bones Unscented Whipped Tallow"
                 loading="lazy"
                 decoding="async"
-                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700 relative z-10"
+                className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700 relative z-10"
               />
             </motion.div>
           </div>
@@ -394,7 +390,7 @@ export default function Products() {
                 alt="The Lumberjack Men's Whipped Tallow"
                 loading="lazy"
                 decoding="async"
-                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
+                className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
               />
             </motion.div>
 
@@ -513,7 +509,7 @@ export default function Products() {
                 alt="The Dreamer Nighttime Whipped Tallow"
                 loading="lazy"
                 decoding="async"
-                className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
+                className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
               />
             </motion.div>
           </div>

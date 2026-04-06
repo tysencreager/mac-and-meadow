@@ -69,10 +69,10 @@ export function Navbar() {
     <>
       {/* Meadow Guard Coming Soon Banner */}
       <div className="fixed top-0 w-full z-[60] bg-gradient-to-r from-[#5B7B5B] via-[#4A6741] to-[#5B7B5B] text-white py-2 px-4 text-center">
-        <div className="container mx-auto flex items-center justify-center gap-2 text-sm font-medium">
-          <Shield className="w-4 h-4 flex-shrink-0" />
+        <div className="container mx-auto flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium">
+          <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
           <span>
-            <strong>Meadow Guard</strong> — Natural Insect Repellant Spray — <span className="italic">Coming Soon!</span>
+            <strong>Meadow Guard</strong> — Natural Insect Repellant <span className="hidden sm:inline">Spray</span> — <span className="italic">Coming Soon!</span>
           </span>
         </div>
       </div>

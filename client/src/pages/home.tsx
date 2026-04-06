@@ -169,7 +169,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
+            className="relative bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-5 sm:p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#9B7FD4]/15 rounded-full blur-[40px]" />
@@ -187,7 +187,7 @@ export default function Home() {
               <img
                 src={dreamerTransparent}
                 alt="The Dreamer tallow cream"
-                className="w-44 h-auto mx-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                className="w-32 sm:w-40 md:w-44 h-auto mx-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
               />
               <div>
                 <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Just Launched</span>
@@ -442,7 +442,7 @@ export default function Home() {
                 <img
                   src={dreamerTransparent}
                   alt="The Dreamer tallow cream"
-                  className="w-48 md:w-56 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                  className="w-36 sm:w-44 md:w-48 lg:w-56 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                   loading="lazy"
                 />
               </div>
