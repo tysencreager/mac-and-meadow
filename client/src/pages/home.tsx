@@ -215,7 +215,7 @@ export default function Home() {
         </motion.div>
       )}
       {/* Hero Section */}
-      <section className="relative min-h-[100vh] flex items-center pt-40 md:pt-48 lg:pt-56 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center pt-48 md:pt-48 lg:pt-56 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
         <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
           <div className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]" />
           <div className="absolute inset-0 bg-noise opacity-15 mix-blend-soft-light" />
