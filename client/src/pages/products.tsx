@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon, Package, Shield } from "lucide-react";
 import product3 from "@assets/mac_meadow_product_3.webp";
-import heavenSentPhoto from "@product-photos/Heaven-Sent-photography.png";
-import bareBonesPhoto from "@product-photos/bare-bones-photography.png";
-import lumberjackPhoto from "@product-photos/the-lumberjack-photography.png";
+import heavenSentPhoto from "@product-photos/mac-and-meadow-heaven-sent.jpeg";
+import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones.jpeg";
+import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack.jpeg";
 import dreamerPhoto from "@product-photos/the-dreamer-photography.png";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
 import allProductsPhoto from "@product-photos/all-products-photography.png";
@@ -300,7 +300,7 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Featured Product: Bare Bones */}
+      {/* Featured Product: bare bones */}
       <section className="py-32 bg-white relative">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -318,7 +318,7 @@ export default function Products() {
                   <span className="uppercase tracking-widest text-sm font-bold">Pure & Simple</span>
                 </div>
 
-                <h2 className="font-serif text-5xl md:text-6xl text-[#644716]">Bare Bones</h2>
+                <h2 className="font-serif text-5xl md:text-6xl text-[#644716]">bare bones</h2>
                 <p className="text-2xl text-[#BC7C5F] font-serif italic">Unscented Whipped Tallow</p>
                 <p className="text-[#644716]/80 leading-relaxed text-lg font-light">
                   For those who love the benefits of tallow without any added fragrance. Pure, simple, and deeply nourishing — just Wagyu beef tallow and olive oil. Perfect for sensitive skin or anyone who prefers a clean, unscented moisturizer.
@@ -360,7 +360,7 @@ export default function Products() {
               <div className="absolute inset-0 bg-[#A2A77F]/10 rounded-full blur-[100px]" />
               <img
                 src={bareBonesPhoto}
-                alt="Bare Bones Unscented Whipped Tallow"
+                alt="bare bones Unscented Whipped Tallow"
                 loading="lazy"
                 decoding="async"
                 className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700 relative z-10"
@@ -476,7 +476,7 @@ export default function Products() {
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <h3 className="font-bold text-white text-lg">Ingredients</h3>
-                  <p className="text-white/60 leading-relaxed">Wagyu Beef Tallow, Olive Oil, Lavender Essential Oil, Magnesium Flakes</p>
+                  <p className="text-white/60 leading-relaxed">Wagyu Beef Tallow, Olive Oil, Lavender Essential Oil, Magnesium Flakes, Frankincense</p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-bold text-white text-lg">Size</h3>
@@ -612,7 +612,7 @@ export default function Products() {
                   </div>
                   <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">Build Your Own Bundle</h2>
                   <p className="text-white/80 text-lg leading-relaxed mb-8">
-                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, Bare Bones, The Lumberjack, and The Dreamer.
+                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, and The Dreamer.
                   </p>
                   <a
                     href="https://macandmeadowco.square.site/"
