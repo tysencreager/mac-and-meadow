@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X, Shield } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/new-mac-and-meadow-product-photos/header-frame.jpeg";
+import heroImage from "@product-photos/mac-and-meadow-hero.png";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
 import meadowGuardPhoto from "@product-photos/meadow-guard-photography.png";
 
@@ -14,7 +14,7 @@ const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 // All products data
 const allProducts = [
-  { name: "Bare Bones", description: "Unscented whipped tallow", price: "$18", isBundle: false },
+  { name: "bare bones", description: "Unscented whipped tallow", price: "$18", isBundle: false },
   { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18", isBundle: false },
   { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18", isBundle: false },
   { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$16", isBundle: false },
@@ -240,6 +240,19 @@ export default function Home() {
                 <span className="text-gradient-gold">Nourishing,</span> <br />
                 <span className="italic font-light text-[#BC7C5F]">Healing.</span>
               </motion.h1>
+
+              {/* Mobile Hero Image */}
+              <motion.div variants={fadeIn} className="md:hidden relative">
+                <div className="absolute inset-0 bg-[#BC7C5F]/20 rounded-full blur-[80px]" />
+                <img
+                  src={heroImage}
+                  alt="Mac & Meadow Whipped Tallow Cream"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  className="rounded-[2rem] shadow-2xl w-full h-[280px] object-cover relative z-10"
+                />
+              </motion.div>
 
               <motion.p variants={fadeIn} className="text-lg md:text-xl text-[#644716] font-medium leading-relaxed drop-shadow-sm max-w-lg">
                 Experience the deep moisturizing power of Wagyu Tallow Cream.
