@@ -186,6 +186,26 @@ export default function BlogPost() {
         </div>
       </section>
 
+      {/* Featured Image */}
+      {post.image && (
+        <section className="bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.8 }}
+              className="max-w-3xl mx-auto"
+            >
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-auto rounded-2xl shadow-md"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Article Content */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6">
