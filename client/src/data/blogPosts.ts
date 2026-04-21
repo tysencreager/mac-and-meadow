@@ -2,6 +2,8 @@ import blogHeader1 from "@assets/blog_header_1.webp";
 import blogHeader2 from "@assets/blog_header_2.webp";
 import valentinesBlogHeader from "@assets/valentines_blog_header.png";
 import mothersDayCollectionHeader from "@assets/mothers_day_collection_blog_header.webp";
+import allProductsCollectionImg from "@assets/blog_all_products_collection.webp";
+import theDreamerImg from "@assets/blog_the_dreamer.webp";
 
 export interface BlogPost {
   slug: string;
@@ -22,6 +24,8 @@ export const blogPosts: BlogPost[] = [
     image: mothersDayCollectionHeader,
     content: `
 Mother's Day is right around the corner, and finding a gift that feels as thoughtful as she is can be tough. That's why we created four distinct varieties of [Mac & Meadow's Whipped Tallow Cream](/products) — each [handcrafted in small batches](/about) with its own personality. Not sure which one to choose? Here's a breakdown.
+
+![The full Mac & Meadow Whipped Tallow Cream collection](${allProductsCollectionImg})
 
 ## Bare Bones — For the Mom Who Keeps It Simple
 
@@ -73,6 +77,8 @@ Frankincense has been treasured for centuries for its skin-rejuvenating and calm
 **Ingredients:** Wagyu Beef Tallow, Magnesium Flakes, Lavender Essential Oil, Frankincense Essential Oil
 
 Every mom knows what it feels like to lie down exhausted but still struggle to fully unwind. [The Dreamer](/products) was made for exactly that moment. This is Mac & Meadow's dedicated nighttime formula — a calming, deeply moisturizing tallow cream infused with lavender and magnesium that works with her body while she sleeps.
+
+![The Dreamer nighttime whipped tallow cream with lavender and magnesium](${theDreamerImg})
 
 Magnesium is absorbed transdermally through the skin and is widely known for supporting relaxation and restful sleep. Combined with soothing lavender essential oil and the [skin-repairing power of Wagyu tallow](/blog/why-tallow-is-the-best-moisturizer), The Dreamer transforms a simple bedtime skincare step into a full ritual of rest and renewal.
 

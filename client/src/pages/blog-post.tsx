@@ -57,6 +57,26 @@ export default function BlogPost() {
             </h3>
           );
         }
+        // Standalone images: ![alt](url)
+        const imageMatch = paragraph.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+        if (imageMatch) {
+          const [, alt, src] = imageMatch;
+          return (
+            <figure key={i} className="my-10">
+              <img
+                src={src}
+                alt={alt}
+                loading="lazy"
+                className="w-full h-auto rounded-2xl shadow-md"
+              />
+              {alt && (
+                <figcaption className="text-sm text-[#644716]/60 italic text-center mt-3">
+                  {alt}
+                </figcaption>
+              )}
+            </figure>
+          );
+        }
         // Handle lists
         if (paragraph.startsWith('- ')) {
           const items = paragraph.split('\n').filter(line => line.startsWith('- '));
