@@ -30,6 +30,14 @@ export default function BlogPost() {
   }
 
   // Convert markdown-like content to HTML
+  const formatInline = (text: string) =>
+    text
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-[#644716]">$1</strong>')
+      .replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="text-[#8B6F47] underline underline-offset-2 hover:text-[#BC7C5F] transition-colors">$1</a>'
+      );
+
   const formatContent = (content: string) => {
     return content
       .split('\n\n')
@@ -49,6 +57,26 @@ export default function BlogPost() {
             </h3>
           );
         }
+        // Standalone images: ![alt](url)
+        const imageMatch = paragraph.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+        if (imageMatch) {
+          const [, alt, src] = imageMatch;
+          return (
+            <figure key={i} className="my-10">
+              <img
+                src={src}
+                alt={alt}
+                loading="lazy"
+                className="w-full h-auto rounded-2xl shadow-md"
+              />
+              {alt && (
+                <figcaption className="text-sm text-[#644716]/60 italic text-center mt-3">
+                  {alt}
+                </figcaption>
+              )}
+            </figure>
+          );
+        }
         // Handle lists
         if (paragraph.startsWith('- ')) {
           const items = paragraph.split('\n').filter(line => line.startsWith('- '));
@@ -56,19 +84,19 @@ export default function BlogPost() {
             <ul key={i} className="list-disc list-inside space-y-2 text-[#644716]/80 my-4 ml-4">
               {items.map((item, j) => (
                 <li key={j} dangerouslySetInnerHTML={{
-                  __html: item.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  __html: formatInline(item.replace('- ', ''))
                 }} />
               ))}
             </ul>
           );
         }
-        // Regular paragraphs with bold text support
+        // Regular paragraphs with bold text + link support
         return (
           <p
             key={i}
             className="text-[#644716]/80 leading-relaxed my-4"
             dangerouslySetInnerHTML={{
-              __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="text-[#644716]">$1</strong>')
+              __html: formatInline(paragraph)
             }}
           />
         );
@@ -157,6 +185,26 @@ export default function BlogPost() {
           </motion.div>
         </div>
       </section>
+
+      {/* Featured Image */}
+      {post.image && (
+        <section className="bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.8 }}
+              className="max-w-3xl mx-auto"
+            >
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-auto rounded-2xl shadow-md"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Article Content */}
       <section className="py-12 bg-white">
