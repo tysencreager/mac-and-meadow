@@ -1,6 +1,7 @@
 import blogHeader1 from "@assets/blog_header_1.webp";
 import blogHeader2 from "@assets/blog_header_2.webp";
 import valentinesBlogHeader from "@assets/valentines_blog_header.png";
+import mothersDayCollectionHeader from "@assets/mothers_day_collection_blog_header.webp";
 
 export interface BlogPost {
   slug: string;
@@ -14,6 +15,84 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "mothers-day-gift-guide-whipped-tallow-cream-collection",
+    title: "Meet the Collection: Find the Perfect Whipped Tallow Cream for Your Mom This Mother's Day",
+    excerpt: "A Mother's Day gift guide to Mac & Meadow's four Whipped Tallow Creams — Bare Bones, The Lumberjack, Heaven Sent, and The Dreamer. Find the perfect scent and formula for every kind of mom.",
+    image: mothersDayCollectionHeader,
+    content: `
+Mother's Day is right around the corner, and finding a gift that feels as thoughtful as she is can be tough. That's why we created four distinct varieties of [Mac & Meadow's Whipped Tallow Cream](/products) — each [handcrafted in small batches](/about) with its own personality. Not sure which one to choose? Here's a breakdown.
+
+## Bare Bones — For the Mom Who Keeps It Simple
+
+**Ingredients:** Wagyu Beef Tallow, Olive Oil
+
+Some moms are no-fuss. They don't want seventeen steps in their skincare routine — they want something that works, full stop. [Bare Bones](/products) is exactly that: pure [Wagyu tallow](/blog/why-tallow-is-the-best-moisturizer) and nourishing olive oil, nothing more.
+
+Bare Bones is perfect for:
+
+- Moms with sensitive skin or fragrance sensitivities
+- Mamas who prefer a completely unscented moisturizer
+- Anyone who values ingredient simplicity above all else
+- New moms who want something safe and gentle for skin that's been through a lot
+
+This is clean skincare at its most honest. Two ingredients. Incredible results.
+
+## The Lumberjack — For the Adventurous, Outdoorsy Mom
+
+**Ingredients:** Wagyu Beef Tallow, Olive Oil, Cedar, Orange Essential Oil
+
+Does your mom love the mountains? Does she garden, hike, or spend weekends outdoors? [The Lumberjack](/products) was made for her. Warm cedar and bright orange essential oil come together in a scent that feels like the best kind of adventure — fresh air, open skies, and a whole lot of life being lived.
+
+The Lumberjack is perfect for:
+
+- The active, outdoorsy mom who wants skincare that keeps up with her
+- Anyone who loves earthy, woodsy fragrance profiles
+- Moms who prefer something bold and grounding over floral or sweet
+- The woman who works with her hands and needs serious moisturization
+
+This one is a conversation-starter. She'll love being asked what she's wearing.
+
+## Heaven Sent — For the Mom Who Deserves to Feel Pampered
+
+**Ingredients:** Wagyu Beef Tallow, Olive Oil, Vanilla Extract, Frankincense
+
+If there's ever a scent that says *you deserve the world*, it's this one. Warm vanilla and ancient frankincense create a deeply grounding, slightly sweet, utterly luxurious fragrance that feels like a full spa moment in a little amber jar. [Heaven Sent](/products) isn't just skincare — it's an experience.
+
+Heaven Sent is perfect for:
+
+- The mom who loves warm, cozy, sophisticated scents
+- Anyone who could use a little stress relief and self-care
+- Moms with dry or mature skin who need deep, lasting hydration
+- The woman in your life who gives endlessly and rarely receives
+
+Frankincense has been treasured for centuries for its skin-rejuvenating and calming properties. Paired with nourishing Wagyu tallow and the comfort of vanilla, this cream feels like a warm hug in a jar.
+
+## The Dreamer — For the Mom Who Needs a Better Night's Sleep
+
+**Ingredients:** Wagyu Beef Tallow, Magnesium Flakes, Lavender Essential Oil, Frankincense Essential Oil
+
+Every mom knows what it feels like to lie down exhausted but still struggle to fully unwind. [The Dreamer](/products) was made for exactly that moment. This is Mac & Meadow's dedicated nighttime formula — a calming, deeply moisturizing tallow cream infused with lavender and magnesium that works with her body while she sleeps.
+
+Magnesium is absorbed transdermally through the skin and is widely known for supporting relaxation and restful sleep. Combined with soothing lavender essential oil and the [skin-repairing power of Wagyu tallow](/blog/why-tallow-is-the-best-moisturizer), The Dreamer transforms a simple bedtime skincare step into a full ritual of rest and renewal.
+
+The Dreamer is perfect for:
+
+- Moms who struggle to wind down at the end of a long day
+- Anyone who wants their skincare to pull double duty — moisturizing and calming
+- Moms with dry, stressed, or tired skin that needs overnight repair
+- The woman who gives all day and deserves deep rest at night
+
+[Apply a small amount](/how-to-use) to the face, neck, hands, or anywhere that needs extra love right before bed. She'll wake up with skin that's soft, nourished, and ready for another day of everything she does.
+
+## Still Can't Decide? Pair a Daytime Cream with The Dreamer
+
+For an especially thoughtful Mother's Day gift, pair a daytime cream with The Dreamer — [morning nourishment](/blog/morning-skincare-routine-with-tallow) and a bedtime ritual, all in one. Want to read what other moms are saying first? Check out our [customer reviews](/reviews), or [shop the full collection at Mac & Meadow](/products).
+    `.trim(),
+    date: "2026-04-21",
+    author: "McKenzie Madsen",
+    tags: ["Mother's Day gifts", "gift guide", "whipped tallow cream", "tallow", "natural skincare", "Mother's Day 2026", "gifts for mom", "self-care"]
+  },
   {
     slug: "valentines-day-galentines-day-gift-ideas-natural-skincare",
     title: "Valentine's Day & Galentine's Day Gift Ideas: Thoughtful Natural Skincare Gifts for 2026",

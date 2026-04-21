@@ -30,6 +30,14 @@ export default function BlogPost() {
   }
 
   // Convert markdown-like content to HTML
+  const formatInline = (text: string) =>
+    text
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-[#644716]">$1</strong>')
+      .replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="text-[#8B6F47] underline underline-offset-2 hover:text-[#BC7C5F] transition-colors">$1</a>'
+      );
+
   const formatContent = (content: string) => {
     return content
       .split('\n\n')
@@ -56,19 +64,19 @@ export default function BlogPost() {
             <ul key={i} className="list-disc list-inside space-y-2 text-[#644716]/80 my-4 ml-4">
               {items.map((item, j) => (
                 <li key={j} dangerouslySetInnerHTML={{
-                  __html: item.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  __html: formatInline(item.replace('- ', ''))
                 }} />
               ))}
             </ul>
           );
         }
-        // Regular paragraphs with bold text support
+        // Regular paragraphs with bold text + link support
         return (
           <p
             key={i}
             className="text-[#644716]/80 leading-relaxed my-4"
             dangerouslySetInnerHTML={{
-              __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="text-[#644716]">$1</strong>')
+              __html: formatInline(paragraph)
             }}
           />
         );
