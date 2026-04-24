@@ -2,7 +2,6 @@ import blogHeader1 from "@assets/blog_header_1.webp";
 import blogHeader2 from "@assets/blog_header_2.webp";
 import valentinesBlogHeader from "@assets/valentines_blog_header.png";
 import mothersDayCollectionHeader from "@assets/mothers_day_collection_blog_header.webp";
-import allProductsCollectionImg from "@assets/blog_all_products_collection.webp";
 import theDreamerImg from "@assets/blog_the_dreamer.webp";
 
 export interface BlogPost {
@@ -24,8 +23,6 @@ export const blogPosts: BlogPost[] = [
     image: mothersDayCollectionHeader,
     content: `
 Mother's Day is right around the corner, and finding a gift that feels as thoughtful as she is can be tough. That's why we created four distinct varieties of [Mac & Meadow's Whipped Tallow Cream](/products) — each [handcrafted in small batches](/about) with its own personality. Not sure which one to choose? Here's a breakdown.
-
-![The full Mac & Meadow Whipped Tallow Cream collection](${allProductsCollectionImg})
 
 ## Bare Bones — For the Mom Who Keeps It Simple
 
