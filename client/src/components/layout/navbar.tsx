@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ChevronDown, Shield } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import logo from "@assets/mac_meadow_logo_horns.webp";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -67,19 +67,9 @@ export function Navbar() {
 
   return (
     <>
-      {/* Meadow Guard Coming Soon Banner */}
-      <div className="fixed top-0 w-full z-[60] bg-gradient-to-r from-[#5B7B5B] via-[#4A6741] to-[#5B7B5B] text-white py-2 px-4 text-center">
-        <div className="container mx-auto flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium">
-          <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-          <span>
-            <strong>Meadow Guard</strong> — Natural Insect Repellant <span className="hidden sm:inline">Spray</span> — <span className="italic">Coming Soon!</span>
-          </span>
-        </div>
-      </div>
-
       <nav
         className={cn(
-          "fixed top-[36px] w-full z-50 transition-all duration-300 border-b",
+          "fixed top-0 w-full z-50 transition-all duration-300 border-b",
           isScrolled ? "bg-background/95 backdrop-blur-sm border-border/40 shadow-sm py-2" : "bg-background/95 backdrop-blur-sm border-border/20 py-4"
         )}
       >

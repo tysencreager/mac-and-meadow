@@ -3,15 +3,14 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon, Package, Shield } from "lucide-react";
-import product3 from "@assets/mac_meadow_product_3.webp";
-import heavenSentPhoto from "@product-photos/mac-and-meadow-heaven-sent.jpeg";
-import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones.jpeg";
-import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack.jpeg";
-import dreamerPhoto from "@product-photos/the-dreamer-photography.png";
+import { Leaf, Droplet, ShieldCheck, Heart, ArrowRight, Sparkles, TreePine, Moon, Package } from "lucide-react";
+import heavenSentPhoto from "@product-photos/mac-and-meadow-heaven-sent-new.png";
+import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones-new.png";
+import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack-new.png";
+import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
-import allProductsPhoto from "@product-photos/all-products-photography.png";
-import meadowGuardPhoto from "@product-photos/meadow-guard-photography.png";
+import allProductsPhoto from "@product-photos/mac-and-meadow-tallow-line.jpeg";
+import thePurgePhoto from "@product-photos/the-purge.jpeg";
 
 export default function Products() {
   return (
@@ -44,36 +43,36 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Meadow Guard Coming Soon */}
+      {/* The Purge - New Product */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#4A6741]/30 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F2D5C4]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#A8593A]/30 rounded-full blur-3xl" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
-                  src={meadowGuardPhoto}
-                  alt="Meadow Guard Natural Insect Repellant"
+                  src={thePurgePhoto}
+                  alt="The Purge Natural Sugar Scrub Exfoliator"
                   loading="lazy"
                   className="rounded-[1.5rem] shadow-xl w-full h-[250px] md:h-[280px] object-cover"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Coming Soon</span>
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">New Product</span>
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                  <Shield className="w-7 h-7 text-[#A2A77F]" />
-                  <h3 className="font-serif text-3xl md:text-4xl text-white">Meadow Guard</h3>
+                  <Sparkles className="w-7 h-7 text-[#F2D5C4]" />
+                  <h3 className="font-serif text-3xl md:text-4xl text-white">The Purge</h3>
                 </div>
-                <p className="text-white/80 text-lg mb-1">Natural Insect Repellant Spray</p>
+                <p className="text-white/80 text-lg mb-1">Natural Sugar Scrub Exfoliator</p>
                 <p className="text-white/60 text-sm md:text-base max-w-md mx-auto md:mx-0">
-                  Protect yourself naturally this summer. A plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
+                  A purifying cleanse for smooth, hydrated skin. Refreshing scent and hydrating formula — perfect for your regular skincare routine.
                 </p>
               </div>
             </div>
@@ -516,6 +515,79 @@ export default function Products() {
         </div>
       </section>
 
+      {/* Featured Product: The Purge */}
+      <section className="py-32 bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#F2D5C4]/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#A8593A]/30 rounded-full blur-[120px]" />
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+            {/* Image (left) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="w-full md:w-1/2 relative"
+            >
+              <img
+                src={thePurgePhoto}
+                alt="The Purge Natural Sugar Scrub Exfoliator"
+                loading="lazy"
+                decoding="async"
+                className="rounded-[2rem] shadow-2xl w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
+              />
+            </motion.div>
+
+            {/* Content (right) */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="w-full md:w-1/2 space-y-10"
+            >
+              <div className="space-y-6">
+                <div className="inline-flex items-center space-x-2 text-[#F2D5C4]">
+                  <span className="h-px w-8 bg-[#F2D5C4]" />
+                  <span className="uppercase tracking-widest text-sm font-bold">New Product</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Sparkles className="w-10 h-10 text-[#F2D5C4]" />
+                  <h2 className="font-serif text-5xl md:text-6xl text-white">The Purge</h2>
+                </div>
+                <p className="text-2xl text-[#F2D5C4] font-serif italic">Natural Sugar Scrub Exfoliator</p>
+                <p className="text-white/85 leading-relaxed text-lg font-light">
+                  A natural sugar scrub designed for a purifying cleanse and smooth, hydrated skin. Its refreshing scent and hydrating formula make it ideal for your regular skincare routine — gently buff away dullness and reveal a fresh, glowing complexion.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <h3 className="font-bold text-white text-lg">Type</h3>
+                  <p className="text-white/70 leading-relaxed">Sugar Scrub Exfoliator</p>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-white text-lg">Size</h3>
+                  <p className="text-white/70">4 oz</p>
+                </div>
+              </div>
+
+              <div className="pt-6">
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-[#8B4A2F] font-bold px-12 py-4 rounded-full hover:bg-[#F7F6F2] transition-colors text-lg shadow-xl"
+                >
+                  Shop Now <ArrowRight className="inline ml-2 w-5 h-5" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* How to Use Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -612,7 +684,7 @@ export default function Products() {
                   </div>
                   <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">Build Your Own Bundle</h2>
                   <p className="text-white/80 text-lg leading-relaxed mb-8">
-                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, and The Dreamer.
+                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, The Dreamer, and The Purge.
                   </p>
                   <a
                     href="https://macandmeadowco.square.site/"

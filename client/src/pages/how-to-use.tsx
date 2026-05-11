@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowLeft, Sun, Moon, Sparkles, Heart, Lightbulb, ArrowRight } from "lucide-react";
 import blogHeader2 from "@assets/blog_header_2.jpg";
-import dreamerPhoto from "@product-photos/the-dreamer-photography.png";
+import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
