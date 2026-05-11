@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import heroImage from "@product-photos/mac-and-meadow-hero.png";
+import heroImage from "@product-photos/mac-and-meadow-tallow-line.jpeg";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
 import thePurgePhoto from "@product-photos/the-purge.jpeg";
 
