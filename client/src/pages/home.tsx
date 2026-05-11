@@ -3,12 +3,12 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X, Shield } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@product-photos/mac-and-meadow-hero.png";
 import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
-import meadowGuardPhoto from "@product-photos/meadow-guard-photography.png";
+import thePurgePhoto from "@product-photos/the-purge.jpeg";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
@@ -18,6 +18,7 @@ const allProducts = [
   { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18", isBundle: false },
   { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18", isBundle: false },
   { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$16", isBundle: false },
+  { name: "The Purge", description: "Natural sugar scrub exfoliator", price: "$16", isBundle: false },
 ];
 
 const fadeIn = {
@@ -112,7 +113,7 @@ const testimonials = [
 export default function Home() {
   const containerRef = useRef(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [showDreamerPopup, setShowDreamerPopup] = useState(false);
+  const [showPurgePopup, setShowPurgePopup] = useState(false);
 
   useEffect(() => {
     // Load Elfsight script if not already loaded
@@ -124,12 +125,12 @@ export default function Home() {
       document.body.appendChild(script);
     }
 
-    // Show Dreamer popup after 3 seconds
-    const popupShown = sessionStorage.getItem("dreamerPopupShown");
+    // Show The Purge popup after 3 seconds
+    const popupShown = sessionStorage.getItem("purgePopupShown");
     if (!popupShown) {
       const timer = setTimeout(() => {
-        setShowDreamerPopup(true);
-        sessionStorage.setItem("dreamerPopupShown", "true");
+        setShowPurgePopup(true);
+        sessionStorage.setItem("purgePopupShown", "true");
       }, 3000);
       return () => clearTimeout(timer);
     }
@@ -156,27 +157,26 @@ export default function Home() {
       <SEO />
       <Navbar />
 
-      {/* The Dreamer Popup */}
-      {showDreamerPopup && (
+      {/* The Purge Popup */}
+      {showPurgePopup && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
-          onClick={() => setShowDreamerPopup(false)}
+          onClick={() => setShowPurgePopup(false)}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-5 sm:p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
+            className="relative bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-5 sm:p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#9B7FD4]/15 rounded-full blur-[40px]" />
-            <div className="absolute top-2 left-2 text-white/5 text-[100px] font-serif leading-none pointer-events-none">&#9790;</div>
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#F2D5C4]/20 rounded-full blur-[60px]" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#A8593A]/30 rounded-full blur-[40px]" />
 
             <button
-              onClick={() => setShowDreamerPopup(false)}
+              onClick={() => setShowPurgePopup(false)}
               className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors z-20"
               aria-label="Close popup"
             >
@@ -185,27 +185,28 @@ export default function Home() {
 
             <div className="relative z-10 text-center space-y-5">
               <img
-                src={dreamerTransparent}
-                alt="The Dreamer tallow cream"
-                className="w-32 sm:w-40 md:w-44 h-auto mx-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                src={thePurgePhoto}
+                alt="The Purge sugar scrub exfoliator"
+                className="w-48 sm:w-56 md:w-60 h-48 sm:h-56 md:h-60 mx-auto rounded-[1.5rem] object-cover shadow-2xl"
               />
               <div>
                 <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Just Launched</span>
-                <h3 className="font-serif text-3xl text-white">The Dreamer</h3>
-                <p className="text-white/80 text-base mt-2">
-                  Nighttime whipped tallow with lavender & magnesium. Nourish your skin while you sleep.
+                <h3 className="font-serif text-3xl text-white">The Purge</h3>
+                <p className="text-[#F2D5C4] text-sm italic mt-1">Natural Sugar Scrub Exfoliator · 4 oz</p>
+                <p className="text-white/85 text-base mt-3">
+                  A purifying cleanse for smooth, hydrated skin. Refreshing scent and hydrating formula — perfect for your skincare routine.
                 </p>
               </div>
               <a
                 href="https://macandmeadowco.square.site/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
+                className="inline-block bg-white text-[#8B4A2F] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
               >
-                Order Now
+                Shop The Purge
               </a>
               <button
-                onClick={() => setShowDreamerPopup(false)}
+                onClick={() => setShowPurgePopup(false)}
                 className="block mx-auto text-white/60 text-sm hover:text-white/80 transition-colors"
               >
                 Maybe later
@@ -305,7 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meadow Guard Coming Soon */}
+      {/* The Purge - New Product */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
@@ -313,17 +314,17 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#5B7B5B] to-[#3D5A3D] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#4A6741]/30 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F2D5C4]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#A8593A]/30 rounded-full blur-3xl" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
               {/* Image */}
               <div className="w-full md:w-2/5 flex-shrink-0">
                 <img
-                  src={meadowGuardPhoto}
-                  alt="Meadow Guard Natural Insect Repellant"
+                  src={thePurgePhoto}
+                  alt="The Purge Natural Sugar Scrub Exfoliator"
                   loading="lazy"
                   decoding="async"
                   className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
@@ -331,15 +332,23 @@ export default function Home() {
               </div>
               {/* Content */}
               <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">Coming Soon</span>
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Product</span>
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                  <Shield className="w-8 h-8 text-[#A2A77F]" />
-                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">Meadow Guard</h3>
+                  <Sparkles className="w-8 h-8 text-[#F2D5C4]" />
+                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">The Purge</h3>
                 </div>
-                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Insect Repellant Spray</p>
-                <p className="text-white/60 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0">
-                  Protect yourself naturally this summer. A plant-based insect repellant spray that keeps the bugs away without harsh chemicals. Stay tuned!
+                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Sugar Scrub Exfoliator</p>
+                <p className="text-white/70 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0 mb-6">
+                  A purifying cleanse for smooth, hydrated skin. Refreshing scent, hydrating formula — perfect for your regular skincare routine.
                 </p>
+                <a
+                  href="https://macandmeadowco.square.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-[#8B4A2F] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg"
+                >
+                  Shop Now
+                </a>
               </div>
             </div>
           </motion.div>
