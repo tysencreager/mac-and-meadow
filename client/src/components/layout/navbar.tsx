@@ -31,6 +31,11 @@ export function Navbar() {
           </a>
         </Link>
         <div className="pl-4 flex flex-col gap-3 border-l-2 border-border/40">
+          <Link href="/find-your-tallow">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Find Your Match
+            </a>
+          </Link>
           <Link href="/how-to-use">
             <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
               How to Use
@@ -127,6 +132,11 @@ export function Navbar() {
                   <Link href="/products">
                     <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       All Products
+                    </a>
+                  </Link>
+                  <Link href="/find-your-tallow">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Find Your Match
                     </a>
                   </Link>
                   <Link href="/how-to-use">
