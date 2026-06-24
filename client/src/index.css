@@ -24,11 +24,11 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   
-  --color-mac-brown: hsl(38 64% 24%);
-  --color-mac-cream: hsl(48 20% 96%);
-  --color-mac-sage: hsl(67 18% 58%);
+  --color-mac-brown: hsl(30 44% 13%);   /* Brand dark brown #312213 */
+  --color-mac-cream: hsl(39 33% 95%);   /* Brand cream #F7F4EF */
+  --color-mac-sage: hsl(91 8% 30%);     /* Brand floral green #4C5246 */
   --color-mac-beige: hsl(38 23% 80%);
-  --color-mac-terracotta: hsl(19 39% 55%);
+  --color-mac-terracotta: hsl(91 8% 30%);
 
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Playfair Display', serif;
@@ -40,40 +40,40 @@
 }
 
 :root {
-  --background: 48 20% 96%; /* Mac Cream */
-  --foreground: 38 64% 24%; /* Mac Brown */
+  --background: 39 33% 95%; /* Brand Cream #F7F4EF */
+  --foreground: 30 44% 13%; /* Brand Brown #312213 */
 
-  --card: 48 20% 96%;
-  --card-foreground: 38 64% 24%;
+  --card: 39 33% 95%;
+  --card-foreground: 30 44% 13%;
 
-  --popover: 48 20% 96%;
-  --popover-foreground: 38 64% 24%;
+  --popover: 39 33% 95%;
+  --popover-foreground: 30 44% 13%;
 
-  --primary: 35 32% 41%; /* Light Chocolate Brown */
-  --primary-foreground: 48 20% 96%; /* Mac Cream */
+  --primary: 91 8% 30%; /* Brand Floral Green #4C5246 */
+  --primary-foreground: 39 33% 95%; /* Brand Cream */
 
-  --secondary: 67 18% 58%; /* Mac Sage */
-  --secondary-foreground: 48 20% 96%;
+  --secondary: 91 8% 30%; /* Brand Floral Green #4C5246 */
+  --secondary-foreground: 39 33% 95%;
 
-  --muted: 38 23% 80%; /* Mac Beige */
-  --muted-foreground: 38 64% 24%;
+  --muted: 38 23% 80%; /* Warm Beige */
+  --muted-foreground: 30 44% 13%;
 
-  --accent: 19 39% 55%; /* Mac Terracotta */
-  --accent-foreground: 48 20% 96%;
+  --accent: 91 8% 30%; /* Brand Floral Green #4C5246 */
+  --accent-foreground: 39 33% 95%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 38 23% 80%; /* Mac Beige */
+  --border: 38 23% 80%; /* Warm Beige */
   --input: 38 23% 80%;
-  --ring: 67 18% 58%; /* Mac Sage */
+  --ring: 91 8% 30%; /* Brand Floral Green #4C5246 */
 
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 48 20% 96%;
-  --foreground: 38 64% 24%;
+  --background: 39 33% 95%;
+  --foreground: 30 44% 13%;
 }
 
 @layer base {
@@ -111,7 +111,7 @@ h6.font-script {
   }
 
   .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#644716] via-[#BC7C5F] to-[#644716] bg-[length:200%_auto];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#312213] via-[#4C5246] to-[#312213] bg-[length:200%_auto];
     animation: shine 8s linear infinite;
   }
 

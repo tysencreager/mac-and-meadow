@@ -113,7 +113,7 @@ export default function Reviews() {
   const avgRating = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1);
 
   return (
-    <div className="min-h-screen bg-[#F7F6F2]">
+    <div className="min-h-screen bg-[#F7F4EF]">
       <SEO
         title="Reviews"
         description="See what our customers are saying about Mac & Meadow's Wagyu tallow cream. Real reviews from real people."
@@ -122,7 +122,7 @@ export default function Reviews() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F4EF] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -130,11 +130,11 @@ export default function Reviews() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto space-y-6"
           >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">What Our Customers Say</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-[#644716]">
+            <span className="text-[#4C5246] font-serif italic text-xl">What Our Customers Say</span>
+            <h1 className="font-serif text-5xl md:text-7xl text-[#312213]">
               Reviews
             </h1>
-            <p className="text-[#644716]/70 text-lg leading-relaxed">
+            <p className="text-[#312213]/70 text-lg leading-relaxed">
               Real results from real people who love Mac & Meadow.
             </p>
           </motion.div>
@@ -266,7 +266,7 @@ export default function Reviews() {
       </section>
 
       {/* Google Business Profile CTA */}
-      <section className="py-20 bg-[#F7F6F2]">
+      <section className="py-20 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -10,7 +10,7 @@ export default function Blog() {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="min-h-screen bg-[#F7F6F2]">
+    <div className="min-h-screen bg-[#F7F4EF]">
       <SEO
         title="Blog"
         description="Skincare tips, tallow benefits, and natural beauty insights from Mac & Meadow. Learn how to care for your skin naturally."
@@ -19,7 +19,7 @@ export default function Blog() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F4EF] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,11 +27,11 @@ export default function Blog() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto space-y-6"
           >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">Our Journal</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-[#644716]">
+            <span className="text-[#4C5246] font-serif italic text-xl">Our Journal</span>
+            <h1 className="font-serif text-5xl md:text-7xl text-[#312213]">
               The Blog
             </h1>
-            <p className="text-[#644716]/70 text-lg leading-relaxed">
+            <p className="text-[#312213]/70 text-lg leading-relaxed">
               Skincare tips, natural beauty insights, and the benefits of tallow-based skincare.
             </p>
           </motion.div>
@@ -52,7 +52,7 @@ export default function Blog() {
                 className="group"
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <a className="block bg-[#F7F6F2] rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <a className="block bg-[#F7F4EF] rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                     {/* Blog post image */}
                     <div className="h-48 overflow-hidden">
                       {post.image ? (
@@ -66,14 +66,14 @@ export default function Blog() {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-[#8B6F47]/20 to-[#BC7C5F]/20 flex items-center justify-center">
-                          <span className="font-serif text-4xl text-[#8B6F47]/30">M&M</span>
+                        <div className="w-full h-full bg-gradient-to-br from-[#4C5246]/20 to-[#4C5246]/20 flex items-center justify-center">
+                          <span className="font-serif text-4xl text-[#4C5246]/30">M&M</span>
                         </div>
                       )}
                     </div>
 
                     <div className="p-8 space-y-4">
-                      <div className="flex items-center gap-2 text-[#BC7C5F] text-sm">
+                      <div className="flex items-center gap-2 text-[#4C5246] text-sm">
                         <Calendar className="w-4 h-4" />
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString('en-US', {
@@ -84,15 +84,15 @@ export default function Blog() {
                         </time>
                       </div>
 
-                      <h2 className="font-serif text-2xl text-[#644716] group-hover:text-[#BC7C5F] transition-colors">
+                      <h2 className="font-serif text-2xl text-[#312213] group-hover:text-[#4C5246] transition-colors">
                         {post.title}
                       </h2>
 
-                      <p className="text-[#644716]/70 leading-relaxed line-clamp-3">
+                      <p className="text-[#312213]/70 leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
 
-                      <div className="flex items-center gap-2 text-[#8B6F47] font-medium pt-2">
+                      <div className="flex items-center gap-2 text-[#4C5246] font-medium pt-2">
                         Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -104,7 +104,7 @@ export default function Blog() {
 
           {posts.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-[#644716]/70 text-lg">No blog posts yet. Check back soon!</p>
+              <p className="text-[#312213]/70 text-lg">No blog posts yet. Check back soon!</p>
             </div>
           )}
         </div>

@@ -3,7 +3,7 @@ import logo from "@assets/mac-meadow-logo-web.webp";
 
 export function Footer() {
   return (
-    <footer className="bg-[#F7F6F2] text-[#644716] py-16 border-t border-[#644716]/10">
+    <footer className="bg-[#F7F4EF] text-[#312213] py-16 border-t border-[#312213]/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           
@@ -34,7 +34,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Mac & Meadow on Instagram"
-              className="bg-[#8B6F47] text-[#F7F6F2] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-[#4C5246] text-[#F7F4EF] p-3 rounded-full hover:bg-[#A2A77F] hover:text-white transition-all duration-300 inline-flex items-center gap-2"
             >
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Follow us on Instagram</span>

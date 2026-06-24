@@ -28,8 +28,8 @@ const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"
 // Simple loading fallback
 function PageLoader() {
   return (
-    <div className="min-h-screen bg-[#F7F6F2] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-[#8B6F47] border-t-transparent rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#F7F4EF] flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-[#4C5246] border-t-transparent rounded-full animate-spin" />
     </div>
   );
 }

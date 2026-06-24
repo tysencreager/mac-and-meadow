@@ -141,14 +141,14 @@ export default function Home() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-[#F7F6F2] font-sans selection:bg-[#BC7C5F] selection:text-white overflow-x-hidden">
+    <div ref={containerRef} className="min-h-screen bg-[#F7F4EF] font-sans selection:bg-[#4C5246] selection:text-white overflow-x-hidden">
       <SEO />
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center pt-48 md:pt-48 lg:pt-56 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
         <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
-          <div className="w-full h-full bg-gradient-to-br from-[#F7F6F2] via-[#E5D5C5] to-[#BC7C5F]" />
+          <div className="w-full h-full bg-gradient-to-br from-[#F7F4EF] via-[#E5D5C5] to-[#4C5246]" />
           <div className="absolute inset-0 bg-noise opacity-15 mix-blend-soft-light" />
         </div>
 
@@ -161,20 +161,20 @@ export default function Home() {
               className="space-y-8"
             >
               <motion.div variants={fadeIn}>
-                <span className="inline-block px-4 py-1.5 bg-white/50 backdrop-blur-md text-[#644716] text-xs tracking-[0.2em] uppercase font-bold rounded-full border border-[#644716]/10 shadow-sm">
+                <span className="inline-block px-4 py-1.5 bg-white/50 backdrop-blur-md text-[#312213] text-xs tracking-[0.2em] uppercase font-bold rounded-full border border-[#312213]/10 shadow-sm">
                   Moisturizing Beef Tallow Cream
                 </span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="font-serif text-6xl md:text-8xl text-[#644716] leading-[1.05]">
+              <motion.h1 variants={fadeIn} className="font-serif text-6xl md:text-8xl text-[#312213] leading-[1.05]">
                 Holistic, <br />
                 <span className="text-gradient-gold">Nourishing,</span> <br />
-                <span className="italic font-light text-[#BC7C5F]">Healing.</span>
+                <span className="italic font-light text-[#4C5246]">Healing.</span>
               </motion.h1>
 
               {/* Mobile Hero Image */}
               <motion.div variants={fadeIn} className="md:hidden relative">
-                <div className="absolute inset-0 bg-[#BC7C5F]/20 rounded-full blur-[80px]" />
+                <div className="absolute inset-0 bg-[#4C5246]/20 rounded-full blur-[80px]" />
                 <img
                   src={heroImage}
                   alt="Mac & Meadow Therapy Balm Collection"
@@ -185,7 +185,7 @@ export default function Home() {
                 />
               </motion.div>
 
-              <motion.p variants={fadeIn} className="text-lg md:text-xl text-[#644716] font-medium leading-relaxed drop-shadow-sm max-w-lg">
+              <motion.p variants={fadeIn} className="text-lg md:text-xl text-[#312213] font-medium leading-relaxed drop-shadow-sm max-w-lg">
                 Experience the deep moisturizing power of Wagyu Tallow Cream.
                 Packed with vitamins A, D, E & K for your skin's natural glow.
               </motion.p>
@@ -193,7 +193,7 @@ export default function Home() {
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-5 pt-6">
                 <Button
                   size="lg"
-                  className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full text-base h-12 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-[#4C5246] text-[#F7F4EF] hover:bg-[#4C5246]/90 rounded-full text-base h-12 px-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                   asChild
                 >
                   <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
@@ -203,7 +203,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full text-base h-12 px-8 bg-white/20 backdrop-blur-sm"
+                  className="border-[#312213]/30 text-[#312213] hover:bg-[#4C5246]/5 rounded-full text-base h-12 px-8 bg-white/20 backdrop-blur-sm"
                   asChild
                 >
                   <Link href="/products">
@@ -220,7 +220,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative hidden md:block"
             >
-              <div className="absolute inset-0 bg-[#BC7C5F]/20 rounded-full blur-[100px]" />
+              <div className="absolute inset-0 bg-[#4C5246]/20 rounded-full blur-[100px]" />
               <img
                 src={heroImage}
                 alt="Mac & Meadow Whipped Tallow Cream"
@@ -249,7 +249,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-[#BC7C5F]/10 rounded-full blur-[100px]" />
+                <div className="absolute inset-0 bg-[#4C5246]/10 rounded-full blur-[100px]" />
                 <img
                   src="https://i.postimg.cc/gksvSzsk/M-M-website-photo.png"
                   alt="Customer using Mac & Meadow tallow cream"
@@ -270,50 +270,50 @@ export default function Home() {
                 className="space-y-8"
               >
                 <div className="space-y-4">
-                  <span className="text-[#BC7C5F] font-serif italic text-xl">Why Choose Mac & Meadow?</span>
-                  <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">
+                  <span className="text-[#4C5246] font-serif italic text-xl">Why Choose Mac & Meadow?</span>
+                  <h2 className="font-serif text-4xl md:text-5xl text-[#312213]">
                     Natural Skincare That Actually Works
                   </h2>
-                  <p className="text-[#644716]/70 text-lg leading-relaxed">
+                  <p className="text-[#312213]/70 text-lg leading-relaxed">
                     Our whipped tallow cream combines the healing power of grass-fed Wagyu tallow with simple, natural ingredients. No chemicals, no synthetics—just pure nourishment for your skin.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
-                      <Leaf className="w-5 h-5 text-[#8B6F47]" />
+                    <div className="w-10 h-10 bg-[#F7F4EF] rounded-full flex items-center justify-center flex-shrink-0">
+                      <Leaf className="w-5 h-5 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-1">100% Natural</h3>
-                      <p className="text-[#644716]/70">Only the finest ingredients from nature.</p>
+                      <h3 className="font-serif text-xl text-[#312213] mb-1">100% Natural</h3>
+                      <p className="text-[#312213]/70">Only the finest ingredients from nature.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
-                      <Heart className="w-5 h-5 text-[#8B6F47]" />
+                    <div className="w-10 h-10 bg-[#F7F4EF] rounded-full flex items-center justify-center flex-shrink-0">
+                      <Heart className="w-5 h-5 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-1">Handcrafted</h3>
-                      <p className="text-[#644716]/70">Small batches made with care and attention.</p>
+                      <h3 className="font-serif text-xl text-[#312213] mb-1">Handcrafted</h3>
+                      <p className="text-[#312213]/70">Small batches made with care and attention.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#F7F6F2] rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-5 h-5 text-[#8B6F47]" />
+                    <div className="w-10 h-10 bg-[#F7F4EF] rounded-full flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-5 h-5 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-1">Deeply Nourishing</h3>
-                      <p className="text-[#644716]/70">Vitamins A, D, E & K for healthy, glowing skin.</p>
+                      <h3 className="font-serif text-xl text-[#312213] mb-1">Deeply Nourishing</h3>
+                      <p className="text-[#312213]/70">Vitamins A, D, E & K for healthy, glowing skin.</p>
                     </div>
                   </div>
                 </div>
 
                 <Button
                   size="lg"
-                  className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full h-14 px-10 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                  className="bg-[#4C5246] text-[#F7F4EF] hover:bg-[#4C5246]/90 rounded-full h-14 px-10 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                   asChild
                 >
                   <Link href="/products">
@@ -327,16 +327,16 @@ export default function Home() {
       </section>
 
       {/* Introducing The Therapy Balm Collection */}
-      <section className="py-12 bg-[#F7F6F2]">
+      <section className="py-12 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#8B6F47] to-[#644716] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#4C5246] to-[#312213] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#4C5246]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
@@ -359,7 +359,7 @@ export default function Home() {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-white text-[#8B6F47] hover:bg-[#F7F6F2] rounded-full text-base h-12 px-8 shadow-lg font-bold"
+                  className="bg-white text-[#4C5246] hover:bg-[#F7F4EF] rounded-full text-base h-12 px-8 shadow-lg font-bold"
                   asChild
                 >
                   <Link href="/products#therapy-balm">
@@ -373,11 +373,11 @@ export default function Home() {
       </section>
 
       {/* Products Grid Section */}
-      <section className="py-20 bg-[#F7F6F2]">
+      <section className="py-20 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <span className="text-[#BC7C5F] font-serif italic text-xl">Our Collection</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-2">Shop Whipped Tallow</h2>
+            <span className="text-[#4C5246] font-serif italic text-xl">Our Collection</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#312213] mt-2">Shop Whipped Tallow</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -388,20 +388,20 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-6 rounded-[1.5rem] shadow-sm hover:shadow-lg transition-all duration-300 border border-[#644716]/10 group hover:-translate-y-1"
+                className="bg-white p-6 rounded-[1.5rem] shadow-sm hover:shadow-lg transition-all duration-300 border border-[#312213]/10 group hover:-translate-y-1"
               >
                 {product.isBundle && (
-                  <span className="inline-block bg-[#8B6F47] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
+                  <span className="inline-block bg-[#4C5246] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
                 )}
-                <h3 className="text-lg font-bold text-[#644716] mb-1">Whipped Tallow</h3>
-                <p className="text-[#BC7C5F] font-serif italic mb-1">{product.name}</p>
-                <p className="text-[#644716]/60 text-sm mb-3">{product.description}</p>
-                <p className="text-[#8B6F47] font-bold text-xl mb-4">{product.price}</p>
+                <h3 className="text-lg font-bold text-[#312213] mb-1">Whipped Tallow</h3>
+                <p className="text-[#4C5246] font-serif italic mb-1">{product.name}</p>
+                <p className="text-[#312213]/60 text-sm mb-3">{product.description}</p>
+                <p className="text-[#4C5246] font-bold text-xl mb-4">{product.price}</p>
                 <a
                   href="https://macandmeadowco.square.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-[#8B6F47] text-white py-2.5 rounded-full text-center text-sm font-medium hover:bg-[#8B6F47]/90 transition"
+                  className="block w-full bg-[#4C5246] text-white py-2.5 rounded-full text-center text-sm font-medium hover:bg-[#4C5246]/90 transition"
                 >
                   Shop Now
                 </a>
@@ -413,7 +413,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full h-12 px-8"
+              className="border-[#312213]/30 text-[#312213] hover:bg-[#4C5246]/5 rounded-full h-12 px-8"
               asChild
             >
               <Link href="/products">
@@ -425,7 +425,7 @@ export default function Home() {
       </section>
 
       {/* Google Reviews + Instagram Section - Side by Side */}
-      <section className="py-24 bg-[#F7F6F2] relative overflow-hidden">
+      <section className="py-24 bg-[#F7F4EF] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -575,8 +575,8 @@ export default function Home() {
                 className="space-y-6"
               >
                 <div className="text-center md:text-left">
-                  <span className="text-[#BC7C5F] font-serif italic text-xl">Stay Connected</span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
+                  <span className="text-[#4C5246] font-serif italic text-xl">Stay Connected</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#312213] mt-2">Follow Us on Instagram</h2>
                 </div>
 
                 <div className="flex justify-center md:justify-start">
@@ -591,7 +591,7 @@ export default function Home() {
                     href="https://www.instagram.com/macandmeadowco"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#8B6F47] text-white px-6 py-3 rounded-full font-medium hover:bg-[#8B6F47]/90 transition-colors"
+                    className="inline-flex items-center gap-3 bg-[#4C5246] text-white px-6 py-3 rounded-full font-medium hover:bg-[#4C5246]/90 transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
                     Follow @macandmeadowco
@@ -604,9 +604,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-[#8B6F47] to-[#644716] text-[#F7F6F2] relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-[#4C5246] to-[#312213] text-[#F7F4EF] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#BC7C5F]/20 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#4C5246]/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#A2A77F]/20 rounded-full blur-[120px]" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -620,14 +620,14 @@ export default function Home() {
             <h2 className="font-serif text-4xl md:text-6xl">
               Ready to Transform Your Skincare Routine?
             </h2>
-            <p className="text-[#F7F6F2]/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            <p className="text-[#F7F4EF]/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
               Join the growing community discovering the healing power of natural, tallow-based skincare.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center pt-6">
               <Button
                 size="lg"
-                className="bg-[#F7F6F2] text-[#8B6F47] hover:bg-white rounded-full h-14 px-10 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-[#F7F4EF] text-[#4C5246] hover:bg-white rounded-full h-14 px-10 shadow-xl hover:shadow-2xl transition-all duration-300"
                 asChild
               >
                 <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
@@ -637,7 +637,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-[#F7F6F2]/30 text-[#F7F6F2] hover:bg-[#F7F6F2]/10 rounded-full h-14 px-10 bg-transparent"
+                className="border-[#F7F4EF]/30 text-[#F7F4EF] hover:bg-[#F7F4EF]/10 rounded-full h-14 px-10 bg-transparent"
                 asChild
               >
                 <Link href="/about">
