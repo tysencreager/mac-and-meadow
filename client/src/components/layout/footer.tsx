@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import logo from "@assets/mac_meadow_logo_horns.webp";
+import logo from "@assets/mac-meadow-logo-web.webp";
 
 export function Footer() {
   return (
