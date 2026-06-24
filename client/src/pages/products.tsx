@@ -8,7 +8,6 @@ import heavenSentPhoto from "@product-photos/mac-and-meadow-heaven-sent-new.png"
 import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones-new.png";
 import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack-new.png";
 import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
-import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
 import allProductsPhoto from "@product-photos/mac-and-meadow-tallow-line.jpeg";
 import thePurgePhoto from "@product-photos/the-purge.jpeg";
 
@@ -39,43 +38,6 @@ export default function Products() {
             <p className="text-[#644716]/70 text-lg leading-relaxed">
               Handcrafted with the finest Wagyu tallow and natural ingredients for healthy, glowing skin.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* The Purge - New Product */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F2D5C4]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#A8593A]/30 rounded-full blur-3xl" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/3 flex-shrink-0">
-                <img
-                  src={thePurgePhoto}
-                  alt="The Purge Natural Sugar Scrub Exfoliator"
-                  loading="lazy"
-                  className="rounded-[1.5rem] shadow-xl w-full h-[250px] md:h-[280px] object-cover"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">New Product</span>
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                  <Sparkles className="w-7 h-7 text-[#F2D5C4]" />
-                  <h3 className="font-serif text-3xl md:text-4xl text-white">The Purge</h3>
-                </div>
-                <p className="text-white/80 text-lg mb-1">Natural Sugar Scrub Exfoliator</p>
-                <p className="text-white/60 text-sm md:text-base max-w-md mx-auto md:mx-0">
-                  A purifying cleanse for smooth, hydrated skin. Refreshing scent and hydrating formula — perfect for your regular skincare routine.
-                </p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -157,70 +119,32 @@ export default function Products() {
         </div>
       </section>
 
-      {/* See the Quality + Dreamer Announcement - Two Column */}
+      {/* See the Quality */}
       <section className="py-20 bg-white relative">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Whipped to Perfection */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-[#F7F6F2] rounded-[2rem] overflow-hidden border border-[#644716]/10"
-            >
-              <img
-                src={allProductsPhoto}
-                alt="Mac & Meadow product collection"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-[200px] sm:h-[240px] md:h-[260px] object-cover"
-              />
-              <div className="p-8">
-                <span className="text-[#BC7C5F] font-serif italic text-lg">See the Quality</span>
-                <h3 className="font-serif text-3xl text-[#644716] mt-2 mb-4">Whipped to Perfection</h3>
-                <p className="text-[#644716]/70 text-lg leading-relaxed">
-                  Our cream is carefully hand-whipped to achieve a light, luxurious texture that melts into your skin.
-                  Rich, nourishing, and never greasy — just pure, natural goodness.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* The Dreamer Announcement */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-8 md:p-10 relative overflow-hidden flex flex-col items-center justify-center text-center"
-            >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#3399ff]/15 rounded-full blur-[60px]" />
-              <div className="absolute bottom-0 left-0 text-white/5 text-[120px] font-serif leading-none pointer-events-none">&#9790;</div>
-
-              <div className="relative z-10 flex flex-col items-center">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">New Product</span>
-                <img
-                  src={dreamerTransparent}
-                  alt="The Dreamer"
-                  className="w-44 md:w-52 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] mb-6"
-                  loading="lazy"
-                />
-                <h4 className="font-serif text-3xl md:text-4xl text-white mb-2">The Dreamer</h4>
-                <p className="text-white/70 text-lg mb-4">Nighttime Whipped Tallow</p>
-                <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-sm">
-                  Your new bedtime ritual is here! Infused with calming lavender & magnesium flakes for better sleep and softer skin.
-                </p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-[#0066cc] font-bold px-10 py-3.5 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
-                >
-                  Order Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-5xl mx-auto bg-[#F7F6F2] rounded-[2rem] overflow-hidden border border-[#644716]/10 grid grid-cols-1 md:grid-cols-2"
+          >
+            <img
+              src={allProductsPhoto}
+              alt="Mac & Meadow product collection"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-[240px] md:h-full object-cover"
+            />
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <span className="text-[#BC7C5F] font-serif italic text-lg">See the Quality</span>
+              <h3 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2 mb-4">Whipped to Perfection</h3>
+              <p className="text-[#644716]/70 text-lg leading-relaxed">
+                Our cream is carefully hand-whipped to achieve a light, luxurious texture that melts into your skin.
+                Rich, nourishing, and never greasy — just pure, natural goodness.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -550,7 +474,7 @@ export default function Products() {
               <div className="space-y-6">
                 <div className="inline-flex items-center space-x-2 text-[#F2D5C4]">
                   <span className="h-px w-8 bg-[#F2D5C4]" />
-                  <span className="uppercase tracking-widest text-sm font-bold">New Product</span>
+                  <span className="uppercase tracking-widest text-sm font-bold">The Tallow Sidekick</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <Sparkles className="w-10 h-10 text-[#F2D5C4]" />

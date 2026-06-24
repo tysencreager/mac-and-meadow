@@ -3,12 +3,10 @@ import { Footer } from "@/components/layout/footer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink, Moon, X } from "lucide-react";
+import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@product-photos/mac-and-meadow-tallow-line.jpeg";
-import dreamerTransparent from "@product-photos/the-dreamer-transparent.png";
-import thePurgePhoto from "@product-photos/the-purge.jpeg";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
@@ -113,7 +111,6 @@ const testimonials = [
 export default function Home() {
   const containerRef = useRef(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [showPurgePopup, setShowPurgePopup] = useState(false);
 
   useEffect(() => {
     // Load Elfsight script if not already loaded
@@ -123,16 +120,6 @@ export default function Home() {
       script.src = "https://elfsightcdn.com/platform.js";
       script.async = true;
       document.body.appendChild(script);
-    }
-
-    // Show The Purge popup after 3 seconds
-    const popupShown = sessionStorage.getItem("purgePopupShown");
-    if (!popupShown) {
-      const timer = setTimeout(() => {
-        setShowPurgePopup(true);
-        sessionStorage.setItem("purgePopupShown", "true");
-      }, 3000);
-      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -157,64 +144,6 @@ export default function Home() {
       <SEO />
       <Navbar />
 
-      {/* The Purge Popup */}
-      {showPurgePopup && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
-          onClick={() => setShowPurgePopup(false)}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            onClick={(e) => e.stopPropagation()}
-            className="relative bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-5 sm:p-8 md:p-10 max-w-md w-full shadow-2xl overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#F2D5C4]/20 rounded-full blur-[60px]" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#A8593A]/30 rounded-full blur-[40px]" />
-
-            <button
-              onClick={() => setShowPurgePopup(false)}
-              className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors z-20"
-              aria-label="Close popup"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="relative z-10 text-center space-y-5">
-              <img
-                src={thePurgePhoto}
-                alt="The Purge sugar scrub exfoliator"
-                className="w-48 sm:w-56 md:w-60 h-48 sm:h-56 md:h-60 mx-auto rounded-[1.5rem] object-cover shadow-2xl"
-              />
-              <div>
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Just Launched</span>
-                <h3 className="font-serif text-3xl text-white">The Purge</h3>
-                <p className="text-[#F2D5C4] text-sm italic mt-1">Natural Sugar Scrub Exfoliator · 4 oz</p>
-                <p className="text-white/85 text-base mt-3">
-                  A purifying cleanse for smooth, hydrated skin. Refreshing scent and hydrating formula — perfect for your skincare routine.
-                </p>
-              </div>
-              <a
-                href="https://macandmeadowco.square.site/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-[#8B4A2F] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg text-lg"
-              >
-                Shop The Purge
-              </a>
-              <button
-                onClick={() => setShowPurgePopup(false)}
-                className="block mx-auto text-white/60 text-sm hover:text-white/80 transition-colors"
-              >
-                Maybe later
-              </button>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center pt-48 md:pt-48 lg:pt-56 pb-20 md:pb-28 lg:pb-32 overflow-hidden">
         <div style={{ transform: `translateY(${heroY})`, opacity: heroOpacity }} className="absolute inset-0 z-0 will-change-transform">
@@ -306,55 +235,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Purge - New Product */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#BC7C5F] to-[#8B4A2F] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F2D5C4]/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#A8593A]/30 rounded-full blur-3xl" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              {/* Image */}
-              <div className="w-full md:w-2/5 flex-shrink-0">
-                <img
-                  src={thePurgePhoto}
-                  alt="The Purge Natural Sugar Scrub Exfoliator"
-                  loading="lazy"
-                  decoding="async"
-                  className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
-                />
-              </div>
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Product</span>
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                  <Sparkles className="w-8 h-8 text-[#F2D5C4]" />
-                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white">The Purge</h3>
-                </div>
-                <p className="text-white/80 text-lg sm:text-xl mb-2">Natural Sugar Scrub Exfoliator</p>
-                <p className="text-white/70 mt-3 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0 mb-6">
-                  A purifying cleanse for smooth, hydrated skin. Refreshing scent, hydrating formula — perfect for your regular skincare routine.
-                </p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-[#8B4A2F] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg"
-                >
-                  Shop Now
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Featured Section */}
       <section className="py-32 bg-white relative">
         <div className="container mx-auto px-4 md:px-6">
@@ -442,50 +322,6 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* NEW: The Dreamer Announcement */}
-      <section className="py-12 bg-[#F7F6F2]">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-[#0066cc] to-[#004999] rounded-[2rem] p-6 md:p-10 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#3399ff]/20 rounded-full blur-[80px]" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#9B7FD4]/15 rounded-full blur-[60px]" />
-            <div className="absolute top-4 left-4 text-white/5 text-[120px] font-serif leading-none pointer-events-none">&#9790;</div>
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center">
-                <img
-                  src={dreamerTransparent}
-                  alt="The Dreamer tallow cream"
-                  className="w-36 sm:w-44 md:w-48 lg:w-56 h-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">New Product</span>
-                <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">Introducing The Dreamer!</h3>
-                <p className="text-white/80 text-lg mb-2">Nighttime Whipped Tallow with Lavender & Magnesium</p>
-                <p className="text-white/60 mb-6">
-                  Your new bedtime ritual is here. Nourish your skin while you sleep with our calming, deeply moisturizing nighttime formula.
-                </p>
-                <a
-                  href="https://macandmeadowco.square.site/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-[#0066cc] font-bold px-8 py-3 rounded-full hover:bg-[#F7F6F2] transition-colors shadow-lg"
-                >
-                  Order Now
-                </a>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
