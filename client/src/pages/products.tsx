@@ -10,6 +10,30 @@ import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack-new.png";
 import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
 import allProductsPhoto from "@product-photos/mac-and-meadow-tallow-line.jpeg";
 import thePurgePhoto from "@product-photos/the-purge.jpeg";
+import therapyBalmMint from "@assets/therapy-balm-meadow-mint.webp";
+import therapyBalmRidge from "@assets/therapy-balm-meadow-ridge.webp";
+import therapyBalmBareBones from "@assets/therapy-balm-bare-bones.webp";
+
+const therapyBalms = [
+  {
+    name: "Meadow Mint",
+    profile: "Fresh & cooling",
+    scent: "Spearmint, vanilla & cedarwood",
+    photo: therapyBalmMint,
+  },
+  {
+    name: "Meadow Ridge",
+    profile: "Warm, woodsy & calming",
+    scent: "Lavender, vanilla, cedarwood & sandalwood",
+    photo: therapyBalmRidge,
+  },
+  {
+    name: "Bare Bones",
+    profile: "Fragrance-free",
+    scent: "Unscented — no added essential oils",
+    photo: therapyBalmBareBones,
+  },
+];
 
 export default function Products() {
   return (
@@ -512,6 +536,68 @@ export default function Products() {
         </div>
       </section>
 
+      {/* Therapy Balm Collection */}
+      <section id="therapy-balm" className="py-32 bg-[#F7F6F2] relative">
+        <div className="absolute inset-0 bg-noise opacity-20" />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-3xl mx-auto mb-14"
+          >
+            <div className="inline-flex items-center justify-center space-x-2 text-[#BC7C5F] mb-4">
+              <span className="h-px w-8 bg-[#BC7C5F]" />
+              <span className="uppercase tracking-widest text-sm font-bold">Targeted Relief</span>
+              <span className="h-px w-8 bg-[#BC7C5F]" />
+            </div>
+            <h2 className="font-serif text-5xl md:text-6xl text-[#644716] mb-6">Therapy Balm Collection</h2>
+            <p className="text-[#644716]/80 leading-relaxed text-lg font-light">
+              Targeted moisture for the places that need it most. Crafted with nourishing tallow, beeswax, and skin-loving oils, our Therapy Balms are ideal for chapped lips, dry hands, cracked heels, rough elbows, cuticles, and other problem areas. Keep one in your purse, desk, or nightstand, and apply as needed—especially before bed for overnight repair.
+            </p>
+            <p className="text-[#644716]/60 text-sm mt-5">
+              Shared base: wagyu tallow, beeswax, castor oil, jojoba oil & vitamin E · 2 oz (60 ml)
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {therapyBalms.map((balm, i) => (
+              <motion.div
+                key={balm.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+                whileHover={{ y: -8 }}
+                className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#644716]/10 flex flex-col"
+              >
+                <img
+                  src={balm.photo}
+                  alt={`Therapy Balm — ${balm.name}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-[260px] object-cover"
+                />
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-serif text-2xl text-[#644716]">{balm.name}</h3>
+                  <p className="text-[#BC7C5F] font-serif italic mb-2">{balm.profile}</p>
+                  <p className="text-[#644716]/70 text-sm leading-relaxed mb-6 flex-1">{balm.scent}</p>
+                  <a
+                    href="https://macandmeadowco.square.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#8B6F47] text-[#F7F6F2] py-3 rounded-full text-center text-sm font-medium hover:bg-[#8B6F47]/90 transition-colors"
+                  >
+                    Shop {balm.name}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How to Use Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -608,7 +694,7 @@ export default function Products() {
                   </div>
                   <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">Build Your Own Bundle</h2>
                   <p className="text-white/80 text-lg leading-relaxed mb-8">
-                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, The Dreamer, and The Purge.
+                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, The Dreamer, The Purge, and the Therapy Balm Collection.
                   </p>
                   <a
                     href="https://macandmeadowco.square.site/"

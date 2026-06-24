@@ -7,6 +7,7 @@ import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Ins
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/therapy-balm-collection-group.webp";
+import balmCollectionImage from "@assets/therapy-balm-collection-group.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
@@ -322,6 +323,52 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Introducing The Therapy Balm Collection */}
+      <section className="py-12 bg-[#F7F6F2]">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto bg-gradient-to-br from-[#8B6F47] to-[#644716] rounded-[2rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#A2A77F]/20 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* Image */}
+              <div className="w-full md:w-2/5 flex-shrink-0">
+                <img
+                  src={balmCollectionImage}
+                  alt="Mac & Meadow Therapy Balm Collection — Meadow Mint, Meadow Ridge & Bare Bones"
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Collection</span>
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-3">Introducing The Therapy Balm Collection</h3>
+                <p className="text-white/80 text-base sm:text-lg max-w-md mx-auto md:mx-0 mb-6">
+                  Targeted moisture for the places that need it most — chapped lips, dry hands, cracked heels, rough elbows, and cuticles. Available in Meadow Mint, Meadow Ridge & Bare Bones.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-white text-[#8B6F47] hover:bg-[#F7F6F2] rounded-full text-base h-12 px-8 shadow-lg font-bold"
+                  asChild
+                >
+                  <Link href="/products#therapy-balm">
+                    Shop the Collection
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
