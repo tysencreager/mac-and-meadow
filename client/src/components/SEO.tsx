@@ -16,7 +16,7 @@ const defaultMeta = {
   title: "Mac & Meadow | Wagyu Tallow Cream",
   description:
     "Natural, healing skincare by McKenzie Madsen. Deeply moisturizing Wagyu Tallow Cream packed with vitamins A, D, E & K for healthy, glowing skin.",
-  image: "/opengraph.png",
+  image: "/opengraph-v2.png",
   url: "https://macandmeadowco.com",
 };
 

@@ -17,7 +17,7 @@ export default function LocationSaltLakeCity() {
     "url": "https://macandmeadowco.com/locations/salt-lake-city-utah",
     "telephone": "",
     "email": "macandmeadowco@gmail.com",
-    "image": "https://macandmeadowco.com/opengraph.png",
+    "image": "https://macandmeadowco.com/opengraph-v2.png",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
