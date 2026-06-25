@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/therapy-balm-collection-group.webp";
+import heroImage from "@assets/mac-meadow-new-hero.webp";
 import balmCollectionImage from "@assets/therapy-balm-collection-group.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[#4C5246]/20 rounded-full blur-[80px]" />
                 <img
                   src={heroImage}
-                  alt="Mac & Meadow Therapy Balm Collection"
+                  alt="Mac & Meadow Whipped Tallow Cream Collection"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"

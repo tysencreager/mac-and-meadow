@@ -1,4 +1,5 @@
 # Serve static assets directly (do not redirect to SPA)
+/opengraph-v2.png /opengraph-v2.png 200
 /opengraph.png /opengraph.png 200
 /opengraph.jpg /opengraph.jpg 200
 /favicon.png /favicon.png 200

@@ -17,7 +17,7 @@ export default function LocationSyracuse() {
     "url": "https://macandmeadowco.com/locations/syracuse-utah",
     "telephone": "",
     "email": "macandmeadowco@gmail.com",
-    "image": "https://macandmeadowco.com/opengraph.png",
+    "image": "https://macandmeadowco.com/opengraph-v2.png",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
