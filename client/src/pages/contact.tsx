@@ -48,7 +48,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F7F6F2]">
+    <div className="min-h-screen bg-[#F7F4EF]">
       <SEO
         title="Contact"
         description="Get in touch with Mac & Meadow. Questions about our Wagyu tallow cream or natural skincare products? We'd love to hear from you."
@@ -57,7 +57,7 @@ export default function Contact() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F4EF] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -65,11 +65,11 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto space-y-6"
           >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">Get in Touch</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-[#644716]">
+            <span className="text-[#4C5246] font-serif italic text-xl">Get in Touch</span>
+            <h1 className="font-serif text-5xl md:text-7xl text-[#312213]">
               Contact Us
             </h1>
-            <p className="text-[#644716]/70 text-lg leading-relaxed">
+            <p className="text-[#312213]/70 text-lg leading-relaxed">
               Have questions about our products? We'd love to hear from you.
             </p>
           </motion.div>
@@ -89,8 +89,8 @@ export default function Contact() {
                 className="space-y-6"
               >
                 <div className="text-center md:text-left">
-                  <span className="text-[#BC7C5F] font-serif italic text-lg">Latest from @macandmeadowco</span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Follow Us on Instagram</h2>
+                  <span className="text-[#4C5246] font-serif italic text-lg">Latest from @macandmeadowco</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#312213] mt-2">Follow Us on Instagram</h2>
                 </div>
                 <div className="flex justify-center md:justify-start">
                   <div
@@ -103,7 +103,7 @@ export default function Contact() {
                     href="https://www.instagram.com/macandmeadowco"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#8B6F47] text-white px-6 py-3 rounded-full font-medium hover:bg-[#8B6F47]/90 transition-colors"
+                    className="inline-flex items-center gap-3 bg-[#4C5246] text-white px-6 py-3 rounded-full font-medium hover:bg-[#4C5246]/90 transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
                     Follow @macandmeadowco
@@ -119,8 +119,8 @@ export default function Contact() {
                 className="space-y-6"
               >
                 <div className="text-center md:text-left">
-                  <span className="text-[#BC7C5F] font-serif italic text-lg">Quick Answers</span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mt-2">Common Questions</h2>
+                  <span className="text-[#4C5246] font-serif italic text-lg">Quick Answers</span>
+                  <h2 className="font-serif text-3xl md:text-4xl text-[#312213] mt-2">Common Questions</h2>
                 </div>
                 <div className="space-y-4">
                   {[
@@ -147,10 +147,10 @@ export default function Contact() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1, duration: 0.5 }}
-                      className="bg-[#F7F6F2] rounded-xl p-5"
+                      className="bg-[#F7F4EF] rounded-xl p-5"
                     >
-                      <h3 className="font-serif text-lg text-[#644716] mb-2">{faq.question}</h3>
-                      <p className="text-[#644716]/70 text-sm leading-relaxed">{faq.answer}</p>
+                      <h3 className="font-serif text-lg text-[#312213] mb-2">{faq.question}</h3>
+                      <p className="text-[#312213]/70 text-sm leading-relaxed">{faq.answer}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -161,7 +161,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-[#F7F6F2]">
+      <section className="py-24 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -174,8 +174,8 @@ export default function Contact() {
                 className="space-y-12"
               >
                 <div>
-                  <h2 className="font-serif text-4xl text-[#644716] mb-6">Let's Connect</h2>
-                  <p className="text-[#644716]/70 text-lg leading-relaxed">
+                  <h2 className="font-serif text-4xl text-[#312213] mb-6">Let's Connect</h2>
+                  <p className="text-[#312213]/70 text-lg leading-relaxed">
                     Whether you have questions about our products, want to learn more about tallow skincare, or are ready to place an order, we're here to help.
                   </p>
                 </div>
@@ -184,19 +184,19 @@ export default function Contact() {
                   {/* Instagram */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <Instagram className="w-6 h-6 text-[#8B6F47]" />
+                      <Instagram className="w-6 h-6 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-2">Instagram</h3>
+                      <h3 className="font-serif text-xl text-[#312213] mb-2">Instagram</h3>
                       <a
                         href="https://www.instagram.com/macandmeadowco?igsh=Ym85aG12OGc2M2Uw"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#8B6F47] hover:text-[#BC7C5F] transition-colors"
+                        className="text-[#4C5246] hover:text-[#4C5246] transition-colors"
                       >
                         @macandmeadowco
                       </a>
-                      <p className="text-[#644716]/75 text-sm mt-1">
+                      <p className="text-[#312213]/75 text-sm mt-1">
                         Follow us for skincare tips, product updates, and behind-the-scenes content.
                       </p>
                     </div>
@@ -205,14 +205,14 @@ export default function Contact() {
                   {/* Location */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#8B6F47]" />
+                      <MapPin className="w-6 h-6 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-2">Location</h3>
-                      <p className="text-[#644716]/70">
+                      <h3 className="font-serif text-xl text-[#312213] mb-2">Location</h3>
+                      <p className="text-[#312213]/70">
                         Syracuse, Utah
                       </p>
-                      <p className="text-[#644716]/75 text-sm mt-1">
+                      <p className="text-[#312213]/75 text-sm mt-1">
                         Local pickup and delivery available in the area.
                       </p>
                     </div>
@@ -221,17 +221,17 @@ export default function Contact() {
                   {/* Email */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#8B6F47]" />
+                      <Mail className="w-6 h-6 text-[#4C5246]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-[#644716] mb-2">Email</h3>
+                      <h3 className="font-serif text-xl text-[#312213] mb-2">Email</h3>
                       <a
                         href="mailto:macandmeadowco@gmail.com"
-                        className="text-[#8B6F47] hover:text-[#BC7C5F] transition-colors"
+                        className="text-[#4C5246] hover:text-[#4C5246] transition-colors"
                       >
                         macandmeadowco@gmail.com
                       </a>
-                      <p className="text-[#644716]/75 text-sm mt-1">
+                      <p className="text-[#312213]/75 text-sm mt-1">
                         We typically respond within 24-48 hours.
                       </p>
                     </div>
@@ -245,12 +245,12 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-white rounded-[2rem] p-10 md:p-12 shadow-lg border border-[#8B6F47]/10"
+                className="bg-white rounded-[2rem] p-10 md:p-12 shadow-lg border border-[#4C5246]/10"
               >
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-serif text-3xl text-[#644716]">Send a Message</h3>
-                    <p className="text-[#644716]/70 mt-2">
+                    <h3 className="font-serif text-3xl text-[#312213]">Send a Message</h3>
+                    <p className="text-[#312213]/70 mt-2">
                       Fill out the form below and we'll get back to you soon.
                     </p>
                   </div>
@@ -261,14 +261,14 @@ export default function Contact() {
                       animate={{ opacity: 1, scale: 1 }}
                       className="text-center py-12 space-y-4"
                     >
-                      <CheckCircle className="w-16 h-16 text-[#8B6F47] mx-auto" />
-                      <h4 className="font-serif text-2xl text-[#644716]">Message Sent!</h4>
-                      <p className="text-[#644716]/70">
+                      <CheckCircle className="w-16 h-16 text-[#4C5246] mx-auto" />
+                      <h4 className="font-serif text-2xl text-[#312213]">Message Sent!</h4>
+                      <p className="text-[#312213]/70">
                         Thank you for reaching out. We'll get back to you within 24-48 hours.
                       </p>
                       <button
                         onClick={() => setFormState("idle")}
-                        className="text-[#8B6F47] hover:text-[#BC7C5F] underline underline-offset-4 transition-colors mt-2"
+                        className="text-[#4C5246] hover:text-[#4C5246] underline underline-offset-4 transition-colors mt-2"
                       >
                         Send another message
                       </button>
@@ -276,7 +276,7 @@ export default function Contact() {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-[#644716] mb-1.5">
+                        <label htmlFor="name" className="block text-sm font-medium text-[#312213] mb-1.5">
                           Name
                         </label>
                         <input
@@ -284,13 +284,13 @@ export default function Contact() {
                           id="name"
                           name="name"
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-[#8B6F47]/20 bg-[#F7F6F2] text-[#644716] placeholder:text-[#644716]/40 focus:outline-none focus:ring-2 focus:ring-[#8B6F47]/30 focus:border-[#8B6F47]/40 transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-[#4C5246]/20 bg-[#F7F4EF] text-[#312213] placeholder:text-[#312213]/40 focus:outline-none focus:ring-2 focus:ring-[#4C5246]/30 focus:border-[#4C5246]/40 transition-all"
                           placeholder="Your name"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-[#644716] mb-1.5">
+                        <label htmlFor="email" className="block text-sm font-medium text-[#312213] mb-1.5">
                           Email
                         </label>
                         <input
@@ -298,13 +298,13 @@ export default function Contact() {
                           id="email"
                           name="email"
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-[#8B6F47]/20 bg-[#F7F6F2] text-[#644716] placeholder:text-[#644716]/40 focus:outline-none focus:ring-2 focus:ring-[#8B6F47]/30 focus:border-[#8B6F47]/40 transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-[#4C5246]/20 bg-[#F7F4EF] text-[#312213] placeholder:text-[#312213]/40 focus:outline-none focus:ring-2 focus:ring-[#4C5246]/30 focus:border-[#4C5246]/40 transition-all"
                           placeholder="your@email.com"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-[#644716] mb-1.5">
+                        <label htmlFor="message" className="block text-sm font-medium text-[#312213] mb-1.5">
                           Message
                         </label>
                         <textarea
@@ -312,7 +312,7 @@ export default function Contact() {
                           name="message"
                           required
                           rows={5}
-                          className="w-full px-4 py-3 rounded-xl border border-[#8B6F47]/20 bg-[#F7F6F2] text-[#644716] placeholder:text-[#644716]/40 focus:outline-none focus:ring-2 focus:ring-[#8B6F47]/30 focus:border-[#8B6F47]/40 transition-all resize-none"
+                          className="w-full px-4 py-3 rounded-xl border border-[#4C5246]/20 bg-[#F7F4EF] text-[#312213] placeholder:text-[#312213]/40 focus:outline-none focus:ring-2 focus:ring-[#4C5246]/30 focus:border-[#4C5246]/40 transition-all resize-none"
                           placeholder="How can we help you?"
                         />
                       </div>
@@ -327,7 +327,7 @@ export default function Contact() {
                         type="submit"
                         disabled={formState === "submitting"}
                         size="lg"
-                        className="w-full bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#644716] rounded-full h-14 text-base shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60"
+                        className="w-full bg-[#4C5246] text-[#F7F4EF] hover:bg-[#312213] rounded-full h-14 text-base shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60"
                       >
                         {formState === "submitting" ? (
                           "Sending..."

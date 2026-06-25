@@ -76,7 +76,7 @@ export default function LocationSyracuse() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F6F2]">
+    <div className="min-h-screen bg-[#F7F4EF]">
       <SEO
         title="Tallow Skincare Syracuse, UT - Local Wagyu Tallow Cream | Davis County"
         description="Buy natural Wagyu tallow skincare in Syracuse, Utah. Mac & Meadow is a local Davis County business offering handcrafted beef tallow cream. Free delivery in Layton, Clearfield, Kaysville & Northern Utah."
@@ -94,7 +94,7 @@ export default function LocationSyracuse() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F4EF] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,14 +102,14 @@ export default function LocationSyracuse() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto space-y-6"
           >
-            <div className="flex items-center justify-center gap-2 text-[#BC7C5F]">
+            <div className="flex items-center justify-center gap-2 text-[#4C5246]">
               <Home className="w-5 h-5" />
               <span className="font-serif italic text-xl">Our Home Base</span>
             </div>
-            <h1 className="font-serif text-5xl md:text-7xl text-[#644716]">
+            <h1 className="font-serif text-5xl md:text-7xl text-[#312213]">
               Tallow Skincare in Syracuse, Utah
             </h1>
-            <p className="text-[#644716]/70 text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-[#312213]/70 text-lg leading-relaxed max-w-2xl mx-auto">
               Discover <strong>natural Wagyu tallow skincare</strong> made right here in Syracuse, Utah.
               Mac & Meadow proudly serves Davis County and Northern Utah with premium,
               locally-handcrafted <strong>beef tallow cream</strong> for healthy, glowing skin.
@@ -129,8 +129,8 @@ export default function LocationSyracuse() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <span className="text-[#BC7C5F] font-serif italic text-xl">Serving Syracuse & Davis County</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-4">
+              <span className="text-[#4C5246] font-serif italic text-xl">Serving Syracuse & Davis County</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#312213] mt-4">
                 Local Tallow Skincare, Handcrafted With Care
               </h2>
             </motion.div>
@@ -159,13 +159,13 @@ export default function LocationSyracuse() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="bg-[#F7F6F2] rounded-2xl p-8 text-center"
+                  className="bg-[#F7F4EF] rounded-2xl p-8 text-center"
                 >
                   <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                    <service.icon className="w-7 h-7 text-[#8B6F47]" />
+                    <service.icon className="w-7 h-7 text-[#4C5246]" />
                   </div>
-                  <h3 className="font-serif text-xl text-[#644716] mb-3">{service.title}</h3>
-                  <p className="text-[#644716]/70 leading-relaxed">{service.description}</p>
+                  <h3 className="font-serif text-xl text-[#312213] mb-3">{service.title}</h3>
+                  <p className="text-[#312213]/70 leading-relaxed">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function LocationSyracuse() {
       </section>
 
       {/* Why Tallow Section */}
-      <section className="py-24 bg-[#8B6F47] text-[#F7F6F2]">
+      <section className="py-24 bg-[#4C5246] text-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -184,11 +184,11 @@ export default function LocationSyracuse() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <span className="text-[#BC7C5F] font-serif italic text-xl">Perfect for Northern Utah</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-[#F7F6F2] mt-4">
+              <span className="text-[#4C5246] font-serif italic text-xl">Perfect for Northern Utah</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#F7F4EF] mt-4">
                 Why Davis County Loves Beef Tallow Skincare
               </h2>
-              <p className="text-[#F7F6F2]/80 text-lg mt-6 max-w-2xl mx-auto">
+              <p className="text-[#F7F4EF]/80 text-lg mt-6 max-w-2xl mx-auto">
                 Northern Utah's climate demands skincare that truly nourishes. Wagyu tallow cream
                 delivers exactly what your skin needs—naturally.
               </p>
@@ -218,13 +218,13 @@ export default function LocationSyracuse() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="bg-[#F7F6F2]/10 backdrop-blur rounded-2xl p-8 text-center"
+                  className="bg-[#F7F4EF]/10 backdrop-blur rounded-2xl p-8 text-center"
                 >
-                  <div className="w-14 h-14 bg-[#F7F6F2]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <benefit.icon className="w-7 h-7 text-[#F7F6F2]" />
+                  <div className="w-14 h-14 bg-[#F7F4EF]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="w-7 h-7 text-[#F7F4EF]" />
                   </div>
-                  <h3 className="font-serif text-xl text-[#F7F6F2] mb-3">{benefit.title}</h3>
-                  <p className="text-[#F7F6F2]/80 leading-relaxed">{benefit.description}</p>
+                  <h3 className="font-serif text-xl text-[#F7F4EF] mb-3">{benefit.title}</h3>
+                  <p className="text-[#F7F4EF]/80 leading-relaxed">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -233,7 +233,7 @@ export default function LocationSyracuse() {
       </section>
 
       {/* About Syracuse Section */}
-      <section className="py-24 bg-[#F7F6F2]">
+      <section className="py-24 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -244,11 +244,11 @@ export default function LocationSyracuse() {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
               >
-                <span className="text-[#BC7C5F] font-serif italic text-xl">Our Story</span>
-                <h2 className="font-serif text-4xl text-[#644716]">
+                <span className="text-[#4C5246] font-serif italic text-xl">Our Story</span>
+                <h2 className="font-serif text-4xl text-[#312213]">
                   Rooted in Syracuse, Serving Our Community
                 </h2>
-                <div className="space-y-4 text-[#644716]/70 leading-relaxed">
+                <div className="space-y-4 text-[#312213]/70 leading-relaxed">
                   <p>
                     <strong>Mac & Meadow was born right here in Syracuse, Utah.</strong> Our founder, McKenzie,
                     started creating tallow skincare products for her family before sharing them
@@ -272,44 +272,44 @@ export default function LocationSyracuse() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gradient-to-br from-[#8B6F47] to-[#644716] rounded-[2rem] p-10 text-[#F7F6F2] relative overflow-hidden"
+                className="bg-gradient-to-br from-[#4C5246] to-[#312213] rounded-[2rem] p-10 text-[#F7F4EF] relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-noise opacity-10" />
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[#BC7C5F]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#4C5246]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
                 <div className="relative z-10 space-y-6">
                   <h3 className="font-serif text-2xl">Davis County Delivery Areas</h3>
-                  <ul className="space-y-3 text-[#F7F6F2]/90">
+                  <ul className="space-y-3 text-[#F7F4EF]/90">
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Syracuse, UT (Home Base)
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Layton, UT
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Clearfield, UT
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Kaysville, UT
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Farmington, UT
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       West Point, UT
                     </li>
                     <li className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-[#BC7C5F]" />
+                      <MapPin className="w-4 h-4 text-[#A2A77F]" />
                       Clinton, UT
                     </li>
                   </ul>
-                  <p className="text-[#F7F6F2]/70 text-sm">
+                  <p className="text-[#F7F4EF]/70 text-sm">
                     Don't see your area? Contact us—we likely deliver there too!
                   </p>
                 </div>
@@ -330,8 +330,8 @@ export default function LocationSyracuse() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <span className="text-[#BC7C5F] font-serif italic text-xl">Common Questions</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-[#644716] mt-4">
+              <span className="text-[#4C5246] font-serif italic text-xl">Common Questions</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#312213] mt-4">
                 Tallow Skincare FAQ - Syracuse & Davis County
               </h2>
             </motion.div>
@@ -361,10 +361,10 @@ export default function LocationSyracuse() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="bg-[#F7F6F2] rounded-2xl p-8"
+                  className="bg-[#F7F4EF] rounded-2xl p-8"
                 >
-                  <h3 className="font-serif text-xl text-[#644716] mb-3">{faq.question}</h3>
-                  <p className="text-[#644716]/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="font-serif text-xl text-[#312213] mb-3">{faq.question}</h3>
+                  <p className="text-[#312213]/70 leading-relaxed">{faq.answer}</p>
                 </motion.div>
               ))}
             </div>
@@ -378,7 +378,7 @@ export default function LocationSyracuse() {
             >
               <Button
                 size="lg"
-                className="bg-[#8B6F47] text-[#F7F6F2] hover:bg-[#8B6F47]/90 rounded-full h-14 px-10 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-[#4C5246] text-[#F7F4EF] hover:bg-[#4C5246]/90 rounded-full h-14 px-10 shadow-xl hover:shadow-2xl transition-all duration-300"
                 asChild
               >
                 <a href="https://macandmeadowco.square.site/" target="_blank" rel="noopener noreferrer">
@@ -388,7 +388,7 @@ export default function LocationSyracuse() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-[#644716]/30 text-[#644716] hover:bg-[#8B6F47]/5 rounded-full h-14 px-10"
+                className="border-[#312213]/30 text-[#312213] hover:bg-[#4C5246]/5 rounded-full h-14 px-10"
                 asChild
               >
                 <Link href="/products">
@@ -401,7 +401,7 @@ export default function LocationSyracuse() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-24 bg-[#F7F6F2]">
+      <section className="py-24 bg-[#F7F4EF]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
             <motion.div
@@ -411,10 +411,10 @@ export default function LocationSyracuse() {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-[2rem] p-10 md:p-14 shadow-xl text-center"
             >
-              <h2 className="font-serif text-3xl md:text-4xl text-[#644716] mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl text-[#312213] mb-6">
                 Ready to Order in Syracuse or Davis County?
               </h2>
-              <p className="text-[#644716]/70 text-lg leading-relaxed mb-8">
+              <p className="text-[#312213]/70 text-lg leading-relaxed mb-8">
                 Contact us to arrange local pickup in Syracuse or delivery anywhere in Davis County.
                 We'd love to help you discover the benefits of natural tallow skincare!
               </p>
@@ -423,15 +423,15 @@ export default function LocationSyracuse() {
                   href="https://www.instagram.com/macandmeadowco"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#8B6F47] hover:text-[#BC7C5F] transition-colors"
+                  className="flex items-center gap-3 text-[#4C5246] hover:text-[#4C5246] transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
                   <span>@macandmeadowco</span>
                 </a>
-                <span className="hidden sm:block text-[#644716]/30">|</span>
+                <span className="hidden sm:block text-[#312213]/30">|</span>
                 <a
                   href="mailto:macandmeadowco@gmail.com"
-                  className="text-[#8B6F47] hover:text-[#BC7C5F] transition-colors"
+                  className="text-[#4C5246] hover:text-[#4C5246] transition-colors"
                 >
                   macandmeadowco@gmail.com
                 </a>

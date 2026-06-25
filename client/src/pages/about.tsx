@@ -7,7 +7,7 @@ import makerImage from "@assets/maker_image.webp";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#F7F6F2]">
+    <div className="min-h-screen bg-[#F7F4EF]">
       <SEO
         title="About"
         description="Meet McKenzie Madsen, founder of Mac & Meadow. Learn about our mission to bring natural, healing skincare to your daily routine."
@@ -16,7 +16,7 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F6F2] to-white">
+      <section className="pt-40 md:pt-48 lg:pt-56 pb-16 bg-gradient-to-b from-[#F7F4EF] to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,11 +24,11 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto space-y-6"
           >
-            <span className="text-[#BC7C5F] font-serif italic text-xl">Our Story</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-[#644716]">
+            <span className="text-[#4C5246] font-serif italic text-xl">Our Story</span>
+            <h1 className="font-serif text-5xl md:text-7xl text-[#312213]">
               Meet the Maker
             </h1>
-            <p className="text-[#644716]/70 text-lg leading-relaxed">
+            <p className="text-[#312213]/70 text-lg leading-relaxed">
               McKenzie Madsen started Mac & Meadow to bring healing back to daily routines.
             </p>
           </motion.div>
@@ -36,7 +36,7 @@ export default function About() {
       </section>
 
       {/* Meet the Maker Section */}
-      <section className="py-32 bg-[#8B6F47] text-[#F7F6F2] relative overflow-hidden">
+      <section className="py-32 bg-[#4C5246] text-[#F7F4EF] relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -61,9 +61,9 @@ export default function About() {
                    height={500}
                    loading="lazy"
                    decoding="async"
-                   className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F6F2]/10"
+                   className="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover border border-[#F7F4EF]/10"
                  />
-                 <div className="absolute -bottom-6 right-4 md:-right-6 bg-[#F7F6F2] text-[#644716] p-4 md:p-6 rounded-2xl shadow-xl max-w-[200px] md:max-w-xs">
+                 <div className="absolute -bottom-6 right-4 md:-right-6 bg-[#F7F4EF] text-[#312213] p-4 md:p-6 rounded-2xl shadow-xl max-w-[200px] md:max-w-xs">
                    <p className="font-serif italic text-base md:text-lg">"Sidekick Rory approved!"</p>
                  </div>
                </motion.div>
@@ -85,7 +85,7 @@ export default function About() {
                 <p>With her trusty sidekick Rory by her side, she crafts each batch with care, ensuring it's simple, honest, and effective. It's not just about skincare; it's about returning to what's natural and good.</p>
               </div>
 
-              <div className="w-32 h-1 bg-gradient-to-r from-[#BC7C5F] to-transparent rounded-full opacity-50" />
+              <div className="w-32 h-1 bg-gradient-to-r from-[#4C5246] to-transparent rounded-full opacity-50" />
             </div>
           </motion.div>
         </div>
@@ -96,8 +96,8 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto space-y-16">
             <div className="text-center space-y-4">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#644716]">Our Values</h2>
-              <p className="text-[#644716]/70 text-lg">What drives everything we do at Mac & Meadow</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#312213]">Our Values</h2>
+              <p className="text-[#312213]/70 text-lg">What drives everything we do at Mac & Meadow</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -108,11 +108,11 @@ export default function About() {
                 transition={{ duration: 0.6 }}
                 className="text-center space-y-4"
               >
-                <div className="w-16 h-16 bg-[#F7F6F2] rounded-full flex items-center justify-center mx-auto">
-                  <Leaf className="w-8 h-8 text-[#8B6F47]" />
+                <div className="w-16 h-16 bg-[#F7F4EF] rounded-full flex items-center justify-center mx-auto">
+                  <Leaf className="w-8 h-8 text-[#4C5246]" />
                 </div>
-                <h3 className="font-serif text-2xl text-[#644716]">Natural</h3>
-                <p className="text-[#644716]/70">We use only the purest, most natural ingredients—no chemicals, no synthetics.</p>
+                <h3 className="font-serif text-2xl text-[#312213]">Natural</h3>
+                <p className="text-[#312213]/70">We use only the purest, most natural ingredients—no chemicals, no synthetics.</p>
               </motion.div>
 
               <motion.div
@@ -122,11 +122,11 @@ export default function About() {
                 transition={{ delay: 0.1, duration: 0.6 }}
                 className="text-center space-y-4"
               >
-                <div className="w-16 h-16 bg-[#F7F6F2] rounded-full flex items-center justify-center mx-auto">
-                  <Heart className="w-8 h-8 text-[#8B6F47]" />
+                <div className="w-16 h-16 bg-[#F7F4EF] rounded-full flex items-center justify-center mx-auto">
+                  <Heart className="w-8 h-8 text-[#4C5246]" />
                 </div>
-                <h3 className="font-serif text-2xl text-[#644716]">Handcrafted</h3>
-                <p className="text-[#644716]/70">Every batch is carefully whipped by hand in small batches to ensure freshness.</p>
+                <h3 className="font-serif text-2xl text-[#312213]">Handcrafted</h3>
+                <p className="text-[#312213]/70">Every batch is carefully whipped by hand in small batches to ensure freshness.</p>
               </motion.div>
 
               <motion.div
@@ -136,11 +136,11 @@ export default function About() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-center space-y-4"
               >
-                <div className="w-16 h-16 bg-[#F7F6F2] rounded-full flex items-center justify-center mx-auto">
-                  <Sparkles className="w-8 h-8 text-[#8B6F47]" />
+                <div className="w-16 h-16 bg-[#F7F4EF] rounded-full flex items-center justify-center mx-auto">
+                  <Sparkles className="w-8 h-8 text-[#4C5246]" />
                 </div>
-                <h3 className="font-serif text-2xl text-[#644716]">Healing</h3>
-                <p className="text-[#644716]/70">We believe in nourishing skin with ingredients that truly heal and restore.</p>
+                <h3 className="font-serif text-2xl text-[#312213]">Healing</h3>
+                <p className="text-[#312213]/70">We believe in nourishing skin with ingredients that truly heal and restore.</p>
               </motion.div>
             </div>
           </div>

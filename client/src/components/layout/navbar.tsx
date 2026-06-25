@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ChevronDown } from "lucide-react";
-import logo from "@assets/mac_meadow_logo_horns.webp";
+import logo from "@assets/mac-meadow-logo-web.webp";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +31,11 @@ export function Navbar() {
           </a>
         </Link>
         <div className="pl-4 flex flex-col gap-3 border-l-2 border-border/40">
+          <Link href="/find-your-tallow">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Find Your Match
+            </a>
+          </Link>
           <Link href="/how-to-use">
             <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
               How to Use
@@ -82,7 +87,7 @@ export function Navbar() {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-[#F7F6F2]">
+              <SheetContent side="left" className="bg-[#F7F4EF]">
                 <div className="flex flex-col gap-6 mt-10">
                   <MobileNavLinks />
                   <Button
@@ -125,12 +130,17 @@ export function Navbar() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[180px]">
                   <Link href="/products">
-                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       All Products
                     </a>
                   </Link>
+                  <Link href="/find-your-tallow">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Find Your Match
+                    </a>
+                  </Link>
                   <Link href="/how-to-use">
-                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       How to Use
                     </a>
                   </Link>
@@ -149,17 +159,17 @@ export function Navbar() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[160px]">
                   <Link href="/about">
-                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       Our Story
                     </a>
                   </Link>
                   <Link href="/reviews">
-                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       Reviews
                     </a>
                   </Link>
                   <Link href="/blog">
-                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F6F2] transition-colors font-medium">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       Blog
                     </a>
                   </Link>

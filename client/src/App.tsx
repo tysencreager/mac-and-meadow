@@ -20,6 +20,7 @@ const Blog = lazy(() => import("@/pages/blog"));
 const BlogPost = lazy(() => import("@/pages/blog-post"));
 const Reviews = lazy(() => import("@/pages/reviews"));
 const HowToUse = lazy(() => import("@/pages/how-to-use"));
+const FindYourTallow = lazy(() => import("@/pages/find-your-tallow"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const LocationSyracuse = lazy(() => import("@/pages/location-syracuse"));
 const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"));
@@ -28,8 +29,8 @@ const LocationSaltLakeCity = lazy(() => import("@/pages/location-salt-lake-city"
 // Simple loading fallback
 function PageLoader() {
   return (
-    <div className="min-h-screen bg-[#F7F6F2] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-[#8B6F47] border-t-transparent rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#F7F4EF] flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-[#4C5246] border-t-transparent rounded-full animate-spin" />
     </div>
   );
 }
@@ -44,6 +45,7 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/products" component={Products} />
           <Route path="/how-to-use" component={HowToUse} />
+          <Route path="/find-your-tallow" component={FindYourTallow} />
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
