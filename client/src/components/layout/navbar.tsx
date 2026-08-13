@@ -5,6 +5,7 @@ import { Menu, ChevronDown } from "lucide-react";
 import logo from "@assets/mac-meadow-logo-web.webp";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,12 +73,14 @@ export function Navbar() {
 
   return (
     <>
-      <nav
-        className={cn(
-          "fixed top-0 w-full z-50 transition-all duration-300 border-b",
-          isScrolled ? "bg-background/95 backdrop-blur-sm border-border/40 shadow-sm py-2" : "bg-background/95 backdrop-blur-sm border-border/20 py-4"
-        )}
-      >
+      <div className="fixed top-0 w-full z-50">
+        <AnnouncementBanner />
+        <nav
+          className={cn(
+            "transition-all duration-300 border-b",
+            isScrolled ? "bg-background/95 backdrop-blur-sm border-border/40 shadow-sm py-2" : "bg-background/95 backdrop-blur-sm border-border/20 py-4"
+          )}
+        >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           {/* Mobile Menu */}
           <div className="md:hidden">
@@ -199,7 +202,8 @@ export function Navbar() {
           {/* Placeholder for layout balance on mobile */}
           <div className="w-10 md:hidden"></div>
         </div>
-      </nav>
+        </nav>
+      </div>
     </>
   );
 }
