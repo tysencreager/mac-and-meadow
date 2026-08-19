@@ -11,12 +11,12 @@ export function AnnouncementBanner() {
   return (
     <div className="bg-[#4C5246] text-[#F7F4EF] text-center text-xs md:text-[0.95rem] px-4 py-2 md:py-2.5 font-medium">
       <span className="hidden md:inline">
-        Heads up! Orders placed Sunday, Aug 16 &ndash; Thursday, Aug 20 will
-        ship when we return on Friday, Aug 21. Thank you for your patience!
+        Heads up! Orders placed Sunday, Aug 16 &ndash; Thursday, Aug 20 will be
+        fulfilled when we return on Friday, Aug 21. Thank you for your patience!
       </span>
       <span className="md:hidden">
-        Orders placed Aug 16&ndash;20 will ship when we return Friday, Aug 21.
-        Thanks for your patience!
+        Orders placed Aug 16&ndash;20 will be fulfilled when we return Friday,
+        Aug 21. Thanks for your patience!
       </span>
     </div>
   );
