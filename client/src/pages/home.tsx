@@ -7,9 +7,7 @@ import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Ins
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/mac-meadow-new-hero.webp";
-// Interim collection shot (Lemon Grove 1 oz tin) — swap back to an updated
-// group photo of the full lineup once the new one is available.
-import balmCollectionImage from "@assets/therapy-balm-lemon-grove.webp";
+import balmCollectionImage from "@assets/therapy-balm-collection-1oz.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 

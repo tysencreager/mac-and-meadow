@@ -9,11 +9,12 @@ import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones-new.png";
 import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack-new.png";
 import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
 import allProductsPhoto from "@product-photos/mac-and-meadow-tallow-line.jpeg";
-import thePurgePhoto from "@product-photos/the-purge.jpeg";
+import thePurgePhoto from "@assets/the-purge-new.webp";
 import meadowGuardPhoto from "@assets/meadow-guard.webp";
 import lipBalmLemonGrove from "@assets/lip-balm-lemon-grove.webp";
 import lipBalmMeadowMint from "@assets/lip-balm-meadow-mint.webp";
-import therapyBalmMint from "@assets/therapy-balm-meadow-mint.webp";
+import lipBalmDoublePack from "@assets/lip-balm-double-pack.webp";
+import therapyBalmMint from "@assets/therapy-balm-meadow-mint-1oz.webp";
 import therapyBalmLemonGrove from "@assets/therapy-balm-lemon-grove.webp";
 import therapyBalmBareBones from "@assets/therapy-balm-bare-bones-1oz.webp";
 
@@ -592,6 +593,39 @@ export default function Products() {
               </motion.div>
             ))}
           </div>
+
+          {/* Double pack feature */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto mt-8 bg-[#F7F4EF] rounded-[2rem] overflow-hidden border border-[#312213]/10 grid grid-cols-1 md:grid-cols-2"
+          >
+            <img
+              src={lipBalmDoublePack}
+              alt="Mac & Meadow Lip Balm double packs — Meadow Mint & Lemon Grove"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-[240px] md:h-full object-cover"
+            />
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <span className="text-[#4C5246] font-serif italic text-lg">Better Together</span>
+              <h3 className="font-serif text-2xl md:text-3xl text-[#312213] mt-2 mb-4">The Double Pack</h3>
+              <p className="text-[#312213]/70 leading-relaxed mb-6">
+                Can't pick just one? Get both flavors in a gift-ready double pack — one for your
+                purse, one for your nightstand, or one for you and one for a friend.
+              </p>
+              <a
+                href="https://macandmeadowco.square.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-fit bg-[#4C5246] text-[#F7F4EF] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#4C5246]/90 transition-colors"
+              >
+                Shop Double Packs
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -725,12 +759,12 @@ export default function Products() {
 
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <h3 className="font-bold text-white text-lg">Type</h3>
-                  <p className="text-white/70 leading-relaxed">Sugar Scrub Exfoliator</p>
+                  <h3 className="font-bold text-white text-lg">Ingredients</h3>
+                  <p className="text-white/70 leading-relaxed">Raw Cane Sugar, Olive Oil, Castor Oil, Vitamin E Oil, Lemon Essential Oil, Cedarwood Essential Oil, Frankincense</p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="font-bold text-white text-lg">Size</h3>
-                  <p className="text-white/70">4 oz</p>
+                  <p className="text-white/70">4 oz (113 g) Jar</p>
                 </div>
               </div>
 

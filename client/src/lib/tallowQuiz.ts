@@ -14,7 +14,7 @@ import lumberjackImg from "@assets/quiz-lumberjack.webp";
 import bareBonesImg from "@assets/quiz-bare-bones.webp";
 import dreamerImg from "@assets/quiz-the-dreamer.webp";
 import purgeImg from "@assets/quiz-the-purge.webp";
-import balmMintImg from "@assets/therapy-balm-meadow-mint.webp";
+import balmMintImg from "@assets/therapy-balm-meadow-mint-1oz.webp";
 import balmLemonGroveImg from "@assets/therapy-balm-lemon-grove.webp";
 import balmBareBonesImg from "@assets/therapy-balm-bare-bones-1oz.webp";
 
