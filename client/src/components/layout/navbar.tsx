@@ -32,6 +32,27 @@ export function Navbar() {
           </a>
         </Link>
         <div className="pl-4 flex flex-col gap-3 border-l-2 border-border/40">
+          <Link href="/products#whipped-tallow">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Whipped Tallow
+            </a>
+          </Link>
+          <Link href="/products#balms">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Balms
+            </a>
+          </Link>
+          <Link href="/products#skin-essentials">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Additional Skin Essentials
+            </a>
+          </Link>
+          <Link href="/products#seasonal">
+            <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
+              Seasonal
+            </a>
+          </Link>
+          <div className="h-px bg-border/40 my-1" />
           <Link href="/find-your-tallow">
             <a className="text-foreground/60 hover:text-primary transition-colors text-sm font-medium">
               Find Your Match
@@ -131,12 +152,33 @@ export function Navbar() {
                 </a>
               </Link>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[180px]">
+                <div className="bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[220px]">
                   <Link href="/products">
                     <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       All Products
                     </a>
                   </Link>
+                  <Link href="/products#whipped-tallow">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Whipped Tallow
+                    </a>
+                  </Link>
+                  <Link href="/products#balms">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Balms
+                    </a>
+                  </Link>
+                  <Link href="/products#skin-essentials">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Additional Skin Essentials
+                    </a>
+                  </Link>
+                  <Link href="/products#seasonal">
+                    <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
+                      Seasonal
+                    </a>
+                  </Link>
+                  <div className="h-px bg-border/40 my-1 mx-4" />
                   <Link href="/find-your-tallow">
                     <a className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-[#F7F4EF] transition-colors font-medium">
                       Find Your Match

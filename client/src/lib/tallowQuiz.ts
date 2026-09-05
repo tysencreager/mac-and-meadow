@@ -15,8 +15,8 @@ import bareBonesImg from "@assets/quiz-bare-bones.webp";
 import dreamerImg from "@assets/quiz-the-dreamer.webp";
 import purgeImg from "@assets/quiz-the-purge.webp";
 import balmMintImg from "@assets/therapy-balm-meadow-mint.webp";
-import balmRidgeImg from "@assets/therapy-balm-meadow-ridge.webp";
-import balmBareBonesImg from "@assets/therapy-balm-bare-bones.webp";
+import balmLemonGroveImg from "@assets/therapy-balm-lemon-grove.webp";
+import balmBareBonesImg from "@assets/therapy-balm-bare-bones-1oz.webp";
 
 export const STORE_URL = "https://macandmeadowco.square.site/";
 
@@ -94,21 +94,21 @@ export const PRODUCTS: Record<ProductKey, Product> = {
 
 // Therapy Balm variants — selected from the Q4 scent answer once the balm is
 // recommended.
-export type BalmVariant = "Meadow Mint" | "Meadow Ridge" | "Bare Bones";
+export type BalmVariant = "Meadow Mint" | "Lemon Grove" | "Bare Bones";
 
 export const BALM_VARIANTS: Record<
   BalmVariant,
   { tagline: string; image: string }
 > = {
   "Meadow Mint": { tagline: "Fresh & cooling", image: balmMintImg },
-  "Meadow Ridge": { tagline: "Warm & calming", image: balmRidgeImg },
+  "Lemon Grove": { tagline: "Bright & sunny", image: balmLemonGroveImg },
   "Bare Bones": { tagline: "Fragrance-free", image: balmBareBonesImg },
 };
 
 export function balmVariantForScent(q4?: AnswerKey): BalmVariant {
   if (q4 === "D") return "Bare Bones";
-  if (q4 === "B" || q4 === "C") return "Meadow Ridge";
-  return "Meadow Mint"; // A "warm & sweet" or default
+  if (q4 === "B" || q4 === "C") return "Meadow Mint";
+  return "Lemon Grove"; // A "warm & sweet" or default
 }
 
 // Scoring matrix: answer -> product points.

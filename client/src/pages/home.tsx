@@ -7,17 +7,19 @@ import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Ins
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/mac-meadow-new-hero.webp";
-import balmCollectionImage from "@assets/therapy-balm-collection-group.webp";
+// Interim collection shot (Lemon Grove 1 oz tin) — swap back to an updated
+// group photo of the full lineup once the new one is available.
+import balmCollectionImage from "@assets/therapy-balm-lemon-grove.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
 
 // All products data
 const allProducts = [
-  { name: "bare bones", description: "Unscented whipped tallow", price: "$18", isBundle: false },
-  { name: "Heaven Sent", description: "Vanilla & Orange blend", price: "$18", isBundle: false },
-  { name: "The Lumberjack", description: "Cedar & Orange men's tallow", price: "$18", isBundle: false },
-  { name: "The Dreamer", description: "Lavender & Magnesium nighttime tallow", price: "$16", isBundle: false },
-  { name: "The Purge", description: "Natural sugar scrub exfoliator", price: "$16", isBundle: false },
+  { name: "bare bones", category: "Whipped Tallow", description: "Unscented whipped tallow", price: "$20", isBundle: false, isFanFavorite: false },
+  { name: "Heaven Sent", category: "Whipped Tallow", description: "Vanilla & Orange blend", price: "$20", isBundle: false, isFanFavorite: true },
+  { name: "The Lumberjack", category: "Whipped Tallow", description: "Cedar & Orange men's tallow", price: "$20", isBundle: false, isFanFavorite: false },
+  { name: "The Dreamer", category: "Whipped Tallow", description: "Lavender & Magnesium nighttime tallow", price: "$20", isBundle: false, isFanFavorite: false },
+  { name: "The Purge", category: "Skin Essential", description: "Natural sugar scrub exfoliator", price: "$10", isBundle: false, isFanFavorite: false },
 ];
 
 const fadeIn = {
@@ -344,7 +346,7 @@ export default function Home() {
               <div className="w-full md:w-2/5 flex-shrink-0">
                 <img
                   src={balmCollectionImage}
-                  alt="Mac & Meadow Therapy Balm Collection — Meadow Mint, Meadow Ridge & Bare Bones"
+                  alt="Mac & Meadow Therapy Balm Collection — Meadow Mint, Lemon Grove & Bare Bones"
                   loading="lazy"
                   decoding="async"
                   className="rounded-[1.5rem] shadow-xl w-full h-[300px] sm:h-[350px] md:h-[380px] object-cover"
@@ -355,7 +357,7 @@ export default function Home() {
                 <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">New Collection</span>
                 <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-3">Introducing The Therapy Balm Collection</h3>
                 <p className="text-white/80 text-base sm:text-lg max-w-md mx-auto md:mx-0 mb-6">
-                  Targeted moisture for the places that need it most — chapped lips, dry hands, cracked heels, rough elbows, and cuticles. Available in Meadow Mint, Meadow Ridge & Bare Bones.
+                  Targeted moisture for the places that need it most — chapped lips, dry hands, cracked heels, rough elbows, and cuticles. Available in Meadow Mint, Lemon Grove & Bare Bones.
                 </p>
                 <Button
                   size="lg"
@@ -393,7 +395,12 @@ export default function Home() {
                 {product.isBundle && (
                   <span className="inline-block bg-[#4C5246] text-white text-xs px-2 py-1 rounded-full mb-3">Bundle & Save</span>
                 )}
-                <h3 className="text-lg font-bold text-[#312213] mb-1">Whipped Tallow</h3>
+                {product.isFanFavorite && (
+                  <span className="inline-flex items-center gap-1 bg-[#F7F4EF] text-[#4C5246] text-xs font-bold px-2.5 py-1 rounded-full mb-3 border border-[#4C5246]/20">
+                    <Star className="w-3 h-3 fill-current" /> Fan Favorite
+                  </span>
+                )}
+                <h3 className="text-lg font-bold text-[#312213] mb-1">{product.category}</h3>
                 <p className="text-[#4C5246] font-serif italic mb-1">{product.name}</p>
                 <p className="text-[#312213]/60 text-sm mb-3">{product.description}</p>
                 <p className="text-[#4C5246] font-bold text-xl mb-4">{product.price}</p>
