@@ -1044,7 +1044,7 @@ export default function Products() {
                   </div>
                   <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">Build Your Own Bundle</h2>
                   <p className="text-white/80 text-lg leading-relaxed mb-8">
-                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, The Dreamer, The Purge, the Therapy Balm Collection, and our new Lip Balms.
+                    Love more than one scent? Build your own custom bundle of Mac & Meadow products and save! Mix and match your favorites — Heaven Sent, bare bones, The Lumberjack, The Dreamer, our limited-edition Spiced Apple, The Purge, the Therapy Balm Collection, and our new Lip Balms.
                   </p>
                   <a
                     href="https://macandmeadowco.square.site/"
