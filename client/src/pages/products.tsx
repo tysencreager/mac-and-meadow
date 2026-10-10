@@ -8,7 +8,9 @@ import heavenSentPhoto from "@product-photos/mac-and-meadow-heaven-sent-new.png"
 import bareBonesPhoto from "@product-photos/mac-and-meadow-bare-bones-new.png";
 import lumberjackPhoto from "@product-photos/mac-and-meadow-lumberjack-new.png";
 import dreamerPhoto from "@product-photos/the-dreamer-new.jpeg";
-import allProductsPhoto from "@product-photos/mac-and-meadow-tallow-line.jpeg";
+import whippedPhoto from "@assets/whipped-to-perfection.webp";
+import bundlePhoto from "@assets/mix-and-match-bundle.webp";
+import spicedApplePhoto from "@assets/spiced-apple-fall-edition.webp";
 import thePurgePhoto from "@assets/the-purge-new.webp";
 import meadowGuardPhoto from "@assets/meadow-guard.webp";
 import lipBalmLemonGrove from "@assets/lip-balm-lemon-grove.webp";
@@ -200,8 +202,8 @@ export default function Products() {
             className="max-w-5xl mx-auto bg-[#F7F4EF] rounded-[2rem] overflow-hidden border border-[#312213]/10 grid grid-cols-1 md:grid-cols-2"
           >
             <img
-              src={allProductsPhoto}
-              alt="Mac & Meadow product collection"
+              src={whippedPhoto}
+              alt="Open jars of hand-whipped Mac & Meadow tallow cream"
               loading="lazy"
               decoding="async"
               className="w-full h-[240px] md:h-full object-cover"
@@ -868,26 +870,56 @@ export default function Products() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Fall Collection */}
+          <div className="max-w-5xl mx-auto space-y-8">
+            {/* Fall Collection: Spiced Apple (limited edition) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-[#8A5A2B] to-[#4E3317] rounded-[2rem] p-10 md:p-12 relative overflow-hidden text-center"
+              className="bg-gradient-to-br from-[#8A5A2B] to-[#4E3317] rounded-[2rem] relative overflow-hidden grid grid-cols-1 md:grid-cols-2"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#D9A45B]/20 rounded-full blur-[80px]" />
-              <div className="relative z-10 space-y-4">
-                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-[#F0D9B8] mx-auto">
-                  <Leaf className="w-7 h-7" />
+              <img
+                src={spicedApplePhoto}
+                alt="Spiced Apple Fall Edition Whipped Tallow Cream"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-[340px] md:h-full object-cover relative z-10"
+              />
+              <div className="p-8 md:p-12 relative z-10 space-y-6 text-center md:text-left">
+                <div className="inline-flex items-center gap-2 text-[#F0D9B8]">
+                  <Leaf className="w-5 h-5" />
+                  <span className="uppercase tracking-widest text-sm font-bold">Fall Collection</span>
                 </div>
-                <h3 className="font-serif text-3xl md:text-4xl text-white">Fall Collection</h3>
-                <p className="text-[#F0D9B8] font-serif italic text-xl">Coming Mid-September</p>
-                <p className="text-white/70 leading-relaxed">
-                  Cozy, autumn-inspired scents are on their way. Follow us on Instagram to be the
-                  first to know when they drop.
+                <div className="space-y-2">
+                  <h3 className="font-serif text-4xl md:text-5xl text-white">Spiced Apple</h3>
+                  <p className="text-[#F0D9B8] font-serif italic text-xl">Limited-Edition Fall Whipped Tallow</p>
+                </div>
+                <p className="text-white/80 leading-relaxed">
+                  Meet Spiced Apple, our limited-edition fall whipped tallow! A cozy blend of crisp,
+                  sweet apple and warm, subtle spice, whipped into our rich, nourishing tallow to leave
+                  your skin feeling soft, smooth, and deeply moisturized. All the comfort of fall wrapped
+                  into your skincare routine.
                 </p>
+                <div className="grid grid-cols-2 gap-6 text-left">
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-white">Ingredients</h4>
+                    <p className="text-white/60 text-sm leading-relaxed">Wagyu Beef Tallow, Olive Oil, Apple Essential Oil, Black Cardamom Essential Oil</p>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-white">Size</h4>
+                    <p className="text-white/60 text-sm">2 oz (58 g) Glass Jar</p>
+                  </div>
+                </div>
+                <a
+                  href="https://macandmeadowco.square.site/product/spiced-apple-fall-edition/BRZEBZN6FKNKUGEOGXWOZQOB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#F7F4EF] hover:bg-white text-[#4E3317] font-medium px-10 py-4 rounded-full transition-colors text-lg shadow-xl"
+                >
+                  Shop Spiced Apple <ArrowRight className="inline ml-2 w-5 h-5" />
+                </a>
               </div>
             </motion.div>
 
@@ -996,7 +1028,7 @@ export default function Products() {
                 {/* Image */}
                 <div className="w-full md:w-2/5 flex-shrink-0">
                   <img
-                    src={allProductsPhoto}
+                    src={bundlePhoto}
                     alt="Mac & Meadow full product collection"
                     loading="lazy"
                     decoding="async"
