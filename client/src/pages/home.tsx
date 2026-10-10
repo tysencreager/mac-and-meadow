@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Sparkles, ChevronLeft, ChevronRight, Star, Instagram, ExternalLink } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import heroImage from "@assets/mac-meadow-new-hero.webp";
+import heroImage from "@assets/home-hero-highland-lineup.webp";
 import balmCollectionImage from "@assets/therapy-balm-collection-1oz.webp";
 
 const ELFSIGHT_WIDGET_ID = "248c87cf-d63e-4df0-a757-f6ba3ee46eec";
