@@ -6,10 +6,11 @@ import { Link } from "wouter";
 //
 // A banner runs from the start of `from` until the start of `until`, so
 // `until` is the first day it is gone. The first entry whose window covers
-// today wins: the time-sensitive fulfillment notices are listed first and take
-// over the strip while they run, then the evergreen launch banner comes back.
+// today wins, so list time-sensitive notices (like fulfillment pauses) ahead of
+// any longer-running promo so they take over the strip while they run. Expired
+// entries can be deleted.
 //
-// Dates are in the visitor's local time, and months are 0-indexed (8 = Sept).
+// Dates are in the visitor's local time, and months are 0-indexed (9 = Oct).
 type Banner = {
   from: Date;
   until: Date;
@@ -20,59 +21,24 @@ type Banner = {
 };
 
 const BANNERS: Banner[] = [
-  // Fulfillment pause #1: Mon Sept 14 – Wed Sept 16. Runs as advance notice
-  // from Sun Sept 13 and clears when fulfillment resumes Thu Sept 17.
+  // Fulfillment pause: Mon Oct 12 – Thu Oct 15, in the owner's own wording.
+  // Goes up right away as advance notice and clears when fulfillment resumes
+  // Fri Oct 16.
   {
-    from: new Date(2026, 8, 13),
-    until: new Date(2026, 8, 17),
+    from: new Date(2026, 9, 10),
+    until: new Date(2026, 9, 16),
     desktop: (
       <>
-        Heads up! Orders placed Monday, Sept 14 &ndash; Wednesday, Sept 16 will
-        be fulfilled when we return on Thursday, Sept 17. Thank you for your
-        patience!
+        We will not be fulfilling orders from Oct 12&ndash;15th. Order
+        fulfillment will resume October 16th. Thank you for your patience!
       </>
     ),
     mobile: (
       <>
-        Orders placed Sept 14&ndash;16 will be fulfilled when we return
-        Thursday, Sept 17. Thanks for your patience!
+        We will not be fulfilling orders Oct 12&ndash;15th. Fulfillment resumes
+        Oct 16th. Thank you for your patience!
       </>
     ),
-  },
-  // Fulfillment pause #2: Mon Sept 21 – Thu Sept 24. Takes over the strip the
-  // moment the first notice clears and hides when fulfillment resumes Fri
-  // Sept 25.
-  {
-    from: new Date(2026, 8, 17),
-    until: new Date(2026, 8, 25),
-    desktop: (
-      <>
-        Heads up! Orders placed Monday, Sept 21 &ndash; Thursday, Sept 24 will
-        be fulfilled when we return on Friday, Sept 25. Thank you for your
-        patience!
-      </>
-    ),
-    mobile: (
-      <>
-        Orders placed Sept 21&ndash;24 will be fulfilled when we return Friday,
-        Sept 25. Thanks for your patience!
-      </>
-    ),
-  },
-  // Lip Balm launch announcement (live since Sept 5, ~a month of visibility).
-  // Safe to delete this entry any time after Oct 10, or push the date out if
-  // the owner wants it running longer.
-  {
-    from: new Date(2026, 8, 5),
-    until: new Date(2026, 9, 10),
-    href: "/products#balms",
-    desktop: (
-      <>
-        ✨ New! Meet our Lip Balms in Lemon Grove &amp; Meadow Mint &mdash;
-        available as singles or double packs. Shop the launch &rarr;
-      </>
-    ),
-    mobile: <>✨ New! Lip Balms in Lemon Grove &amp; Meadow Mint &rarr;</>,
   },
 ];
 
